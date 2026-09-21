@@ -1,0 +1,76 @@
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : ros_gz_bridge
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : rviz
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : transform_listener_impl_592fdd46fbc0
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : rviz_navigation_dialog_action_client
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : transform_listener_impl_592fdd79d140
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : nav2_rviz_selector_node
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : nav2_rviz_docking_panel_node
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : nav2_container
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : controller_server
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : local_costmap
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : map_server
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : amcl
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : smoother_server
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : lifecycle_manager_localization
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : planner_server
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : global_costmap
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : route_server
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : behavior_server
+compatibility status    : OK
+topic [type]            : /parameter_events [rcl_interfaces/msg/ParameterEvent]
+publisher node          : _ros2cli_daemon_0_0448cd5af53d4a0ea2b7067730ecc17d
+subscriber node         : bt_navigator
