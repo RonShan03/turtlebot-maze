@@ -1,0 +1,19 @@
+[
+  {"room":"central hall", "x":0.0,"y":0.0,"yaw":-1.57},
+  {"room":"living room west", "x":-1.2,"y":-2.8,"yaw":0.0},
+  {"room":"living room television", "x":0.0,"y":-3.8,"yaw":-1.57},
+  {"room":"living room east", "x":3.3,"y":-3.2,"yaw":3.14},
+  {"room":"central hall east", "x":3.5,"y":0.0,"yaw":0.0},
+  {"room":"dining room", "x":5.5,"y":-0.5,"yaw":0.7},
+  {"room":"kitchen", "x":6.7,"y":-2.3,"yaw":0.0},
+  {"room":"dining room north", "x":7.8,"y":2.5,"yaw":-2.5},
+  {"room":"central hall return", "x":3.3,"y":0.0,"yaw":1.57},
+  {"room":"north room", "x":0.0,"y":2.7,"yaw":1.57},
+  {"room":"north room chairs", "x":-1.1,"y":2.8,"yaw":1.57},
+  {"room":"west hall", "x":-3.2,"y":0.0,"yaw":3.14},
+  {"room":"bedroom south", "x":-5.8,"y":-0.5,"yaw":1.57},
+  {"room":"bedroom west", "x":-7.8,"y":0.0,"yaw":1.57},
+  {"room":"southwest room", "x":-6.3,"y":-3.0,"yaw":3.14},
+  {"room":"southwest chair", "x":-7.0,"y":-4.0,"yaw":3.14},
+  {"room":"return", "x":0.0,"y":0.0,"yaw":0.0}
+]

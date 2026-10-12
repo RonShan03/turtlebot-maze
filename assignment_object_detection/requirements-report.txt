@@ -1,0 +1,2 @@
+reportlab==5.0.1
+markdown==3.11

@@ -1,0 +1,6 @@
+Validated 2026-10-12 in the submission worktree.
+Command: python -m pytest -q -p no:cacheprovider assignment_object_detection/tests
+Result: 25 passed in 0.65s
+Docker Compose configuration: valid. DISPLAY and HOME unset warnings in PowerShell; headless simulation was exercised in the original workspace.
+Recorded observations: all 204 detection IDs agree with exported evidence IDs.
+Replay: noise analysis successfully reads the compressed depth archive.

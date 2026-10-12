@@ -1,0 +1,29 @@
+{
+  "connect": "tcp/localhost:7447",
+  "model": "yolov8n.pt",
+  "duration": 1800.0,
+  "output": "assignment_object_detection/runs/house03",
+  "schema": "ds685_house03",
+  "radius": 0.5,
+  "map_to_odom": null,
+  "pg_host": "localhost",
+  "pg_port": 5436,
+  "pg_db": "vectordb",
+  "started_utc": "2026-10-12T19:47:29.814498+00:00",
+  "confidence": 0.3,
+  "clip": "ViT-B-32/laion2b_s34b_b79k",
+  "max_hz": 10,
+  "translation_m": 0.5,
+  "rotation_deg": 15,
+  "sync_tolerance_ms": 200,
+  "counters": {
+    "tf_received": 20679,
+    "odom_received": 5908,
+    "depth_received": 1063,
+    "color_received": 1063,
+    "motion_rejected": 838,
+    "observations": 204
+  },
+  "keyframes": 225,
+  "elapsed_s": 660.810244088003
+}

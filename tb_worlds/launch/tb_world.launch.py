@@ -32,6 +32,7 @@ def generate_launch_description():
     namespace = LaunchConfiguration("namespace")
     use_sim_time = LaunchConfiguration("use_sim_time")
     texture_base = LaunchConfiguration("texture_base")
+    headless = LaunchConfiguration("headless")
 
     # Launch configuration variables specific to simulation
     world = LaunchConfiguration("world")
@@ -79,6 +80,12 @@ def generate_launch_description():
         "texture_base",
         default_value=os.path.join(bringup_dir, "worlds", "textures"),
         description="Absolute path to wall texture directory for enhanced worlds",
+    )
+
+    declare_headless_cmd = DeclareLaunchArgument(
+        "headless",
+        default_value="true",
+        description="Run Gazebo in headless mode for containerized or no-display environments",
     )
 
     turtlebot_model_os_value = os.getenv("TURTLEBOT_MODEL", "3")
@@ -138,10 +145,15 @@ def generate_launch_description():
             world_sdf,
             world,
             ["texture_base:=", texture_base],
+            ["headless:=", headless],
         ]
     )
+    # Explicitly start the Gazebo server in headless mode. Running the GUI in a
+    # container without a real OpenGL stack causes Qt to abort while creating the
+    # QOpenGL context, which prevents ROS topics such as /clock and /odom from ever
+    # being published.
     gazebo = ExecuteProcess(
-        cmd=["gz", "sim", "-r", world_sdf],
+        cmd=["gz", "sim", "-s", "--headless-rendering", "-r", world_sdf],
         output="screen",
     )
 
@@ -179,6 +191,7 @@ def generate_launch_description():
             declare_robot_name_cmd,
             declare_robot_sdf_cmd,
             declare_texture_base_cmd,
+            declare_headless_cmd,
             world_sdf_xacro,
             remove_temp_sdf_file,
             gz_tb_spawner,

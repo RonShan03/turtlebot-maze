@@ -36,6 +36,7 @@ def generate_launch_description():
     use_rviz = LaunchConfiguration("use_rviz")
     world_name = LaunchConfiguration("world_name")
     use_aruco = LaunchConfiguration("use_aruco")
+    headless = LaunchConfiguration("headless")
 
     # Declare the launch arguments
     declare_namespace_cmd = DeclareLaunchArgument(
@@ -88,7 +89,9 @@ def generate_launch_description():
     )
 
     declare_use_rviz_cmd = DeclareLaunchArgument(
-        "use_rviz", default_value="True", description="Whether to start RVIZ"
+        "use_rviz",
+        default_value="False",
+        description="Whether to start RVIZ; default disabled for headless Docker runs",
     )
 
     declare_robot_name_cmd = DeclareLaunchArgument(
@@ -107,6 +110,12 @@ def generate_launch_description():
         description="Whether to spawn ArUco markers",
     )
 
+    declare_headless_cmd = DeclareLaunchArgument(
+        "headless",
+        default_value="True",
+        description="Launch Gazebo in headless mode for Docker and displayless systems",
+    )
+
     # Construct full world path from world_name
     world_path = PathJoinSubstitution([bringup_dir, "worlds", world_name])
 
@@ -118,6 +127,7 @@ def generate_launch_description():
             "namespace": namespace,
             "use_sim_time": use_sim_time,
             "world": world_path,
+            "headless": headless,
         }.items(),
     )
 
@@ -182,6 +192,7 @@ def generate_launch_description():
     ld.add_action(declare_use_respawn_cmd)
     ld.add_action(declare_world_name_cmd)
     ld.add_action(declare_use_aruco_cmd)
+    ld.add_action(declare_headless_cmd)
 
     # Add the actions to launch all of the navigation nodes
     ld.add_action(sim_cmd)

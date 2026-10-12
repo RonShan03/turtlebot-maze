@@ -37,6 +37,8 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
+      - QT_QPA_PLATFORM=${QT_QPA_PLATFORM:-offscreen}
+      - LIBGL_ALWAYS_SOFTWARE=1
       - NVIDIA_DRIVER_CAPABILITIES=all
     volumes:
       # Allows graphical programs in the container.
@@ -118,6 +120,8 @@ services:
     command: >
       ros2 launch tb_worlds tb_demo_world.launch.py
       world_name:=house_world.sdf.xacro
+      headless:=True
+      use_rviz:=False
       map:=/overlay_ws/install/tb_worlds/share/tb_worlds/maps/house_world_map.yaml
       rviz_config_file:=/overlay_ws/install/tb_worlds/share/tb_worlds/rviz/nav2_turtlebot_view.rviz
 

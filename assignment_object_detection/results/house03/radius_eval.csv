@@ -1,0 +1,193 @@
+radius_m,tie_break,class_name,true_instances,stored_objects,correct_matches,precision,recall,duplicate_rate,detection_rate,relevant_keyframes,correct_detection_keyframes,false_merges,misses
+0.25,clip,airplane,0,7,0,0.0,,,,0,0,0,0
+0.25,clip,bed,1,4,1,0.25,1.0,4.0,0.058823529411764705,17,1,0,0
+0.25,clip,bench,0,7,0,0.0,,,,0,0,0,0
+0.25,clip,boat,0,2,0,0.0,,,,0,0,0,0
+0.25,clip,cat,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,chair,8,15,5,0.3333333333333333,0.625,1.875,0.18253968253968253,126,23,1,3
+0.25,clip,couch,1,2,0,0.0,0.0,2.0,0.0,42,0,0,1
+0.25,clip,cup,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,dining table,4,2,2,1.0,0.5,0.5,0.08928571428571429,112,10,0,2
+0.25,clip,dog,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,frisbee,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,giraffe,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,keyboard,0,2,0,0.0,,,,0,0,0,0
+0.25,clip,person,0,11,0,0.0,,,,0,0,0,0
+0.25,clip,refrigerator,1,5,1,0.2,1.0,5.0,0.21428571428571427,42,9,0,0
+0.25,clip,sink,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,sports ball,2,3,1,0.3333333333333333,0.5,1.5,0.1956521739130435,46,9,0,1
+0.25,clip,suitcase,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,traffic light,0,11,0,0.0,,,,0,0,0,0
+0.25,clip,train,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,truck,0,1,0,0.0,,,,0,0,0,0
+0.25,clip,tv,2,1,0,0.0,0.0,0.5,0.0,39,0,0,2
+0.25,clip,umbrella,0,3,0,0.0,,,,0,0,0,0
+0.25,clip,vase,1,0,0,,0.0,0.0,,0,0,0,1
+0.25,nearest_position,airplane,0,7,0,0.0,,,,0,0,0,0
+0.25,nearest_position,bed,1,4,1,0.25,1.0,4.0,0.058823529411764705,17,1,0,0
+0.25,nearest_position,bench,0,7,0,0.0,,,,0,0,0,0
+0.25,nearest_position,boat,0,2,0,0.0,,,,0,0,0,0
+0.25,nearest_position,cat,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,chair,8,15,5,0.3333333333333333,0.625,1.875,0.18253968253968253,126,23,1,3
+0.25,nearest_position,couch,1,2,0,0.0,0.0,2.0,0.0,42,0,0,1
+0.25,nearest_position,cup,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,dining table,4,2,2,1.0,0.5,0.5,0.08928571428571429,112,10,0,2
+0.25,nearest_position,dog,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,frisbee,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,giraffe,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,keyboard,0,2,0,0.0,,,,0,0,0,0
+0.25,nearest_position,person,0,11,0,0.0,,,,0,0,0,0
+0.25,nearest_position,refrigerator,1,5,1,0.2,1.0,5.0,0.21428571428571427,42,9,0,0
+0.25,nearest_position,sink,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,sports ball,2,3,1,0.3333333333333333,0.5,1.5,0.1956521739130435,46,9,0,1
+0.25,nearest_position,suitcase,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,traffic light,0,11,0,0.0,,,,0,0,0,0
+0.25,nearest_position,train,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,truck,0,1,0,0.0,,,,0,0,0,0
+0.25,nearest_position,tv,2,1,0,0.0,0.0,0.5,0.0,39,0,0,2
+0.25,nearest_position,umbrella,0,3,0,0.0,,,,0,0,0,0
+0.25,nearest_position,vase,1,0,0,,0.0,0.0,,0,0,0,1
+0.5,clip,airplane,0,6,0,0.0,,,,0,0,0,0
+0.5,clip,bed,1,3,1,0.3333333333333333,1.0,3.0,0.058823529411764705,17,1,0,0
+0.5,clip,bench,0,5,0,0.0,,,,0,0,0,0
+0.5,clip,boat,0,2,0,0.0,,,,0,0,0,0
+0.5,clip,cat,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,chair,8,9,4,0.4444444444444444,0.5,1.125,0.18253968253968253,126,23,2,4
+0.5,clip,couch,1,2,0,0.0,0.0,2.0,0.0,42,0,0,1
+0.5,clip,cup,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,dining table,4,2,2,1.0,0.5,0.5,0.08928571428571429,112,10,0,2
+0.5,clip,dog,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,frisbee,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,giraffe,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,keyboard,0,2,0,0.0,,,,0,0,0,0
+0.5,clip,person,0,11,0,0.0,,,,0,0,0,0
+0.5,clip,refrigerator,1,4,1,0.25,1.0,4.0,0.21428571428571427,42,9,0,0
+0.5,clip,sink,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,sports ball,2,2,1,0.5,0.5,1.0,0.1956521739130435,46,9,0,1
+0.5,clip,suitcase,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,traffic light,0,11,0,0.0,,,,0,0,0,0
+0.5,clip,train,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,truck,0,1,0,0.0,,,,0,0,0,0
+0.5,clip,tv,2,1,0,0.0,0.0,0.5,0.0,39,0,0,2
+0.5,clip,umbrella,0,3,0,0.0,,,,0,0,0,0
+0.5,clip,vase,1,0,0,,0.0,0.0,,0,0,0,1
+0.5,nearest_position,airplane,0,6,0,0.0,,,,0,0,0,0
+0.5,nearest_position,bed,1,3,1,0.3333333333333333,1.0,3.0,0.058823529411764705,17,1,0,0
+0.5,nearest_position,bench,0,5,0,0.0,,,,0,0,0,0
+0.5,nearest_position,boat,0,2,0,0.0,,,,0,0,0,0
+0.5,nearest_position,cat,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,chair,8,8,4,0.5,0.5,1.0,0.18253968253968253,126,23,2,4
+0.5,nearest_position,couch,1,2,0,0.0,0.0,2.0,0.0,42,0,0,1
+0.5,nearest_position,cup,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,dining table,4,2,2,1.0,0.5,0.5,0.08928571428571429,112,10,0,2
+0.5,nearest_position,dog,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,frisbee,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,giraffe,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,keyboard,0,2,0,0.0,,,,0,0,0,0
+0.5,nearest_position,person,0,11,0,0.0,,,,0,0,0,0
+0.5,nearest_position,refrigerator,1,4,1,0.25,1.0,4.0,0.21428571428571427,42,9,0,0
+0.5,nearest_position,sink,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,sports ball,2,2,1,0.5,0.5,1.0,0.1956521739130435,46,9,0,1
+0.5,nearest_position,suitcase,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,traffic light,0,11,0,0.0,,,,0,0,0,0
+0.5,nearest_position,train,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,truck,0,1,0,0.0,,,,0,0,0,0
+0.5,nearest_position,tv,2,1,0,0.0,0.0,0.5,0.0,39,0,0,2
+0.5,nearest_position,umbrella,0,3,0,0.0,,,,0,0,0,0
+0.5,nearest_position,vase,1,0,0,,0.0,0.0,,0,0,0,1
+0.75,clip,airplane,0,5,0,0.0,,,,0,0,0,0
+0.75,clip,bed,1,3,1,0.3333333333333333,1.0,3.0,0.058823529411764705,17,1,0,0
+0.75,clip,bench,0,4,0,0.0,,,,0,0,0,0
+0.75,clip,boat,0,2,0,0.0,,,,0,0,0,0
+0.75,clip,cat,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,chair,8,7,3,0.42857142857142855,0.375,0.875,0.18253968253968253,126,23,2,5
+0.75,clip,couch,1,2,0,0.0,0.0,2.0,0.0,42,0,0,1
+0.75,clip,cup,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,dining table,4,2,2,1.0,0.5,0.5,0.08928571428571429,112,10,0,2
+0.75,clip,dog,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,frisbee,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,giraffe,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,keyboard,0,2,0,0.0,,,,0,0,0,0
+0.75,clip,person,0,10,0,0.0,,,,0,0,0,0
+0.75,clip,refrigerator,1,4,1,0.25,1.0,4.0,0.21428571428571427,42,9,0,0
+0.75,clip,sink,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,sports ball,2,2,1,0.5,0.5,1.0,0.1956521739130435,46,9,0,1
+0.75,clip,suitcase,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,traffic light,0,10,0,0.0,,,,0,0,0,0
+0.75,clip,train,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,truck,0,1,0,0.0,,,,0,0,0,0
+0.75,clip,tv,2,1,0,0.0,0.0,0.5,0.0,39,0,0,2
+0.75,clip,umbrella,0,2,0,0.0,,,,0,0,0,0
+0.75,clip,vase,1,0,0,,0.0,0.0,,0,0,0,1
+0.75,nearest_position,airplane,0,5,0,0.0,,,,0,0,0,0
+0.75,nearest_position,bed,1,3,1,0.3333333333333333,1.0,3.0,0.058823529411764705,17,1,0,0
+0.75,nearest_position,bench,0,4,0,0.0,,,,0,0,0,0
+0.75,nearest_position,boat,0,2,0,0.0,,,,0,0,0,0
+0.75,nearest_position,cat,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,chair,8,7,3,0.42857142857142855,0.375,0.875,0.18253968253968253,126,23,2,5
+0.75,nearest_position,couch,1,2,0,0.0,0.0,2.0,0.0,42,0,0,1
+0.75,nearest_position,cup,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,dining table,4,2,2,1.0,0.5,0.5,0.08928571428571429,112,10,0,2
+0.75,nearest_position,dog,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,frisbee,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,giraffe,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,keyboard,0,2,0,0.0,,,,0,0,0,0
+0.75,nearest_position,person,0,10,0,0.0,,,,0,0,0,0
+0.75,nearest_position,refrigerator,1,4,1,0.25,1.0,4.0,0.21428571428571427,42,9,0,0
+0.75,nearest_position,sink,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,sports ball,2,2,1,0.5,0.5,1.0,0.1956521739130435,46,9,0,1
+0.75,nearest_position,suitcase,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,traffic light,0,10,0,0.0,,,,0,0,0,0
+0.75,nearest_position,train,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,truck,0,1,0,0.0,,,,0,0,0,0
+0.75,nearest_position,tv,2,1,0,0.0,0.0,0.5,0.0,39,0,0,2
+0.75,nearest_position,umbrella,0,2,0,0.0,,,,0,0,0,0
+0.75,nearest_position,vase,1,0,0,,0.0,0.0,,0,0,0,1
+1.0,clip,airplane,0,4,0,0.0,,,,0,0,0,0
+1.0,clip,bed,1,3,1,0.3333333333333333,1.0,3.0,0.058823529411764705,17,1,0,0
+1.0,clip,bench,0,4,0,0.0,,,,0,0,0,0
+1.0,clip,boat,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,cat,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,chair,8,6,2,0.3333333333333333,0.25,0.75,0.18253968253968253,126,23,3,6
+1.0,clip,couch,1,2,0,0.0,0.0,2.0,0.0,42,0,0,1
+1.0,clip,cup,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,dining table,4,2,2,1.0,0.5,0.5,0.08928571428571429,112,10,0,2
+1.0,clip,dog,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,frisbee,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,giraffe,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,keyboard,0,2,0,0.0,,,,0,0,0,0
+1.0,clip,person,0,10,0,0.0,,,,0,0,0,0
+1.0,clip,refrigerator,1,4,1,0.25,1.0,4.0,0.21428571428571427,42,9,0,0
+1.0,clip,sink,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,sports ball,2,2,1,0.5,0.5,1.0,0.1956521739130435,46,9,0,1
+1.0,clip,suitcase,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,traffic light,0,9,0,0.0,,,,0,0,0,0
+1.0,clip,train,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,truck,0,1,0,0.0,,,,0,0,0,0
+1.0,clip,tv,2,1,0,0.0,0.0,0.5,0.0,39,0,0,2
+1.0,clip,umbrella,0,2,0,0.0,,,,0,0,0,0
+1.0,clip,vase,1,0,0,,0.0,0.0,,0,0,0,1
+1.0,nearest_position,airplane,0,4,0,0.0,,,,0,0,0,0
+1.0,nearest_position,bed,1,3,1,0.3333333333333333,1.0,3.0,0.058823529411764705,17,1,0,0
+1.0,nearest_position,bench,0,4,0,0.0,,,,0,0,0,0
+1.0,nearest_position,boat,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,cat,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,chair,8,6,3,0.5,0.375,0.75,0.18253968253968253,126,23,2,5
+1.0,nearest_position,couch,1,2,0,0.0,0.0,2.0,0.0,42,0,0,1
+1.0,nearest_position,cup,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,dining table,4,2,2,1.0,0.5,0.5,0.08928571428571429,112,10,0,2
+1.0,nearest_position,dog,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,frisbee,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,giraffe,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,keyboard,0,2,0,0.0,,,,0,0,0,0
+1.0,nearest_position,person,0,10,0,0.0,,,,0,0,0,0
+1.0,nearest_position,refrigerator,1,4,1,0.25,1.0,4.0,0.21428571428571427,42,9,0,0
+1.0,nearest_position,sink,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,sports ball,2,2,1,0.5,0.5,1.0,0.1956521739130435,46,9,0,1
+1.0,nearest_position,suitcase,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,traffic light,0,9,0,0.0,,,,0,0,0,0
+1.0,nearest_position,train,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,truck,0,1,0,0.0,,,,0,0,0,0
+1.0,nearest_position,tv,2,1,0,0.0,0.0,0.5,0.0,39,0,0,2
+1.0,nearest_position,umbrella,0,2,0,0.0,,,,0,0,0,0
+1.0,nearest_position,vase,1,0,0,,0.0,0.0,,0,0,0,1

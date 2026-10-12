@@ -1,0 +1,23 @@
+# Apply the local headless launch fixes without rebuilding the course image.
+services:
+  demo-world-house:
+    volumes:
+      - ./tb_worlds/launch/tb_world.launch.py:/overlay_ws/install/tb_worlds/share/tb_worlds/launch/tb_world.launch.py:ro
+      - ./tb_worlds/launch/tb_demo_world.launch.py:/overlay_ws/install/tb_worlds/share/tb_worlds/launch/tb_demo_world.launch.py:ro
+      - ./assignment_object_detection:/assignment:rw
+  assignment-detector:
+    image: ds685-assignment-detector
+    build:
+      context: .
+      dockerfile: assignment_object_detection/Dockerfile
+    network_mode: host
+    environment:
+      PYTHONUNBUFFERED: '1'
+    volumes:
+      - ./:/work
+    working_dir: /work
+    command: >
+      python -m assignment_object_detection.runtime
+      --output assignment_object_detection/runs/${DS685_RUN:-newrun}
+      --schema ds685_${DS685_RUN:-newrun}
+      --duration ${DS685_DURATION:-1800}

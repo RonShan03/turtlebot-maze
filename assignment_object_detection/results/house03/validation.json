@@ -1,0 +1,11 @@
+{
+  "keyframes": 225,
+  "objects": 72,
+  "observations": 204,
+  "depth_max_delta_ms": 0.0,
+  "odom_max_delta_ms": 18.0,
+  "pose_xy_error_median_m": 0.0,
+  "pose_xy_error_p95_m": 0.016559983207764792,
+  "pose_comparisons": 225,
+  "all_checks_passed": true
+}

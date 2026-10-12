@@ -1,0 +1,17 @@
+{"room": "central hall", "x": 0.0, "y": 0.0, "yaw": -1.57, "result": "TaskResult.SUCCEEDED", "elapsed_s": 7.851907910997397}
+{"room": "living room west", "x": -1.2, "y": -2.8, "yaw": 0.0, "result": "TaskResult.SUCCEEDED", "elapsed_s": 40.651252295007}
+{"room": "living room television", "x": 0.0, "y": -3.8, "yaw": -1.57, "result": "TaskResult.SUCCEEDED", "elapsed_s": 36.557078522993834}
+{"room": "living room east", "x": 3.3, "y": -3.2, "yaw": 3.14, "result": "TaskResult.SUCCEEDED", "elapsed_s": 36.99997797899414}
+{"room": "central hall east", "x": 3.5, "y": 0.0, "yaw": 0.0, "result": "TaskResult.SUCCEEDED", "elapsed_s": 32.39855777900084}
+{"room": "dining room", "x": 5.5, "y": -0.5, "yaw": 0.7, "result": "TaskResult.SUCCEEDED", "elapsed_s": 18.151750995995826}
+{"room": "kitchen", "x": 6.7, "y": -2.3, "yaw": 0.0, "result": "TaskResult.SUCCEEDED", "elapsed_s": 27.200742813001852}
+{"room": "dining room north", "x": 7.8, "y": 2.5, "yaw": -2.5, "result": "TaskResult.SUCCEEDED", "elapsed_s": 44.585277965001296}
+{"room": "central hall return", "x": 3.3, "y": 0.0, "yaw": 1.57, "result": "TaskResult.SUCCEEDED", "elapsed_s": 59.70079674599401}
+{"room": "north room", "x": 0.0, "y": 2.7, "yaw": 1.57, "result": "TaskResult.SUCCEEDED", "elapsed_s": 35.25038492900785}
+{"room": "north room chairs", "x": -1.1, "y": 2.8, "yaw": 1.57, "result": "TaskResult.SUCCEEDED", "elapsed_s": 22.69896852898819}
+{"room": "west hall", "x": -3.2, "y": 0.0, "yaw": 3.14, "result": "TaskResult.SUCCEEDED", "elapsed_s": 59.46673827499035}
+{"room": "bedroom south", "x": -5.8, "y": -0.5, "yaw": 1.57, "result": "TaskResult.SUCCEEDED", "elapsed_s": 28.99928428400017}
+{"room": "bedroom west", "x": -7.8, "y": 0.0, "yaw": 1.57, "result": "TaskResult.SUCCEEDED", "elapsed_s": 29.60041531699244}
+{"room": "southwest room", "x": -6.3, "y": -3.0, "yaw": 3.14, "result": "TaskResult.SUCCEEDED", "elapsed_s": 61.5011864570115}
+{"room": "southwest chair", "x": -7.0, "y": -4.0, "yaw": 3.14, "result": "TaskResult.SUCCEEDED", "elapsed_s": 16.89760405299603}
+{"room": "return", "x": 0.0, "y": 0.0, "yaw": 0.0, "result": "TaskResult.SUCCEEDED", "elapsed_s": 70.80133831800777}

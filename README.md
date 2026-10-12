@@ -1,3 +1,7 @@
+# DS685 assignment submission
+
+The completed object-detection assignment, report, screenshots, database exports, and reproduction instructions are in [assignment_object_detection](assignment_object_detection/README.md). Open the [PDF report](assignment_object_detection/REPORT.pdf) for the measured results.
+
 # TurtleBot Behavior Demos
 
 Autonomous navigation demos for a simulated [ROBOTIS TurtleBot](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/#overview) using ROS 2 Jazzy and behavior trees.

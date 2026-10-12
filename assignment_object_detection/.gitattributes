@@ -1,0 +1,7 @@
+# Preserve recorded evidence and manifest hashes byte-for-byte on every platform.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.pdf binary
+*.jpg binary
+*.png binary
+*.npz binary
+*.cdr binary
