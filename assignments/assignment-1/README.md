@@ -1,10 +1,12 @@
-Assignment 1: TurtleBot Maze
+# Assignment 1: TurtleBot Maze
 
-Screenshots to include (place PNG files in this folder):
-- `ros-cli.png` : terminal showing `ros2 topic list` / `ros2 node list` output.
-- `gazebo-maze.png` : Gazebo showing the TurtleBot inside the maze.
-- `rviz2-maze.png` : RViz2 showing robot model and sensor data (scan, tf, map).
+This folder preserves the earlier assignment's [ROS diagnostic output](ros2_doctor.txt).
 
-I captured ROS diagnostic output into `ros2_doctor.txt` for CLI evidence.
+The original submission did not include the required Gazebo and RViz screenshots.
+The diagnostic output does not replace those screenshots. Their omission remains
+a limitation of that earlier submission.
 
-Do you want me to stage a git commit for this folder? I will not push without your permission.
+The subsequent object-detection assignment has its own [report and captured
+evidence](../../assignment_object_detection/README.md). Its camera images and
+semantic map are evidence for that experiment; they do not retroactively supply
+the missing Assignment 1 application screenshots.
