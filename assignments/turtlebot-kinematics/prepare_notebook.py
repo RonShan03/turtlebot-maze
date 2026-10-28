@@ -53,9 +53,9 @@ $$
 
 The final configuration is $(\phi,x,y)=(\pi/2,\ 2-2/\pi,\ 1+2/\pi)\approx(1.571\ \mathrm{rad},\ 1.363\ \mathrm{m},\ 1.637\ \mathrm{m})$. Since $\omega<0$ the robot turns right, following a clockwise circular arc; the product is $T_0\exp(\hat\xi t)$ because the twist is expressed in body coordinates and its displacement must be transformed by the initial world pose, whereas pre-multiplication would apply a spatial/world-frame displacement.""",
     16: r"""**Answer.** Odometry integrates successive wheel-angle increments, so errors from encoder noise, wheel-radius and separation uncertainty, and wheel slip accumulate in later position and heading estimates; an early heading error also misdirects all subsequent translations. Robots therefore fuse wheel odometry with independent observations from devices such as IMUs, cameras, LiDAR, GPS (when available), or map-based localization/SLAM to correct drift.""",
-    23: r"""**Answer.** The simulated chassis should follow the no-slip differential-drive path closely, while finite motor response, contact/friction effects, or wheel slip can cause its trajectory to drift from the ideal kinematic prediction.""",
-    27: r"""**Answer.** The near-zero body-frame lateral speed confirms the nonholonomic no-sideways-motion constraint $v_y=0$, because the wheels roll forward along their planes rather than sliding sideways across the floor.""",
-    36: r"""**Answer.** Over a long winding drive the wheel-based odometry can drift from the simulated true path because small slip and imperfect wheel-motion estimates are integrated across many steps, although the instantaneous position error need not increase monotonically.""",
+    23: r"""**Answer.** The simulated robot closely follows the model (final position gap $0.008$ m and heading gap $0.012$ rad), while finite motor response, contact/friction effects, and wheel slip can produce deviations from the ideal no-slip prediction.""",
+    27: r"""**Answer.** The near-zero measured sideways speed (at most $0.0003$ m/s) supports the Background's nonholonomic no-sideways-motion constraint $v_y=0$, because tire-floor friction resists sideways sliding while the wheels roll forward along their planes.""",
+    36: r"""**Answer.** The position error grows overall from $0.7$ cm at $8$ s to $7.9$ cm at $60$ s, with brief decreases, because small discrepancies between wheel-implied and actual chassis motion accumulate through integration even though successive errors can sometimes partly cancel.""",
 }
 
 
@@ -108,8 +108,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, help="Path to official original notebook (optional)")
     parser.add_argument("--output", type=Path, default=BASE / "turtlebot-kinematics.ipynb")
+    parser.add_argument("--overwrite", action="store_true", help="Replace an existing notebook, discarding its saved outputs")
     parser.add_argument("--accept-upstream-change", action="store_true", help="Allow different official source SHA (still checks cell markers)")
     args = parser.parse_args()
+    if args.output.exists() and not args.overwrite:
+        raise SystemExit(f"Refusing to replace {args.output}; it may contain saved simulation outputs. "
+                         "Choose another --output path or explicitly pass --overwrite.")
     if args.source is None:
         print("Fetching official starter notebook:", UPSTREAM_URL)
         with urlopen(UPSTREAM_URL, timeout=30) as res:
