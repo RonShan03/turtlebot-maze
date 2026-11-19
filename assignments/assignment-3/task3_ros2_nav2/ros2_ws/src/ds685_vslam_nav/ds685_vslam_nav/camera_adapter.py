@@ -6,7 +6,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import Image,CameraInfo
-import message_filters
+from .core import StampedPairs
 
 
 class Adapter(Node):
@@ -18,14 +18,19 @@ class Adapter(Node):
         self.color_pub=self.create_publisher(Image,'/vslam/color/image_raw',10)
         self.depth_pub=self.create_publisher(Image,'/vslam/depth/image_raw',10)
         self.info_sub=self.create_subscription(CameraInfo,'/camera/color/camera_info',self.receive_info,qos_profile_sensor_data)
-        self.color=message_filters.Subscriber(self,Image,'/camera/color/image_raw',qos_profile=qos_profile_sensor_data)
-        self.depth=message_filters.Subscriber(self,Image,'/camera/depth/image_rect_raw',qos_profile=qos_profile_sensor_data)
-        self.sync=message_filters.TimeSynchronizer([self.color,self.depth],20)
-        self.sync.registerCallback(self.receive)
+        self.sync=StampedPairs(); self.raw_counts=[0,0]
+        self.color=self.create_subscription(Image,'/camera/color/image_raw',lambda m:self.raw(0,m),qos_profile_sensor_data)
+        self.depth=self.create_subscription(Image,'/camera/depth/image_rect_raw',lambda m:self.raw(1,m),qos_profile_sensor_data)
         self.timer=self.create_timer(5.,self.report)
 
+    def raw(self,side,msg):
+        self.raw_counts[side]+=1
+        stamp=msg.header.stamp.sec*10**9+msg.header.stamp.nanosec
+        pair=self.sync.push(side,stamp,msg)
+        if pair is not None: self.receive(*pair)
+
     def report(self):
-        self.get_logger().info(f'RGBD pairs={self.pairs}, calibration={self.info is not None}, queues={[len(q) for q in self.sync.queues]}')
+        self.get_logger().info(f'RGBD pairs={self.pairs}, raw={self.raw_counts}, calibration={self.info is not None}, queues={[len(q) for q in self.sync.queues]}')
 
     def receive_info(self,msg):
         if self.info is not None: return

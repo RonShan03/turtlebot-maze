@@ -1,6 +1,17 @@
 import numpy as np
 from scipy.spatial.transform import Rotation
-from ds685_vslam_nav.core import LocalizationBridge, OccupancyMapper, pose_matrix
+from ds685_vslam_nav.core import LocalizationBridge, OccupancyMapper, pose_matrix, StampedPairs
+
+
+def test_exact_pairs_are_bounded_and_never_reuse_stale_images():
+    pairs=StampedPairs(limit=3)
+    assert pairs.push(0,1,'rgb') is None
+    assert pairs.push(1,2,'unmatched depth') is None
+    assert pairs.push(1,1,'depth')==('rgb','depth')
+    for t in range(3,10): pairs.push(0,t,t)
+    assert len(pairs.queues[0])==3
+    assert pairs.push(1,9,'latest')==(9,'latest')
+    assert all(not q for q in pairs.queues)
 
 
 def test_bridge_composes_camera_extrinsic_and_odometry_without_double_rotation():

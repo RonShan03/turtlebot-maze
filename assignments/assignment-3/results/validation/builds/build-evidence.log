@@ -1,0 +1,50 @@
+docker : #0 building with "desktop-linux" instance using docker driver
+At line:2 char:169
++ ...  '{{.Id}}'; docker build --progress plain -f assignments/assignment-3 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (#0 building wit...g docker driver:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+#1 [internal] load build definition from Dockerfile.evidence
+#1 transferring dockerfile: 398B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ds685-vslam:latest
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.11kB done
+#4 DONE 0.0s
+
+#5 [1/3] FROM 
+docker.io/library/ds685-vslam:latest@sha256:df1f337320a4cd016dc52ddc12abdeecf3f1bce2f9ae19161794d03b6aeb3e0e
+#5 resolve 
+docker.io/library/ds685-vslam:latest@sha256:df1f337320a4cd016dc52ddc12abdeecf3f1bce2f9ae19161794d03b6aeb3e0e 0.0s done
+#5 DONE 0.2s
+
+#6 [2/3] COPY assignments/assignment-3/task2_stella_vslam/patch_examples.py /opt/vslam/patch_examples.py
+#6 DONE 0.0s
+
+#7 [3/3] RUN python3 /opt/vslam/patch_examples.py /opt/vslam/examples/src/run_video_slam.cc     && cmake --build 
+/opt/vslam/examples/build -j2 --target run_video_slam
+#7 0.365 [ 50%] Building CXX object CMakeFiles/run_video_slam.dir/src/run_video_slam.cc.o
+#7 5.473 [100%] Linking CXX executable run_video_slam
+#7 5.979 [100%] Built target run_video_slam
+#7 DONE 6.0s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 exporting manifest sha256:1a3c2a86106ef2bc0c2b28eb9349b6a91c8058e060c3eb7015671522cb161030 0.0s done
+#8 exporting config sha256:0c604c1f18a62697be1a1191f54c17f1549fec1abf07e30408e0c7cc00d1bb67 0.0s done
+#8 exporting attestation manifest sha256:fcb7ca312f09f5089db16990c8cbd67d0debccf5dd43091595c51fcfb050e7b9 0.0s done
+#8 exporting manifest list sha256:b3a110791f98cd41f88c4021c96c8e88e6aa8801a7a8ce8d6057fe56cda4c375
+#8 exporting manifest list sha256:b3a110791f98cd41f88c4021c96c8e88e6aa8801a7a8ce8d6057fe56cda4c375 0.0s done
+#8 naming to docker.io/library/ds685-vslam:evidence done
+#8 unpacking to docker.io/library/ds685-vslam:evidence 0.1s done
+#8 DONE 0.6s

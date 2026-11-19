@@ -60,7 +60,7 @@ The launch starts the existing enhanced maze with textured walls, the assignment
 | `/scan` | LiDAR → occupancy inserter and Nav2 obstacle layers |
 | `/cmd_vel`, `TwistStamped` | Nav2 → existing Gazebo bridge |
 
-The CameraInfo adapter subscribes using sensor QoS, validates dimensions/encoding, preserves the image timestamps and emits matched RGB-D pairs using reliable QoS because the upstream RGB-D wrapper's filters use reliable subscriptions. Approximate synchronization allows 20 ms transport tolerance. `Preprocessing.depthmap_factor=1.0` is required for Gazebo's floating-point metric depth.
+The CameraInfo adapter subscribes using sensor QoS, validates dimensions/encoding, preserves the image timestamps and emits matched RGB-D pairs using reliable QoS because the upstream RGB-D wrapper's filters use reliable subscriptions. The latest source uses a bounded exact-stamp pairing buffer, and the wrapper also uses exact synchronization. Gazebo supplies equal RGB/depth stamps; mismatched frames are dropped rather than relabeled. `Preprocessing.depthmap_factor=1.0` is required for Gazebo's floating-point metric depth. Intermittent subscription/pairing stalls remain a runtime blocker even though independent probes receive raw frames; inspect the diagnostics described below.
 
 TF authority is deliberately unique:
 
@@ -128,4 +128,12 @@ Save logs to a fresh result folder before starting another run. The wrapper may 
 | Lost tracking | The bridge stops producing new transforms; stale TF should block motion. Do not keep publishing a held visual pose as if it were newly localized. |
 | New cloud host | Run Python CI first, build/import images, then repeat sensor/tracking/TF/costmap/goal stages. Cloud-provider creation and GPU allocation are not automated. |
 
-Runtime outcomes are captured in `../results/ros2/`. The initial headless baseline is proven; completion of every later stage must be supported by its own message counts, transforms, lifecycle state and action result. No hardware-camera or full-maze result should be inferred from the baseline.
+## Measured runtime outcome at travel handoff
+
+`../results/ros2/integration02/smoke.json` validates all required sensor streams, 157 visual-pose messages, map TF and both costmaps. Controller and navigator were active. `goal01.json` records the successful (0.5, 0.0) goal: accepted, terminal status 4, error code 0, 5.345 s. This run used Python TimeSynchronizer and the upstream wrapper's approximate synchronization; commit `9789edb` preserves that source version.
+
+The stream later stalled: adapter pair counts stopped increasing while independent probes still saw raw color/depth. `sync-diagnostic.json` found 106 equal-stamp pairs across 113 RGB/111 depth messages, confirming that the raw sensor can supply matching stamps. `goal02.json` records a 2 m goal abort; `goal03.json` records rejection on a fresh run without visual map TF. The latest directly testable pairing buffer is algorithm-tested but did not resolve the runtime stall. Investigate per-subscription DDS/QoS delivery and buffer/loan lifetime next; the root cause is not established. Do not claim reliable full-maze navigation.
+
+`data/navigation-bag/` is a real 54.4 s, 21,971-message recording; its small inventory is committed as `navigation-bag-info.txt`. It began after goal01 finished, and contains zero velocity commands, so it records localization/geometry and the later stall rather than the completed short motion. `data/navigation02.avi` records actual camera imagery during a subsequent failed run; metadata describe its scope. These raw artifacts are ignored by Git and need an owner-controlled backup if they must survive loss of the workstation.
+
+The isolated simulation was stopped at handoff. Restart with the commands above, then repeat every stage. No personal camera reconstruction, full-maze run, GUI recording or published video is claimed.

@@ -1,0 +1,72 @@
+docker : #0 building with "desktop-linux" instance using docker driver
+At line:2 char:1
++ docker build --target examples --progress plain -f assignments/assign ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (#0 building wit...g docker driver:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.15kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/turtlebot_behavior:overlay
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/turtlebot-maze-demo-slam:latest
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [examples 1/6] FROM 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33
+#5 resolve 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33 
+0.0s done
+#5 DONE 0.0s
+
+#6 [cached 1/1] FROM docker.io/library/turtlebot-maze-demo-slam:latest@sha256:209c78d938e6734f6089ea0463917a1231b964aa2
+ec2b324606f08ff17ff8b47
+#6 resolve docker.io/library/turtlebot-maze-demo-slam:latest@sha256:209c78d938e6734f6089ea0463917a1231b964aa2ec2b324606
+f08ff17ff8b47 0.0s done
+#6 DONE 0.0s
+
+#7 [examples 3/6] COPY --from=cached /slam/vocab/orb_vocab.fbow /opt/vslam/orb_vocab.fbow
+#7 CACHED
+
+#8 [examples 5/6] RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core     && cd 
+/opt/vslam/core && git checkout e445b5452535e781fdf6777ec33a06f5f8f5e416 && git submodule update --init --recursive    
+ && sed -i 's|/build/stella_vslam/3rd/FBoW/include|/usr/local/include|g; 
+s|/build/stella_vslam/build/3rd/FBoW/|/usr/local/lib/|g' /usr/local/lib/fbow/fbowTargets.cmake     && cmake -S . -B 
+build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF     && cmake --build build -j2 && cmake --install build 
+&& ldconfig
+#8 CACHED
+
+#9 [examples 4/6] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential cmake git curl 
+ca-certificates ffmpeg     libeigen3-dev libspdlog-dev libyaml-cpp-dev libsqlite3-dev libsuitesparse-dev     
+libgoogle-glog-dev libgflags-dev libatlas-base-dev libopencv-dev     ros-jazzy-tf2-eigen ros-jazzy-cv-bridge 
+ros-jazzy-image-transport     ros-jazzy-message-filters ros-jazzy-rosbag2-cpp python3-scipy python3-yaml 
+python3-msgpack     && rm -rf /var/lib/apt/lists/* && ldconfig
+#9 CACHED
+
+#10 [examples 2/6] COPY --from=cached /usr/local/ /usr/local/
+#10 CACHED
+
+#11 [examples 6/6] RUN git clone https://github.com/stella-cv/stella_vslam_examples.git /opt/vslam/examples     && cd 
+/opt/vslam/examples && git checkout defc69eecc36e51cdda22885bb86954f08ad6887 && git submodule update --init 
+--recursive     && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release     && cmake --build build -j2 --target 
+run_video_slam run_camera_slam
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers 0.0s done
+#12 exporting manifest sha256:633907fa36b562402c038e1c8fe3b5e9146e7aa1a67343853637080dca3dd490 0.0s done
+#12 exporting config sha256:4adf4e7b7255c625b754bb931c999e1c735d069e43abfb538be2e8ff76a5fe93 0.0s done
+#12 exporting attestation manifest sha256:bd14b88f130c00e6761b92e42c60fff6524a43e468c2c79d8b328cbfb4aed165 0.0s done
+#12 exporting manifest list sha256:ce1125ddcf2e1ca4c5a3839048547a2acf897241ea6e87f1cf6acb21a0570724
+#12 exporting manifest list sha256:ce1125ddcf2e1ca4c5a3839048547a2acf897241ea6e87f1cf6acb21a0570724 0.0s done
+#12 naming to docker.io/library/ds685-vslam-examples:latest done
+#12 unpacking to docker.io/library/ds685-vslam-examples:latest 0.0s done
+#12 DONE 0.2s

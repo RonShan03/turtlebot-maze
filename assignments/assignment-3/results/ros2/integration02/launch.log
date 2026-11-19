@@ -1,0 +1,1244 @@
+integration-1  | [INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-19-22-46-17-125292-705b40408e56-7
+integration-1  | [INFO] [launch]: Default logging verbosity is set to INFO
+integration-1  | [INFO] [xacro-1]: process started with pid [53]
+integration-1  | [INFO] [parameter_bridge-2]: process started with pid [54]
+integration-1  | [INFO] [create-3]: process started with pid [55]
+integration-1  | [INFO] [gz-4]: process started with pid [56]
+integration-1  | [INFO] [robot_state_publisher-5]: process started with pid [57]
+integration-1  | [INFO] [static_transform_publisher-6]: process started with pid [58]
+integration-1  | [INFO] [static_transform_publisher-7]: process started with pid [59]
+integration-1  | [INFO] [parameter_bridge-8]: process started with pid [60]
+integration-1  | [INFO] [camera_adapter-9]: process started with pid [61]
+integration-1  | [INFO] [bash-10]: process started with pid [62]
+integration-1  | [INFO] [pose_bridge-11]: process started with pid [63]
+integration-1  | [INFO] [occupancy_mapper-12]: process started with pid [64]
+integration-1  | [robot_state_publisher-5] [WARN] [1795128377.410924852] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [robot_state_publisher-5] [WARN] [1795128377.410950438] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-6] [WARN] [1795128377.419399572] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [static_transform_publisher-6] [WARN] [1795128377.419441352] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-7] [WARN] [1795128377.420171268] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [static_transform_publisher-7] [WARN] [1795128377.420190686] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [create-3] [WARN] [1795128377.429233231] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [create-3] [WARN] [1795128377.429261692] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-7] [INFO] [1795128377.431599176] [assignment3_optical_rotation]: Spinning until stopped - publishing transform
+integration-1  | [static_transform_publisher-7] translation: ('0.000000', '0.000000', '0.000000')
+integration-1  | [static_transform_publisher-7] rotation: ('-0.500000', '0.500000', '-0.500000', '0.500000')
+integration-1  | [static_transform_publisher-7] from 'assignment3_camera' to 'assignment3_camera_optical'
+integration-1  | [static_transform_publisher-6] [INFO] [1795128377.431967184] [assignment3_camera_mount]: Spinning until stopped - publishing transform
+integration-1  | [static_transform_publisher-6] translation: ('0.070000', '0.000000', '0.160000')
+integration-1  | [static_transform_publisher-6] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+integration-1  | [static_transform_publisher-6] from 'base_link' to 'assignment3_camera'
+integration-1  | [robot_state_publisher-5] [INFO] [1795128377.435420236] [robot_state_publisher]: Robot initialized
+integration-1  | [create-3] [INFO] [1795128377.442588018] [ros_gz_sim]: Requesting list of world names.
+integration-1  | [parameter_bridge-8] [WARN] [1795128377.448684424] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [parameter_bridge-8] [WARN] [1795128377.448739993] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [parameter_bridge-2] [WARN] [1795128377.448702218] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [parameter_bridge-2] [WARN] [1795128377.448739381] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [parameter_bridge-8] [INFO] [1795128377.461485193] [assignment3_camera_info]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/camera_info (gz.msgs.CameraInfo) -> /camera/realsense_d435i/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+integration-1  | [INFO] [xacro-1]: process has finished cleanly [pid 53]
+integration-1  | [camera_adapter-9] [WARN] [1795128377.710269430] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [camera_adapter-9] [WARN] [1795128377.710302798] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [pose_bridge-11] [WARN] [1795128377.940043123] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [pose_bridge-11] [WARN] [1795128377.940081107] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [occupancy_mapper-12] [WARN] [1795128377.940441128] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [occupancy_mapper-12] [WARN] [1795128377.940450502] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [create-3] [INFO] [1795128378.047520914] [ros_gz_sim]: Entity creation successful.
+integration-1  | [INFO] [create-3]: process has finished cleanly [pid 55]
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.462511277] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.464249497] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/joint_states (gz.msgs.Model) -> joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.466696941] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/odom (gz.msgs.Odometry) -> odom (nav_msgs/msg/Odometry)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.468788867] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/tf (gz.msgs.Pose_V) -> tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.470743700] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/imu (gz.msgs.IMU) -> imu (sensor_msgs/msg/Imu)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.471997710] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/scan (gz.msgs.LaserScan) -> scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.473147884] [ros_gz_bridge]: Creating ROS->GZ Bridge: [cmd_vel (geometry_msgs/msg/TwistStamped) -> /cmd_vel (gz.msgs.Twist)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.474311979] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/image (gz.msgs.Image) -> /camera/color/image_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.475478296] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/depth_image (gz.msgs.Image) -> /camera/depth/image_rect_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.476650230] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/points (gz.msgs.PointCloudPacked) -> /camera/depth/color/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128378.478122156] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/image (gz.msgs.Image) -> /camera/image_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L51]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L138]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="camera_realsense_d435i"]/gz_frame_id:<data-string>:L369]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [camera_adapter-9] [INFO] [1795128380.788900785] [vslam_camera_adapter]: CameraInfo validated; wrote /work/assignments/assignment-3/data/sim-camera.yaml
+integration-1  | [bash-10] [WARN] [1795128381.146564061] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [bash-10] [WARN] [1795128381.146612047] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [bash-10] [2026-11-19 22:46:21.149] [I] config file loaded: /work/assignments/assignment-3/data/sim-camera.yaml
+integration-1  | [bash-10] [2026-11-19 22:46:21.150] [I] 
+integration-1  | [bash-10] original version of OpenVSLAM,
+integration-1  | [bash-10] Copyright (C) 2019,
+integration-1  | [bash-10] National Institute of Advanced Industrial Science and Technology (AIST)
+integration-1  | [bash-10] All rights reserved.
+integration-1  | [bash-10] stella_vslam (the changes after forking from OpenVSLAM),
+integration-1  | [bash-10] Copyright (C) 2022, stella-cv, All rights reserved.
+integration-1  | [bash-10] 
+integration-1  | [bash-10] This is free software,
+integration-1  | [bash-10] and you are welcome to redistribute it under certain conditions.
+integration-1  | [bash-10] See the LICENSE file.
+integration-1  | [bash-10] 
+integration-1  | [bash-10] Camera:
+integration-1  | [bash-10]   color_order: RGB
+integration-1  | [bash-10]   cols: 640
+integration-1  | [bash-10]   cx: 320.0
+integration-1  | [bash-10]   cy: 240.0
+integration-1  | [bash-10]   depth_threshold: 40.0
+integration-1  | [bash-10]   focal_x_baseline: 27.719135641132205
+integration-1  | [bash-10]   fps: 15.0
+integration-1  | [bash-10]   fx: 554.3827128226441
+integration-1  | [bash-10]   fy: 554.3827128226441
+integration-1  | [bash-10]   k1: 0.0
+integration-1  | [bash-10]   k2: 0.0
+integration-1  | [bash-10]   k3: 0.0
+integration-1  | [bash-10]   model: perspective
+integration-1  | [bash-10]   name: Gazebo CameraInfo RGBD
+integration-1  | [bash-10]   p1: 0.0
+integration-1  | [bash-10]   p2: 0.0
+integration-1  | [bash-10]   rows: 480
+integration-1  | [bash-10]   setup: RGBD
+integration-1  | [bash-10] Feature:
+integration-1  | [bash-10]   ini_fast_threshold: 12
+integration-1  | [bash-10]   min_fast_threshold: 5
+integration-1  | [bash-10]   name: ORB
+integration-1  | [bash-10]   num_levels: 8
+integration-1  | [bash-10]   scale_factor: 1.2
+integration-1  | [bash-10] Mapping:
+integration-1  | [bash-10]   backend: g2o
+integration-1  | [bash-10]   baseline_dist_thr: 0.05
+integration-1  | [bash-10] Preprocessing:
+integration-1  | [bash-10]   depthmap_factor: 1.0
+integration-1  | [bash-10]   min_size: 200
+integration-1  | [bash-10] System:
+integration-1  | [bash-10]   map_format: msgpack
+integration-1  | [bash-10] Tracking:
+integration-1  | [bash-10]   backend: g2o
+integration-1  | [bash-10] 
+integration-1  | [bash-10] [2026-11-19 22:46:21.150] [I] loading ORB vocabulary: /opt/vslam/orb_vocab.fbow
+integration-1  | [bash-10] [2026-11-19 22:46:21.177] [I] load orb_params "ORB"
+integration-1  | [bash-10] [2026-11-19 22:46:21.178] [I] startup SLAM system
+integration-1  | [bash-10] [2026-11-19 22:46:21.178] [I] start mapping module
+integration-1  | [bash-10] [2026-11-19 22:46:21.178] [I] start global optimization module
+integration-1  | [bash-10] [2026-11-19 22:46:23.154] [I] new map created with 453 points: frame 0
+integration-1  | [ERROR] [launch]: Caught exception in launch (see debug for traceback): name 'false' is not defined
+integration-1  | [INFO] [occupancy_mapper-12]: sending signal 'SIGINT' to process[occupancy_mapper-12]
+integration-1  | [INFO] [pose_bridge-11]: sending signal 'SIGINT' to process[pose_bridge-11]
+integration-1  | [INFO] [bash-10]: sending signal 'SIGINT' to process[bash-10]
+integration-1  | [INFO] [camera_adapter-9]: sending signal 'SIGINT' to process[camera_adapter-9]
+integration-1  | [INFO] [parameter_bridge-8]: sending signal 'SIGINT' to process[parameter_bridge-8]
+integration-1  | [INFO] [static_transform_publisher-7]: sending signal 'SIGINT' to process[static_transform_publisher-7]
+integration-1  | [INFO] [static_transform_publisher-6]: sending signal 'SIGINT' to process[static_transform_publisher-6]
+integration-1  | [INFO] [robot_state_publisher-5]: sending signal 'SIGINT' to process[robot_state_publisher-5]
+integration-1  | [INFO] [gz-4]: sending signal 'SIGINT' to process[gz-4]
+integration-1  | [INFO] [parameter_bridge-2]: sending signal 'SIGINT' to process[parameter_bridge-2]
+integration-1  | [parameter_bridge-8] [INFO] [1795128389.415429438] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+integration-1  | [static_transform_publisher-7] [INFO] [1795128389.417376686] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+integration-1  | [static_transform_publisher-6] [INFO] [1795128389.418224657] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+integration-1  | [robot_state_publisher-5] [INFO] [1795128389.419449817] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+integration-1  | [parameter_bridge-2] [INFO] [1795128389.421216022] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+integration-1  | [parameter_bridge-2] corrupted double-linked list
+integration-1  | [INFO] [parameter_bridge-8]: process has finished cleanly [pid 60]
+integration-1  | [INFO] [gz-4]: process has finished cleanly [pid 56]
+integration-1  | [INFO] [static_transform_publisher-7]: process has finished cleanly [pid 59]
+integration-1  | [INFO] [static_transform_publisher-6]: process has finished cleanly [pid 58]
+integration-1  | [INFO] [robot_state_publisher-5]: process has finished cleanly [pid 57]
+integration-1  | [INFO] [occupancy_mapper-12]: process has finished cleanly [pid 64]
+integration-1  | [INFO] [pose_bridge-11]: process has finished cleanly [pid 63]
+integration-1  | [ERROR] [parameter_bridge-2]: process has died [pid 54, exit code -6, cmd '/opt/ros/jazzy/lib/ros_gz_bridge/parameter_bridge --ros-args -r __ns:=/ --params-file /tmp/launch_params_6lyrqynl'].
+integration-1  | [INFO] [camera_adapter-9]: process has finished cleanly [pid 61]
+integration-1  | [ERROR] [bash-10]: process[bash-10] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+integration-1  | [INFO] [bash-10]: sending signal 'SIGTERM' to process[bash-10]
+integration-1  | [ERROR] [bash-10]: process has died [pid 62, exit code -15, cmd 'bash -lc source /opt/ros/jazzy/setup.bash; source /opt/vslam/ros_ws/install/setup.bash; for i in $(seq 1 180); do test -s /work/assignments/assignment-3/data/sim-camera.yaml && break; sleep 1; done; mkdir -p /work/assignments/assignment-3/results/ros2/live; exec ros2 run stella_vslam_ros run_slam -v /opt/vslam/orb_vocab.fbow -c /work/assignments/assignment-3/data/sim-camera.yaml --viewer none --eval-log-dir /work/assignments/assignment-3/results/ros2/live --map-db-out /work/assignments/assignment-3/data/simulation-map.msg --ros-args -p use_sim_time:=true -p publish_tf:=false -p camera_frame:=assignment3_camera -r camera/color/image_raw:=/vslam/color/image_raw -r camera/depth/image_raw:=/vslam/depth/image_raw'].
+integration-1  | [INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-19-22-47-01-269906-705b40408e56-7
+integration-1  | [INFO] [launch]: Default logging verbosity is set to INFO
+integration-1  | [INFO] [xacro-1]: process started with pid [53]
+integration-1  | [INFO] [parameter_bridge-2]: process started with pid [54]
+integration-1  | [INFO] [create-3]: process started with pid [55]
+integration-1  | [INFO] [gz-4]: process started with pid [56]
+integration-1  | [INFO] [robot_state_publisher-5]: process started with pid [57]
+integration-1  | [INFO] [static_transform_publisher-6]: process started with pid [58]
+integration-1  | [INFO] [static_transform_publisher-7]: process started with pid [59]
+integration-1  | [INFO] [parameter_bridge-8]: process started with pid [60]
+integration-1  | [INFO] [camera_adapter-9]: process started with pid [61]
+integration-1  | [INFO] [bash-10]: process started with pid [62]
+integration-1  | [INFO] [pose_bridge-11]: process started with pid [63]
+integration-1  | [INFO] [occupancy_mapper-12]: process started with pid [64]
+integration-1  | [robot_state_publisher-5] [WARN] [1795128421.551872265] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [robot_state_publisher-5] [WARN] [1795128421.551906607] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-7] [WARN] [1795128421.563455029] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [static_transform_publisher-7] [WARN] [1795128421.563484620] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-6] [WARN] [1795128421.564161917] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [static_transform_publisher-6] [WARN] [1795128421.564178767] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [create-3] [WARN] [1795128421.576136736] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [create-3] [WARN] [1795128421.576171419] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-7] [INFO] [1795128421.584935523] [assignment3_optical_rotation]: Spinning until stopped - publishing transform
+integration-1  | [static_transform_publisher-7] translation: ('0.000000', '0.000000', '0.000000')
+integration-1  | [static_transform_publisher-7] rotation: ('-0.500000', '0.500000', '-0.500000', '0.500000')
+integration-1  | [static_transform_publisher-7] from 'assignment3_camera' to 'assignment3_camera_optical'
+integration-1  | [static_transform_publisher-6] [INFO] [1795128421.589111743] [assignment3_camera_mount]: Spinning until stopped - publishing transform
+integration-1  | [static_transform_publisher-6] translation: ('0.070000', '0.000000', '0.160000')
+integration-1  | [static_transform_publisher-6] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+integration-1  | [static_transform_publisher-6] from 'base_link' to 'assignment3_camera'
+integration-1  | [create-3] [INFO] [1795128421.590011181] [ros_gz_sim]: Requesting list of world names.
+integration-1  | [robot_state_publisher-5] [INFO] [1795128421.599922044] [robot_state_publisher]: Robot initialized
+integration-1  | [parameter_bridge-2] [WARN] [1795128421.606197226] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [parameter_bridge-2] [WARN] [1795128421.606246303] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [parameter_bridge-8] [WARN] [1795128421.620837590] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [parameter_bridge-8] [WARN] [1795128421.620866719] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [parameter_bridge-8] [INFO] [1795128421.635590300] [assignment3_camera_info]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/camera_info (gz.msgs.CameraInfo) -> /camera/realsense_d435i/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+integration-1  | [INFO] [xacro-1]: process has finished cleanly [pid 53]
+integration-1  | [camera_adapter-9] [WARN] [1795128421.821272061] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [camera_adapter-9] [WARN] [1795128421.821333106] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [occupancy_mapper-12] [WARN] [1795128421.960445881] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [occupancy_mapper-12] [WARN] [1795128421.960480654] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [pose_bridge-11] [WARN] [1795128421.961100285] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [pose_bridge-11] [WARN] [1795128421.961111662] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [create-3] [INFO] [1795128422.282983981] [ros_gz_sim]: Entity creation successful.
+integration-1  | [bash-10] [WARN] [1795128422.439570856] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [bash-10] [WARN] [1795128422.439616778] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [bash-10] [2026-11-19 22:47:02.442] [I] config file loaded: /work/assignments/assignment-3/data/sim-camera.yaml
+integration-1  | [bash-10] [2026-11-19 22:47:02.443] [I] 
+integration-1  | [bash-10] original version of OpenVSLAM,
+integration-1  | [bash-10] Copyright (C) 2019,
+integration-1  | [bash-10] National Institute of Advanced Industrial Science and Technology (AIST)
+integration-1  | [bash-10] All rights reserved.
+integration-1  | [bash-10] stella_vslam (the changes after forking from OpenVSLAM),
+integration-1  | [bash-10] Copyright (C) 2022, stella-cv, All rights reserved.
+integration-1  | [bash-10] 
+integration-1  | [bash-10] This is free software,
+integration-1  | [bash-10] and you are welcome to redistribute it under certain conditions.
+integration-1  | [bash-10] See the LICENSE file.
+integration-1  | [bash-10] 
+integration-1  | [bash-10] Camera:
+integration-1  | [bash-10]   color_order: RGB
+integration-1  | [bash-10]   cols: 640
+integration-1  | [bash-10]   cx: 320.0
+integration-1  | [bash-10]   cy: 240.0
+integration-1  | [bash-10]   depth_threshold: 40.0
+integration-1  | [bash-10]   focal_x_baseline: 27.719135641132205
+integration-1  | [bash-10]   fps: 15.0
+integration-1  | [bash-10]   fx: 554.3827128226441
+integration-1  | [bash-10]   fy: 554.3827128226441
+integration-1  | [bash-10]   k1: 0.0
+integration-1  | [bash-10]   k2: 0.0
+integration-1  | [bash-10]   k3: 0.0
+integration-1  | [bash-10]   model: perspective
+integration-1  | [bash-10]   name: Gazebo CameraInfo RGBD
+integration-1  | [bash-10]   p1: 0.0
+integration-1  | [bash-10]   p2: 0.0
+integration-1  | [bash-10]   rows: 480
+integration-1  | [bash-10]   setup: RGBD
+integration-1  | [bash-10] Feature:
+integration-1  | [bash-10]   ini_fast_threshold: 12
+integration-1  | [bash-10]   min_fast_threshold: 5
+integration-1  | [bash-10]   name: ORB
+integration-1  | [bash-10]   num_levels: 8
+integration-1  | [bash-10]   scale_factor: 1.2
+integration-1  | [bash-10] Mapping:
+integration-1  | [bash-10]   backend: g2o
+integration-1  | [bash-10]   baseline_dist_thr: 0.05
+integration-1  | [bash-10] Preprocessing:
+integration-1  | [bash-10]   depthmap_factor: 1.0
+integration-1  | [bash-10]   min_size: 200
+integration-1  | [bash-10] System:
+integration-1  | [bash-10]   map_format: msgpack
+integration-1  | [bash-10] Tracking:
+integration-1  | [bash-10]   backend: g2o
+integration-1  | [bash-10] 
+integration-1  | [bash-10] [2026-11-19 22:47:02.443] [I] loading ORB vocabulary: /opt/vslam/orb_vocab.fbow
+integration-1  | [bash-10] [2026-11-19 22:47:02.493] [I] load orb_params "ORB"
+integration-1  | [INFO] [create-3]: process has finished cleanly [pid 55]
+integration-1  | [bash-10] [2026-11-19 22:47:02.495] [I] startup SLAM system
+integration-1  | [bash-10] [2026-11-19 22:47:02.495] [I] start mapping module
+integration-1  | [bash-10] [2026-11-19 22:47:02.495] [I] start global optimization module
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.625708281] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.627507961] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/joint_states (gz.msgs.Model) -> joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.631356921] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/odom (gz.msgs.Odometry) -> odom (nav_msgs/msg/Odometry)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.633825687] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/tf (gz.msgs.Pose_V) -> tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.636773308] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/imu (gz.msgs.IMU) -> imu (sensor_msgs/msg/Imu)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.638558494] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/scan (gz.msgs.LaserScan) -> scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.639702428] [ros_gz_bridge]: Creating ROS->GZ Bridge: [cmd_vel (geometry_msgs/msg/TwistStamped) -> /cmd_vel (gz.msgs.Twist)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.641187074] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/image (gz.msgs.Image) -> /camera/color/image_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.643166403] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/depth_image (gz.msgs.Image) -> /camera/depth/image_rect_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.644718097] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/points (gz.msgs.PointCloudPacked) -> /camera/depth/color/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128422.646203013] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/image (gz.msgs.Image) -> /camera/image_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L51]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L138]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="camera_realsense_d435i"]/gz_frame_id:<data-string>:L369]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [camera_adapter-9] [INFO] [1795128425.017076014] [vslam_camera_adapter]: CameraInfo validated; wrote /work/assignments/assignment-3/data/sim-camera.yaml
+integration-1  | [INFO] [controller_server-13]: process started with pid [424]
+integration-1  | [INFO] [smoother_server-14]: process started with pid [425]
+integration-1  | [INFO] [planner_server-15]: process started with pid [426]
+integration-1  | [INFO] [route_server-16]: process started with pid [427]
+integration-1  | [INFO] [behavior_server-17]: process started with pid [428]
+integration-1  | [INFO] [bt_navigator-18]: process started with pid [429]
+integration-1  | [INFO] [waypoint_follower-19]: process started with pid [430]
+integration-1  | [INFO] [velocity_smoother-20]: process started with pid [431]
+integration-1  | [INFO] [collision_monitor-21]: process started with pid [432]
+integration-1  | [INFO] [opennav_docking-22]: process started with pid [433]
+integration-1  | [INFO] [lifecycle_manager-23]: process started with pid [434]
+integration-1  | [velocity_smoother-20] [WARN] [1795128433.801044919] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [velocity_smoother-20] [WARN] [1795128433.801084063] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [planner_server-15] [WARN] [1795128433.807238140] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [planner_server-15] [WARN] [1795128433.807288211] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [waypoint_follower-19] [WARN] [1795128433.808166067] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [waypoint_follower-19] [WARN] [1795128433.808202330] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [smoother_server-14] [WARN] [1795128433.808414751] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [smoother_server-14] [WARN] [1795128433.808430431] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [behavior_server-17] [WARN] [1795128433.809942851] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [behavior_server-17] [WARN] [1795128433.809961953] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [controller_server-13] [WARN] [1795128433.811083947] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [controller_server-13] [WARN] [1795128433.811105020] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [bt_navigator-18] [WARN] [1795128433.812820249] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [bt_navigator-18] [WARN] [1795128433.812858663] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [lifecycle_manager-23] [WARN] [1795128433.826625828] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [lifecycle_manager-23] [WARN] [1795128433.826683004] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [collision_monitor-21] [WARN] [1795128433.829019105] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [collision_monitor-21] [WARN] [1795128433.829069916] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [route_server-16] [WARN] [1795128433.842723088] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [route_server-16] [WARN] [1795128433.842758720] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [smoother_server-14] [INFO] [1795128433.849899335] [smoother_server]: 
+integration-1  | [smoother_server-14] 	smoother_server lifecycle node launched. 
+integration-1  | [smoother_server-14] 	Waiting on external lifecycle transitions to activate
+integration-1  | [smoother_server-14] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [collision_monitor-21] [INFO] [1795128433.850201248] [collision_monitor]: 
+integration-1  | [collision_monitor-21] 	collision_monitor lifecycle node launched. 
+integration-1  | [collision_monitor-21] 	Waiting on external lifecycle transitions to activate
+integration-1  | [collision_monitor-21] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [opennav_docking-22] [WARN] [1795128433.856766418] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [opennav_docking-22] [WARN] [1795128433.856818731] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [bt_navigator-18] [INFO] [1795128433.858313578] [bt_navigator]: 
+integration-1  | [bt_navigator-18] 	bt_navigator lifecycle node launched. 
+integration-1  | [bt_navigator-18] 	Waiting on external lifecycle transitions to activate
+integration-1  | [bt_navigator-18] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [planner_server-15] [INFO] [1795128433.858341137] [planner_server]: 
+integration-1  | [planner_server-15] 	planner_server lifecycle node launched. 
+integration-1  | [planner_server-15] 	Waiting on external lifecycle transitions to activate
+integration-1  | [planner_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [route_server-16] [INFO] [1795128433.873356056] [route_server]: 
+integration-1  | [route_server-16] 	route_server lifecycle node launched. 
+integration-1  | [route_server-16] 	Waiting on external lifecycle transitions to activate
+integration-1  | [route_server-16] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [velocity_smoother-20] [INFO] [1795128433.886354084] [velocity_smoother]: 
+integration-1  | [velocity_smoother-20] 	velocity_smoother lifecycle node launched. 
+integration-1  | [velocity_smoother-20] 	Waiting on external lifecycle transitions to activate
+integration-1  | [velocity_smoother-20] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [opennav_docking-22] [INFO] [1795128433.892246766] [docking_server]: 
+integration-1  | [opennav_docking-22] 	docking_server lifecycle node launched. 
+integration-1  | [opennav_docking-22] 	Waiting on external lifecycle transitions to activate
+integration-1  | [opennav_docking-22] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [opennav_docking-22] [INFO] [1795128433.892352912] [docking_server]: Creating docking_server
+integration-1  | [controller_server-13] [INFO] [1795128433.894501296] [controller_server]: 
+integration-1  | [controller_server-13] 	controller_server lifecycle node launched. 
+integration-1  | [controller_server-13] 	Waiting on external lifecycle transitions to activate
+integration-1  | [controller_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [waypoint_follower-19] [INFO] [1795128433.905614029] [waypoint_follower]: 
+integration-1  | [waypoint_follower-19] 	waypoint_follower lifecycle node launched. 
+integration-1  | [waypoint_follower-19] 	Waiting on external lifecycle transitions to activate
+integration-1  | [waypoint_follower-19] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128433.913750208] [lifecycle_manager_navigation]: Creating
+integration-1  | [waypoint_follower-19] [INFO] [1795128433.928528342] [waypoint_follower]: Creating
+integration-1  | [behavior_server-17] [INFO] [1795128433.929151127] [behavior_server]: 
+integration-1  | [behavior_server-17] 	behavior_server lifecycle node launched. 
+integration-1  | [behavior_server-17] 	Waiting on external lifecycle transitions to activate
+integration-1  | [behavior_server-17] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [smoother_server-14] [INFO] [1795128433.949526231] [smoother_server]: Creating smoother server
+integration-1  | [bt_navigator-18] [INFO] [1795128433.950918176] [bt_navigator]: Creating
+integration-1  | [planner_server-15] [INFO] [1795128433.952139836] [planner_server]: Creating
+integration-1  | [lifecycle_manager-23] [INFO] [1795128433.956104560] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+integration-1  | [controller_server-13] [INFO] [1795128433.957799083] [controller_server]: Creating controller server
+integration-1  | [controller_server-13] [INFO] [1795128433.990187876] [local_costmap.local_costmap]: 
+integration-1  | [controller_server-13] 	local_costmap lifecycle node launched. 
+integration-1  | [controller_server-13] 	Waiting on external lifecycle transitions to activate
+integration-1  | [controller_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [controller_server-13] [INFO] [1795128433.995061648] [local_costmap.local_costmap]: Creating Costmap
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.003631749] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.003715701] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+integration-1  | [planner_server-15] [INFO] [1795128434.011893662] [global_costmap.global_costmap]: 
+integration-1  | [planner_server-15] 	global_costmap lifecycle node launched. 
+integration-1  | [planner_server-15] 	Waiting on external lifecycle transitions to activate
+integration-1  | [planner_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [planner_server-15] [INFO] [1795128434.015467831] [global_costmap.global_costmap]: Creating Costmap
+integration-1  | [controller_server-13] [INFO] [1795128434.052964050] [controller_server]: Configuring controller interface
+integration-1  | [controller_server-13] [INFO] [1795128434.053753456] [controller_server]: getting progress checker plugins..
+integration-1  | [controller_server-13] [INFO] [1795128434.054495284] [controller_server]: getting goal checker plugins..
+integration-1  | [controller_server-13] [INFO] [1795128434.054945430] [controller_server]: Controller frequency set to 10.0000Hz
+integration-1  | [controller_server-13] [INFO] [1795128434.055029039] [local_costmap.local_costmap]: Configuring
+integration-1  | [controller_server-13] [INFO] [1795128434.066152715] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+integration-1  | [controller_server-13] [INFO] [1795128434.086179804] [local_costmap.local_costmap]: Subscribed to Topics: scan
+integration-1  | [controller_server-13] [INFO] [1795128434.108147836] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+integration-1  | [controller_server-13] [INFO] [1795128434.108205200] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+integration-1  | [controller_server-13] [INFO] [1795128434.109591669] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+integration-1  | [controller_server-13] [INFO] [1795128434.134629428] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+integration-1  | [controller_server-13] [INFO] [1795128434.136331022] [controller_server]: Controller Server has progress_checker  progress checkers available.
+integration-1  | [controller_server-13] [INFO] [1795128434.138445851] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+integration-1  | [controller_server-13] [INFO] [1795128434.139980327] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+integration-1  | [controller_server-13] [INFO] [1795128434.161929320] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+integration-1  | [controller_server-13] [INFO] [1795128434.165884284] [controller_server]: Setting transform_tolerance to 1.000000
+integration-1  | [controller_server-13] [INFO] [1795128434.206200068] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+integration-1  | [controller_server-13] [INFO] [1795128434.209235469] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128434.209900062] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+integration-1  | [controller_server-13] [INFO] [1795128434.213227605] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128434.213936574] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+integration-1  | [controller_server-13] [INFO] [1795128434.214943488] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128434.215487890] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+integration-1  | [controller_server-13] [INFO] [1795128434.217130669] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128434.217605919] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+integration-1  | [controller_server-13] [INFO] [1795128434.218985943] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128434.219443794] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+integration-1  | [controller_server-13] [INFO] [1795128434.220633616] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128434.221184781] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+integration-1  | [controller_server-13] [INFO] [1795128434.222237791] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128434.222289061] [controller_server]: Controller Server has FollowPath  controllers available.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.237128802] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+integration-1  | [smoother_server-14] [INFO] [1795128434.237593296] [smoother_server]: Configuring smoother server
+integration-1  | [smoother_server-14] [INFO] [1795128434.263551516] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+integration-1  | [smoother_server-14] [INFO] [1795128434.266431485] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.273631564] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+integration-1  | [planner_server-15] [INFO] [1795128434.273888474] [planner_server]: Configuring
+integration-1  | [planner_server-15] [INFO] [1795128434.273920003] [global_costmap.global_costmap]: Configuring
+integration-1  | [planner_server-15] [INFO] [1795128434.285662884] [global_costmap.global_costmap]: Using plugin "static_layer"
+integration-1  | [planner_server-15] [INFO] [1795128434.292271536] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+integration-1  | [planner_server-15] [INFO] [1795128434.293903649] [global_costmap.global_costmap]: Subscribing to updates
+integration-1  | [planner_server-15] [INFO] [1795128434.296476597] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+integration-1  | [planner_server-15] [INFO] [1795128434.296538103] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+integration-1  | [planner_server-15] [INFO] [1795128434.298934737] [global_costmap.global_costmap]: Subscribed to Topics: scan
+integration-1  | [planner_server-15] [INFO] [1795128434.306355457] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+integration-1  | [planner_server-15] [INFO] [1795128434.306418274] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+integration-1  | [planner_server-15] [INFO] [1795128434.308407068] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+integration-1  | [planner_server-15] [INFO] [1795128434.336376515] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+integration-1  | [planner_server-15] [INFO] [1795128434.336476304] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+integration-1  | [planner_server-15] [INFO] [1795128434.338646075] [planner_server]: Planner Server has GridBased  planners available.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.351845563] [lifecycle_manager_navigation]: [34m[1mConfiguring route_server[0m[0m
+integration-1  | [route_server-16] [INFO] [1795128434.352238757] [route_server]: Configuring
+integration-1  | [route_server-16] [INFO] [1795128434.397863843] [route_server]: Created GraphFileLoader GeoJsonGraphFileLoader of type nav2_route::GeoJsonGraphFileLoader
+integration-1  | [route_server-16] [INFO] [1795128434.397939748] [route_server]: Configuring geojson graph file loader
+integration-1  | [route_server-16] [INFO] [1795128434.397958259] [route_server]: No graph file provided to load yet.
+integration-1  | [route_server-16] [INFO] [1795128434.407589934] [route_server]: Created edge cost function plugin DistanceScorer of type nav2_route::DistanceScorer
+integration-1  | [route_server-16] [INFO] [1795128434.407648518] [route_server]: Configuring distance scorer.
+integration-1  | [route_server-16] [INFO] [1795128434.408286085] [route_server]: Created edge cost function plugin DynamicEdgesScorer of type nav2_route::DynamicEdgesScorer
+integration-1  | [route_server-16] [INFO] [1795128434.408313901] [route_server]: Configuring adjust edges scorer.
+integration-1  | [route_server-16] [INFO] [1795128434.419304726] [route_server]: Created route operation AdjustSpeedLimit of type nav2_route::AdjustSpeedLimit
+integration-1  | [route_server-16] [INFO] [1795128434.419397641] [route_server]: Configuring Adjust speed limit operation.
+integration-1  | [route_server-16] [INFO] [1795128434.421858869] [route_server]: Created route operation ReroutingService of type nav2_route::ReroutingService
+integration-1  | [route_server-16] [INFO] [1795128434.421977700] [route_server]: Configuring Rerouting service operation.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.431672415] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+integration-1  | [behavior_server-17] [INFO] [1795128434.431988072] [behavior_server]: Configuring
+integration-1  | [behavior_server-17] [INFO] [1795128434.439275793] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+integration-1  | [behavior_server-17] [INFO] [1795128434.444373953] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+integration-1  | [behavior_server-17] [INFO] [1795128434.448463285] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+integration-1  | [behavior_server-17] [INFO] [1795128434.452192775] [behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors::AssistedTeleop
+integration-1  | [behavior_server-17] [INFO] [1795128434.462345144] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+integration-1  | [behavior_server-17] [INFO] [1795128434.475386025] [behavior_server]: Configuring spin
+integration-1  | [behavior_server-17] [INFO] [1795128434.485375471] [behavior_server]: Configuring backup
+integration-1  | [behavior_server-17] [INFO] [1795128434.494701655] [behavior_server]: Configuring drive_on_heading
+integration-1  | [behavior_server-17] [INFO] [1795128434.502299197] [behavior_server]: Configuring assisted_teleop
+integration-1  | [behavior_server-17] [INFO] [1795128434.510492211] [behavior_server]: Configuring wait
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.516677064] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+integration-1  | [velocity_smoother-20] [INFO] [1795128434.516970257] [velocity_smoother]: Configuring velocity smoother
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.526643971] [lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+integration-1  | [collision_monitor-21] [INFO] [1795128434.529527858] [collision_monitor]: Configuring
+integration-1  | [collision_monitor-21] [INFO] [1795128434.546477658] [collision_monitor]: [scan]: Creating Scan
+integration-1  | [collision_monitor-21] [INFO] [1795128434.553763161] [collision_monitor]: [FootprintApproach]: Creating Polygon
+integration-1  | [collision_monitor-21] [INFO] [1795128434.556591400] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+integration-1  | [collision_monitor-21] [INFO] [1795128434.563305313] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on /local_costmap/published_footprint topic
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.576219641] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+integration-1  | [bt_navigator-18] [INFO] [1795128434.576513978] [bt_navigator]: Configuring
+integration-1  | [bt_navigator-18] [INFO] [1795128434.586960119] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+integration-1  | [bt_navigator-18] [INFO] [1795128434.884159885] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.933882769] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+integration-1  | [waypoint_follower-19] [INFO] [1795128434.934201958] [waypoint_follower]: Configuring
+integration-1  | [waypoint_follower-19] [INFO] [1795128434.963077616] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+integration-1  | [lifecycle_manager-23] [INFO] [1795128434.964443674] [lifecycle_manager_navigation]: [34m[1mConfiguring docking_server[0m[0m
+integration-1  | [opennav_docking-22] [INFO] [1795128434.964947822] [docking_server]: Configuring docking_server
+integration-1  | [opennav_docking-22] [INFO] [1795128434.965023076] [docking_server]: Controller frequency set to 50.0000Hz
+integration-1  | [opennav_docking-22] [INFO] [1795128435.015365408] [docking_server]: Created charging dock plugin simple_charging_dock of type opennav_docking::SimpleChargingDock
+integration-1  | [opennav_docking-22] [WARN] [1795128435.023045359] [docking_server]: Dock database filepath nor dock parameters set. Docking actions can only be executed specifying the dock pose via the action request. Or update the dock database via the reload_database service.
+integration-1  | [opennav_docking-22] [INFO] [1795128435.023109525] [docking_server]: Docking Server has 1 dock types and 0 dock instances available.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128435.025105051] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+integration-1  | [controller_server-13] [INFO] [1795128435.025335111] [controller_server]: Activating
+integration-1  | [controller_server-13] [INFO] [1795128435.025366669] [local_costmap.local_costmap]: Activating
+integration-1  | [controller_server-13] [INFO] [1795128435.025374393] [local_costmap.local_costmap]: Checking transform
+integration-1  | [controller_server-13] [INFO] [1795128435.025581039] [local_costmap.local_costmap]: start
+integration-1  | [controller_server-13] [INFO] [1795128435.277074987] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128435.383756298] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128435.383830610] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+integration-1  | [smoother_server-14] [INFO] [1795128435.384559490] [smoother_server]: Activating
+integration-1  | [smoother_server-14] [INFO] [1795128435.384596741] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128435.489631567] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128435.489800211] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+integration-1  | [planner_server-15] [INFO] [1795128435.490634339] [planner_server]: Activating
+integration-1  | [planner_server-15] [INFO] [1795128435.490687249] [global_costmap.global_costmap]: Activating
+integration-1  | [planner_server-15] [INFO] [1795128435.490700696] [global_costmap.global_costmap]: Checking transform
+integration-1  | [planner_server-15] [INFO] [1795128435.490765753] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128435.990861264] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128436.490862633] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128436.990843211] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128437.490849452] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128437.990837992] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128438.490842061] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128438.990883257] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128439.491645079] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128439.990868768] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128440.490830957] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128440.990831712] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128441.490877983] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128441.990821846] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128442.490835473] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128442.990863309] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128443.491481817] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128443.990901138] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128444.490855336] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128444.990860324] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128445.490830088] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128445.990856563] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128446.490851738] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128446.990861337] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128447.490879288] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128447.990898042] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128448.490849888] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128448.990874484] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128449.490881334] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128449.990880643] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128450.490892886] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128450.990864671] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128451.491599586] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128451.990860983] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128452.490855905] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128452.991946532] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128453.490873278] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128453.990936985] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128454.490880523] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128454.990874605] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128455.490904439] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128455.990854902] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128456.490885527] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128456.990877474] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128457.490820570] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128457.990863215] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128458.490907637] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128458.990935518] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128459.490844220] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128459.990904600] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128460.490857250] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128460.990901826] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128461.490871179] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128461.990880903] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128462.490852003] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128462.990849634] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128463.491306848] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128463.990882731] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128464.490825782] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128464.991126100] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128465.490829403] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128465.990885524] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128466.490859280] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128466.990873264] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128467.490845775] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128467.990857856] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128468.491231670] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128468.990841566] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128469.490839642] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128469.990883684] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128470.490863477] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128470.990858070] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128471.490900625] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128471.990911316] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128472.490906402] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128472.990843527] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128473.490839038] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128473.990857499] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128474.490867937] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128474.990871979] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128475.490847765] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128475.990837976] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128476.490911329] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128476.990853949] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128477.490824270] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128477.990852461] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128478.490859727] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128478.990905373] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128479.490874710] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128479.990891554] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128480.490857567] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128480.990853274] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128481.490870572] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128481.990899248] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128482.490889475] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128482.990874510] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128483.490850635] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128483.990868757] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128484.490871066] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128484.990856742] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128485.490856268] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128485.990887241] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128486.490888807] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128486.990856932] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128487.490810835] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128487.990875685] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128488.490881705] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128488.990891403] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128489.490858544] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128489.990917550] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128490.490847207] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128490.990822579] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128491.490861869] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128491.990865329] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128492.490849121] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128492.990838404] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128493.490842395] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128493.990850366] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128494.490865297] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128494.990874577] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128495.490829677] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128495.990819267] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128496.490860683] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128496.990836239] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128497.490860504] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [INFO] [1795128497.990816888] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+integration-1  | [planner_server-15] [ERROR] [1795128497.990900625] [global_costmap.global_costmap]: Failed to activate global_costmap because transform from base_link to map did not become available before timeout
+integration-1  | [lifecycle_manager-23] [ERROR] [1795128497.991551981] [lifecycle_manager_navigation]: Failed to change state for node: planner_server
+integration-1  | [lifecycle_manager-23] [ERROR] [1795128497.991625355] [lifecycle_manager_navigation]: Failed to bring up all requested nodes. Aborting bringup.
+integration-1  | [INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-19-22-49-13-177661-705b40408e56-7
+integration-1  | [INFO] [launch]: Default logging verbosity is set to INFO
+integration-1  | [INFO] [xacro-1]: process started with pid [53]
+integration-1  | [INFO] [parameter_bridge-2]: process started with pid [54]
+integration-1  | [INFO] [create-3]: process started with pid [55]
+integration-1  | [INFO] [gz-4]: process started with pid [56]
+integration-1  | [INFO] [robot_state_publisher-5]: process started with pid [57]
+integration-1  | [INFO] [static_transform_publisher-6]: process started with pid [58]
+integration-1  | [INFO] [static_transform_publisher-7]: process started with pid [59]
+integration-1  | [INFO] [parameter_bridge-8]: process started with pid [60]
+integration-1  | [INFO] [camera_adapter-9]: process started with pid [61]
+integration-1  | [INFO] [bash-10]: process started with pid [62]
+integration-1  | [INFO] [pose_bridge-11]: process started with pid [63]
+integration-1  | [INFO] [occupancy_mapper-12]: process started with pid [64]
+integration-1  | [robot_state_publisher-5] [WARN] [1795128553.383257687] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [robot_state_publisher-5] [WARN] [1795128553.383333131] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-7] [WARN] [1795128553.385018363] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [static_transform_publisher-7] [WARN] [1795128553.385068151] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-6] [WARN] [1795128553.388836321] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [static_transform_publisher-6] [WARN] [1795128553.388896033] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [static_transform_publisher-7] [INFO] [1795128553.401268505] [assignment3_optical_rotation]: Spinning until stopped - publishing transform
+integration-1  | [static_transform_publisher-7] translation: ('0.000000', '0.000000', '0.000000')
+integration-1  | [static_transform_publisher-7] rotation: ('-0.500000', '0.500000', '-0.500000', '0.500000')
+integration-1  | [static_transform_publisher-7] from 'assignment3_camera' to 'assignment3_camera_optical'
+integration-1  | [static_transform_publisher-6] [INFO] [1795128553.401551855] [assignment3_camera_mount]: Spinning until stopped - publishing transform
+integration-1  | [static_transform_publisher-6] translation: ('0.070000', '0.000000', '0.160000')
+integration-1  | [static_transform_publisher-6] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+integration-1  | [static_transform_publisher-6] from 'base_link' to 'assignment3_camera'
+integration-1  | [create-3] [WARN] [1795128553.403653449] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [create-3] [WARN] [1795128553.403682279] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [robot_state_publisher-5] [INFO] [1795128553.406328342] [robot_state_publisher]: Robot initialized
+integration-1  | [create-3] [INFO] [1795128553.418532641] [ros_gz_sim]: Requesting list of world names.
+integration-1  | [parameter_bridge-8] [WARN] [1795128553.423383485] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [parameter_bridge-8] [WARN] [1795128553.423440483] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [parameter_bridge-2] [WARN] [1795128553.429109090] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [parameter_bridge-2] [WARN] [1795128553.429138440] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [parameter_bridge-8] [INFO] [1795128553.439346050] [assignment3_camera_info]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/camera_info (gz.msgs.CameraInfo) -> /camera/realsense_d435i/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+integration-1  | [INFO] [xacro-1]: process has finished cleanly [pid 53]
+integration-1  | [camera_adapter-9] [WARN] [1795128553.587013884] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [camera_adapter-9] [WARN] [1795128553.587054926] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [occupancy_mapper-12] [WARN] [1795128553.678609279] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [occupancy_mapper-12] [WARN] [1795128553.678671398] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [pose_bridge-11] [WARN] [1795128553.679270671] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [pose_bridge-11] [WARN] [1795128553.679285851] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [create-3] [INFO] [1795128553.995379637] [ros_gz_sim]: Entity creation successful.
+integration-1  | [bash-10] [WARN] [1795128554.092020552] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [bash-10] [WARN] [1795128554.092073758] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [bash-10] [2026-11-19 22:49:14.095] [I] config file loaded: /work/assignments/assignment-3/data/sim-camera.yaml
+integration-1  | [bash-10] [2026-11-19 22:49:14.096] [I] 
+integration-1  | [bash-10] original version of OpenVSLAM,
+integration-1  | [bash-10] Copyright (C) 2019,
+integration-1  | [bash-10] National Institute of Advanced Industrial Science and Technology (AIST)
+integration-1  | [bash-10] All rights reserved.
+integration-1  | [bash-10] stella_vslam (the changes after forking from OpenVSLAM),
+integration-1  | [bash-10] Copyright (C) 2022, stella-cv, All rights reserved.
+integration-1  | [bash-10] 
+integration-1  | [bash-10] This is free software,
+integration-1  | [bash-10] and you are welcome to redistribute it under certain conditions.
+integration-1  | [bash-10] See the LICENSE file.
+integration-1  | [bash-10] 
+integration-1  | [bash-10] Camera:
+integration-1  | [bash-10]   color_order: RGB
+integration-1  | [bash-10]   cols: 640
+integration-1  | [bash-10]   cx: 320.0
+integration-1  | [bash-10]   cy: 240.0
+integration-1  | [bash-10]   depth_threshold: 40.0
+integration-1  | [bash-10]   focal_x_baseline: 27.719135641132205
+integration-1  | [bash-10]   fps: 15.0
+integration-1  | [bash-10]   fx: 554.3827128226441
+integration-1  | [bash-10]   fy: 554.3827128226441
+integration-1  | [bash-10]   k1: 0.0
+integration-1  | [bash-10]   k2: 0.0
+integration-1  | [bash-10]   k3: 0.0
+integration-1  | [bash-10]   model: perspective
+integration-1  | [bash-10]   name: Gazebo CameraInfo RGBD
+integration-1  | [bash-10]   p1: 0.0
+integration-1  | [bash-10]   p2: 0.0
+integration-1  | [bash-10]   rows: 480
+integration-1  | [bash-10]   setup: RGBD
+integration-1  | [bash-10] Feature:
+integration-1  | [bash-10]   ini_fast_threshold: 12
+integration-1  | [bash-10]   min_fast_threshold: 5
+integration-1  | [bash-10]   name: ORB
+integration-1  | [bash-10]   num_levels: 8
+integration-1  | [bash-10]   scale_factor: 1.2
+integration-1  | [bash-10] Mapping:
+integration-1  | [bash-10]   backend: g2o
+integration-1  | [bash-10]   baseline_dist_thr: 0.05
+integration-1  | [bash-10] Preprocessing:
+integration-1  | [bash-10]   depthmap_factor: 1.0
+integration-1  | [bash-10]   min_size: 200
+integration-1  | [bash-10] System:
+integration-1  | [bash-10]   map_format: msgpack
+integration-1  | [bash-10] Tracking:
+integration-1  | [bash-10]   backend: g2o
+integration-1  | [bash-10] 
+integration-1  | [bash-10] [2026-11-19 22:49:14.096] [I] loading ORB vocabulary: /opt/vslam/orb_vocab.fbow
+integration-1  | [bash-10] [2026-11-19 22:49:14.126] [I] load orb_params "ORB"
+integration-1  | [bash-10] [2026-11-19 22:49:14.128] [I] startup SLAM system
+integration-1  | [bash-10] [2026-11-19 22:49:14.128] [I] start mapping module
+integration-1  | [bash-10] [2026-11-19 22:49:14.128] [I] start global optimization module
+integration-1  | [INFO] [create-3]: process has finished cleanly [pid 55]
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.444374539] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.446053728] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/joint_states (gz.msgs.Model) -> joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.449063542] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/odom (gz.msgs.Odometry) -> odom (nav_msgs/msg/Odometry)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.451671306] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/tf (gz.msgs.Pose_V) -> tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.454006139] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/imu (gz.msgs.IMU) -> imu (sensor_msgs/msg/Imu)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.455641660] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/scan (gz.msgs.LaserScan) -> scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.457074666] [ros_gz_bridge]: Creating ROS->GZ Bridge: [cmd_vel (geometry_msgs/msg/TwistStamped) -> /cmd_vel (gz.msgs.Twist)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.458743030] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/image (gz.msgs.Image) -> /camera/color/image_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.460324477] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/depth_image (gz.msgs.Image) -> /camera/depth/image_rect_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.461683057] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/points (gz.msgs.PointCloudPacked) -> /camera/depth/color/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+integration-1  | [parameter_bridge-2] [INFO] [1795128554.463052801] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera/realsense_d435i/image (gz.msgs.Image) -> /camera/image_raw (sensor_msgs/msg/Image)] (Lazy 0)
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L51]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L138]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [gz-4] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="camera_realsense_d435i"]/gz_frame_id:<data-string>:L369]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+integration-1  | [camera_adapter-9] [INFO] [1795128556.596521442] [vslam_camera_adapter]: CameraInfo validated; wrote /work/assignments/assignment-3/data/sim-camera.yaml
+integration-1  | [bash-10] [2026-11-19 22:49:18.295] [I] new map created with 457 points: frame 0
+integration-1  | [bash-10] [2026-11-19 22:49:18.359] [W] projection candidate not found
+integration-1  | [bash-10] [2026-11-19 22:49:18.359] [I] local map tracking failed (curr_frm_=1)
+integration-1  | [bash-10] [2026-11-19 22:49:18.359] [I] tracking lost: frame 1
+integration-1  | [bash-10] [2026-11-19 22:49:18.359] [I] tracking lost within 5 sec after initialization
+integration-1  | [bash-10] [2026-11-19 22:49:18.359] [I] resetting system
+integration-1  | [bash-10] [2026-11-19 22:49:18.361] [I] reset mapping module
+integration-1  | [bash-10] [2026-11-19 22:49:18.364] [I] reset global optimization module
+integration-1  | [bash-10] [2026-11-19 22:49:18.364] [I] clear BoW database
+integration-1  | [bash-10] [2026-11-19 22:49:18.364] [I] clear map database
+integration-1  | [bash-10] [2026-11-19 22:49:18.370] [I] new map created with 465 points: frame 2
+integration-1  | [camera_adapter-9] [INFO] [1795128561.966658040] [vslam_camera_adapter]: RGBD pairs=55, calibration=True, queues=[0, 0]
+integration-1  | [INFO] [controller_server-13]: process started with pid [355]
+integration-1  | [INFO] [smoother_server-14]: process started with pid [356]
+integration-1  | [INFO] [planner_server-15]: process started with pid [357]
+integration-1  | [INFO] [route_server-16]: process started with pid [358]
+integration-1  | [INFO] [behavior_server-17]: process started with pid [359]
+integration-1  | [INFO] [bt_navigator-18]: process started with pid [360]
+integration-1  | [INFO] [waypoint_follower-19]: process started with pid [361]
+integration-1  | [INFO] [velocity_smoother-20]: process started with pid [362]
+integration-1  | [INFO] [collision_monitor-21]: process started with pid [363]
+integration-1  | [INFO] [opennav_docking-22]: process started with pid [364]
+integration-1  | [INFO] [lifecycle_manager-23]: process started with pid [365]
+integration-1  | [velocity_smoother-20] [WARN] [1795128565.549065748] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [velocity_smoother-20] [WARN] [1795128565.549096096] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [lifecycle_manager-23] [WARN] [1795128565.550234940] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [lifecycle_manager-23] [WARN] [1795128565.550261383] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [behavior_server-17] [WARN] [1795128565.552690051] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [behavior_server-17] [WARN] [1795128565.552733495] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [planner_server-15] [WARN] [1795128565.555669196] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [planner_server-15] [WARN] [1795128565.555694157] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [opennav_docking-22] [WARN] [1795128565.557917166] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [opennav_docking-22] [WARN] [1795128565.557937942] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [controller_server-13] [WARN] [1795128565.560120640] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [controller_server-13] [WARN] [1795128565.560139684] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [collision_monitor-21] [WARN] [1795128565.561593071] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [collision_monitor-21] [WARN] [1795128565.561611554] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128565.565554796] [lifecycle_manager_navigation]: Creating
+integration-1  | [waypoint_follower-19] [WARN] [1795128565.567013198] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [waypoint_follower-19] [WARN] [1795128565.567034184] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [velocity_smoother-20] [INFO] [1795128565.568562874] [velocity_smoother]: 
+integration-1  | [velocity_smoother-20] 	velocity_smoother lifecycle node launched. 
+integration-1  | [velocity_smoother-20] 	Waiting on external lifecycle transitions to activate
+integration-1  | [velocity_smoother-20] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [smoother_server-14] [WARN] [1795128565.570987659] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [smoother_server-14] [WARN] [1795128565.571013281] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [route_server-16] [WARN] [1795128565.571216445] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [route_server-16] [WARN] [1795128565.571232195] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [behavior_server-17] [INFO] [1795128565.577022204] [behavior_server]: 
+integration-1  | [behavior_server-17] 	behavior_server lifecycle node launched. 
+integration-1  | [behavior_server-17] 	Waiting on external lifecycle transitions to activate
+integration-1  | [behavior_server-17] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [opennav_docking-22] [INFO] [1795128565.577285945] [docking_server]: 
+integration-1  | [opennav_docking-22] 	docking_server lifecycle node launched. 
+integration-1  | [opennav_docking-22] 	Waiting on external lifecycle transitions to activate
+integration-1  | [opennav_docking-22] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [opennav_docking-22] [INFO] [1795128565.577348663] [docking_server]: Creating docking_server
+integration-1  | [bt_navigator-18] [WARN] [1795128565.579658020] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+integration-1  | [bt_navigator-18] [WARN] [1795128565.579679577] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+integration-1  | [controller_server-13] [INFO] [1795128565.582474692] [controller_server]: 
+integration-1  | [controller_server-13] 	controller_server lifecycle node launched. 
+integration-1  | [controller_server-13] 	Waiting on external lifecycle transitions to activate
+integration-1  | [controller_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [planner_server-15] [INFO] [1795128565.582893636] [planner_server]: 
+integration-1  | [planner_server-15] 	planner_server lifecycle node launched. 
+integration-1  | [planner_server-15] 	Waiting on external lifecycle transitions to activate
+integration-1  | [planner_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128565.585027313] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+integration-1  | [planner_server-15] [INFO] [1795128565.585379795] [planner_server]: Creating
+integration-1  | [waypoint_follower-19] [INFO] [1795128565.587664781] [waypoint_follower]: 
+integration-1  | [waypoint_follower-19] 	waypoint_follower lifecycle node launched. 
+integration-1  | [waypoint_follower-19] 	Waiting on external lifecycle transitions to activate
+integration-1  | [waypoint_follower-19] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [waypoint_follower-19] [INFO] [1795128565.588530744] [waypoint_follower]: Creating
+integration-1  | [controller_server-13] [INFO] [1795128565.592202696] [controller_server]: Creating controller server
+integration-1  | [route_server-16] [INFO] [1795128565.593267197] [route_server]: 
+integration-1  | [route_server-16] 	route_server lifecycle node launched. 
+integration-1  | [route_server-16] 	Waiting on external lifecycle transitions to activate
+integration-1  | [route_server-16] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [bt_navigator-18] [INFO] [1795128565.595484850] [bt_navigator]: 
+integration-1  | [bt_navigator-18] 	bt_navigator lifecycle node launched. 
+integration-1  | [bt_navigator-18] 	Waiting on external lifecycle transitions to activate
+integration-1  | [bt_navigator-18] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [smoother_server-14] [INFO] [1795128565.598077641] [smoother_server]: 
+integration-1  | [smoother_server-14] 	smoother_server lifecycle node launched. 
+integration-1  | [smoother_server-14] 	Waiting on external lifecycle transitions to activate
+integration-1  | [smoother_server-14] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [bt_navigator-18] [INFO] [1795128565.598505666] [bt_navigator]: Creating
+integration-1  | [smoother_server-14] [INFO] [1795128565.601133331] [smoother_server]: Creating smoother server
+integration-1  | [collision_monitor-21] [INFO] [1795128565.604855004] [collision_monitor]: 
+integration-1  | [collision_monitor-21] 	collision_monitor lifecycle node launched. 
+integration-1  | [collision_monitor-21] 	Waiting on external lifecycle transitions to activate
+integration-1  | [collision_monitor-21] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [planner_server-15] [INFO] [1795128565.623283346] [global_costmap.global_costmap]: 
+integration-1  | [planner_server-15] 	global_costmap lifecycle node launched. 
+integration-1  | [planner_server-15] 	Waiting on external lifecycle transitions to activate
+integration-1  | [planner_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [planner_server-15] [INFO] [1795128565.624257484] [global_costmap.global_costmap]: Creating Costmap
+integration-1  | [controller_server-13] [INFO] [1795128565.632560976] [local_costmap.local_costmap]: 
+integration-1  | [controller_server-13] 	local_costmap lifecycle node launched. 
+integration-1  | [controller_server-13] 	Waiting on external lifecycle transitions to activate
+integration-1  | [controller_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+integration-1  | [controller_server-13] [INFO] [1795128565.634313487] [local_costmap.local_costmap]: Creating Costmap
+integration-1  | [lifecycle_manager-23] [INFO] [1795128565.773548349] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+integration-1  | [lifecycle_manager-23] [INFO] [1795128565.773636299] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+integration-1  | [controller_server-13] [INFO] [1795128565.774052758] [controller_server]: Configuring controller interface
+integration-1  | [controller_server-13] [INFO] [1795128565.774086510] [controller_server]: getting progress checker plugins..
+integration-1  | [controller_server-13] [INFO] [1795128565.774806160] [controller_server]: getting goal checker plugins..
+integration-1  | [controller_server-13] [INFO] [1795128565.775291667] [controller_server]: Controller frequency set to 10.0000Hz
+integration-1  | [controller_server-13] [INFO] [1795128565.775346275] [local_costmap.local_costmap]: Configuring
+integration-1  | [controller_server-13] [INFO] [1795128565.784540382] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+integration-1  | [controller_server-13] [INFO] [1795128565.791027233] [local_costmap.local_costmap]: Subscribed to Topics: scan
+integration-1  | [controller_server-13] [INFO] [1795128565.809926634] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+integration-1  | [controller_server-13] [INFO] [1795128565.809988171] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+integration-1  | [controller_server-13] [INFO] [1795128565.811368637] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+integration-1  | [controller_server-13] [INFO] [1795128565.829342729] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+integration-1  | [controller_server-13] [INFO] [1795128565.830749378] [controller_server]: Controller Server has progress_checker  progress checkers available.
+integration-1  | [controller_server-13] [INFO] [1795128565.832279571] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+integration-1  | [controller_server-13] [INFO] [1795128565.835037319] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+integration-1  | [controller_server-13] [INFO] [1795128565.839618479] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+integration-1  | [controller_server-13] [INFO] [1795128565.844805714] [controller_server]: Setting transform_tolerance to 1.000000
+integration-1  | [controller_server-13] [INFO] [1795128565.872083410] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+integration-1  | [controller_server-13] [INFO] [1795128565.874922920] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128565.875289278] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+integration-1  | [controller_server-13] [INFO] [1795128565.877509424] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128565.878182435] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+integration-1  | [controller_server-13] [INFO] [1795128565.879157344] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128565.879722851] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+integration-1  | [controller_server-13] [INFO] [1795128565.880920528] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128565.881180203] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+integration-1  | [controller_server-13] [INFO] [1795128565.882103217] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128565.882635083] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+integration-1  | [controller_server-13] [INFO] [1795128565.883778183] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128565.884274924] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+integration-1  | [controller_server-13] [INFO] [1795128565.885143851] [controller_server]: Critic plugin initialized
+integration-1  | [controller_server-13] [INFO] [1795128565.885182639] [controller_server]: Controller Server has FollowPath  controllers available.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128565.895068149] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+integration-1  | [smoother_server-14] [INFO] [1795128565.895334482] [smoother_server]: Configuring smoother server
+integration-1  | [smoother_server-14] [INFO] [1795128565.911187273] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+integration-1  | [smoother_server-14] [INFO] [1795128565.913687810] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128565.922457773] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+integration-1  | [planner_server-15] [INFO] [1795128565.922781980] [planner_server]: Configuring
+integration-1  | [planner_server-15] [INFO] [1795128565.922824103] [global_costmap.global_costmap]: Configuring
+integration-1  | [planner_server-15] [INFO] [1795128565.933173604] [global_costmap.global_costmap]: Using plugin "static_layer"
+integration-1  | [planner_server-15] [INFO] [1795128565.938687578] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+integration-1  | [planner_server-15] [INFO] [1795128565.940023528] [global_costmap.global_costmap]: Subscribing to updates
+integration-1  | [planner_server-15] [INFO] [1795128565.942270068] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+integration-1  | [planner_server-15] [INFO] [1795128565.942367859] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+integration-1  | [planner_server-15] [INFO] [1795128565.945169702] [global_costmap.global_costmap]: Subscribed to Topics: scan
+integration-1  | [planner_server-15] [INFO] [1795128565.951554345] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+integration-1  | [planner_server-15] [INFO] [1795128565.951617414] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+integration-1  | [planner_server-15] [INFO] [1795128565.953538235] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+integration-1  | [planner_server-15] [INFO] [1795128565.979938106] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 800 X 800 at 0.050000 m/pix
+integration-1  | [planner_server-15] [INFO] [1795128565.980036374] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+integration-1  | [planner_server-15] [INFO] [1795128565.980066822] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+integration-1  | [planner_server-15] [INFO] [1795128565.984442288] [planner_server]: Planner Server has GridBased  planners available.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.001511639] [lifecycle_manager_navigation]: [34m[1mConfiguring route_server[0m[0m
+integration-1  | [route_server-16] [INFO] [1795128566.002632801] [route_server]: Configuring
+integration-1  | [route_server-16] [INFO] [1795128566.038295936] [route_server]: Created GraphFileLoader GeoJsonGraphFileLoader of type nav2_route::GeoJsonGraphFileLoader
+integration-1  | [route_server-16] [INFO] [1795128566.038369368] [route_server]: Configuring geojson graph file loader
+integration-1  | [route_server-16] [INFO] [1795128566.038384997] [route_server]: No graph file provided to load yet.
+integration-1  | [route_server-16] [INFO] [1795128566.046190342] [route_server]: Created edge cost function plugin DistanceScorer of type nav2_route::DistanceScorer
+integration-1  | [route_server-16] [INFO] [1795128566.046243007] [route_server]: Configuring distance scorer.
+integration-1  | [route_server-16] [INFO] [1795128566.046730934] [route_server]: Created edge cost function plugin DynamicEdgesScorer of type nav2_route::DynamicEdgesScorer
+integration-1  | [route_server-16] [INFO] [1795128566.046747445] [route_server]: Configuring adjust edges scorer.
+integration-1  | [route_server-16] [INFO] [1795128566.054511725] [route_server]: Created route operation AdjustSpeedLimit of type nav2_route::AdjustSpeedLimit
+integration-1  | [route_server-16] [INFO] [1795128566.054601586] [route_server]: Configuring Adjust speed limit operation.
+integration-1  | [route_server-16] [INFO] [1795128566.058473275] [route_server]: Created route operation ReroutingService of type nav2_route::ReroutingService
+integration-1  | [route_server-16] [INFO] [1795128566.058551592] [route_server]: Configuring Rerouting service operation.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.066706010] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+integration-1  | [behavior_server-17] [INFO] [1795128566.067180667] [behavior_server]: Configuring
+integration-1  | [behavior_server-17] [INFO] [1795128566.074044850] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+integration-1  | [behavior_server-17] [INFO] [1795128566.075613943] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+integration-1  | [behavior_server-17] [INFO] [1795128566.077281057] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+integration-1  | [behavior_server-17] [INFO] [1795128566.079731728] [behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors::AssistedTeleop
+integration-1  | [behavior_server-17] [INFO] [1795128566.084386619] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+integration-1  | [behavior_server-17] [INFO] [1795128566.091887885] [behavior_server]: Configuring spin
+integration-1  | [behavior_server-17] [INFO] [1795128566.104655461] [behavior_server]: Configuring backup
+integration-1  | [behavior_server-17] [INFO] [1795128566.116909060] [behavior_server]: Configuring drive_on_heading
+integration-1  | [behavior_server-17] [INFO] [1795128566.120714812] [behavior_server]: Configuring assisted_teleop
+integration-1  | [behavior_server-17] [INFO] [1795128566.126644013] [behavior_server]: Configuring wait
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.132855532] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+integration-1  | [velocity_smoother-20] [INFO] [1795128566.134489795] [velocity_smoother]: Configuring velocity smoother
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.141670632] [lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+integration-1  | [collision_monitor-21] [INFO] [1795128566.142024531] [collision_monitor]: Configuring
+integration-1  | [collision_monitor-21] [INFO] [1795128566.154007963] [collision_monitor]: [scan]: Creating Scan
+integration-1  | [collision_monitor-21] [INFO] [1795128566.157637269] [collision_monitor]: [FootprintApproach]: Creating Polygon
+integration-1  | [collision_monitor-21] [INFO] [1795128566.158292645] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+integration-1  | [collision_monitor-21] [INFO] [1795128566.162574023] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on /local_costmap/published_footprint topic
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.173555516] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+integration-1  | [bt_navigator-18] [INFO] [1795128566.173881017] [bt_navigator]: Configuring
+integration-1  | [bt_navigator-18] [INFO] [1795128566.184598629] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+integration-1  | [bt_navigator-18] [INFO] [1795128566.297097826] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.337100442] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+integration-1  | [waypoint_follower-19] [INFO] [1795128566.337541380] [waypoint_follower]: Configuring
+integration-1  | [waypoint_follower-19] [INFO] [1795128566.360852358] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.362450737] [lifecycle_manager_navigation]: [34m[1mConfiguring docking_server[0m[0m
+integration-1  | [opennav_docking-22] [INFO] [1795128566.362725219] [docking_server]: Configuring docking_server
+integration-1  | [opennav_docking-22] [INFO] [1795128566.362770015] [docking_server]: Controller frequency set to 50.0000Hz
+integration-1  | [opennav_docking-22] [INFO] [1795128566.394025697] [docking_server]: Created charging dock plugin simple_charging_dock of type opennav_docking::SimpleChargingDock
+integration-1  | [opennav_docking-22] [WARN] [1795128566.403683274] [docking_server]: Dock database filepath nor dock parameters set. Docking actions can only be executed specifying the dock pose via the action request. Or update the dock database via the reload_database service.
+integration-1  | [opennav_docking-22] [INFO] [1795128566.403775089] [docking_server]: Docking Server has 1 dock types and 0 dock instances available.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.406227039] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+integration-1  | [controller_server-13] [INFO] [1795128566.407236376] [controller_server]: Activating
+integration-1  | [controller_server-13] [INFO] [1795128566.407314573] [local_costmap.local_costmap]: Activating
+integration-1  | [controller_server-13] [INFO] [1795128566.407328711] [local_costmap.local_costmap]: Checking transform
+integration-1  | [controller_server-13] [INFO] [1795128566.407660003] [local_costmap.local_costmap]: start
+integration-1  | [controller_server-13] [INFO] [1795128566.658878155] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.764765384] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.764850280] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+integration-1  | [smoother_server-14] [INFO] [1795128566.765260281] [smoother_server]: Activating
+integration-1  | [smoother_server-14] [INFO] [1795128566.765299640] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.868825021] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128566.868948335] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+integration-1  | [planner_server-15] [INFO] [1795128566.869422065] [planner_server]: Activating
+integration-1  | [planner_server-15] [INFO] [1795128566.869479667] [global_costmap.global_costmap]: Activating
+integration-1  | [planner_server-15] [INFO] [1795128566.869498830] [global_costmap.global_costmap]: Checking transform
+integration-1  | [planner_server-15] [INFO] [1795128566.869757002] [global_costmap.global_costmap]: start
+integration-1  | [camera_adapter-9] [INFO] [1795128567.301401241] [vslam_camera_adapter]: RGBD pairs=121, calibration=True, queues=[0, 0]
+integration-1  | [planner_server-15] [INFO] [1795128567.921281137] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+integration-1  | [planner_server-15] [INFO] [1795128567.922323901] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.026309422] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.026478775] [lifecycle_manager_navigation]: [34m[1mActivating route_server[0m[0m
+integration-1  | [route_server-16] [INFO] [1795128568.027239179] [route_server]: Activating
+integration-1  | [route_server-16] [INFO] [1795128568.027394874] [route_server]: Creating bond (route_server) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.133631217] [lifecycle_manager_navigation]: Server route_server connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.133704903] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+integration-1  | [behavior_server-17] [INFO] [1795128568.134107549] [behavior_server]: Activating
+integration-1  | [behavior_server-17] [INFO] [1795128568.134143544] [behavior_server]: Activating spin
+integration-1  | [behavior_server-17] [INFO] [1795128568.134162379] [behavior_server]: Activating backup
+integration-1  | [behavior_server-17] [INFO] [1795128568.134176932] [behavior_server]: Activating drive_on_heading
+integration-1  | [behavior_server-17] [INFO] [1795128568.134190171] [behavior_server]: Activating assisted_teleop
+integration-1  | [behavior_server-17] [INFO] [1795128568.134200591] [behavior_server]: Activating wait
+integration-1  | [behavior_server-17] [INFO] [1795128568.134216758] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.238829687] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.238929700] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+integration-1  | [velocity_smoother-20] [INFO] [1795128568.239411274] [velocity_smoother]: Activating
+integration-1  | [velocity_smoother-20] [INFO] [1795128568.239501417] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.343203870] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.343270254] [lifecycle_manager_navigation]: [34m[1mActivating collision_monitor[0m[0m
+integration-1  | [collision_monitor-21] [INFO] [1795128568.343617569] [collision_monitor]: Activating
+integration-1  | [collision_monitor-21] [INFO] [1795128568.343654587] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.448551765] [lifecycle_manager_navigation]: Server collision_monitor connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.448649561] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+integration-1  | [bt_navigator-18] [INFO] [1795128568.449114290] [bt_navigator]: Activating
+integration-1  | [bt_navigator-18] [INFO] [1795128568.532823041] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.639512946] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.639569872] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+integration-1  | [waypoint_follower-19] [INFO] [1795128568.639969664] [waypoint_follower]: Activating
+integration-1  | [waypoint_follower-19] [INFO] [1795128568.640013010] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.747811748] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.747872917] [lifecycle_manager_navigation]: [34m[1mActivating docking_server[0m[0m
+integration-1  | [opennav_docking-22] [INFO] [1795128568.748213948] [docking_server]: Activating docking_server
+integration-1  | [opennav_docking-22] [INFO] [1795128568.757857721] [docking_server]: Creating bond (docking_server) to lifecycle manager.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.863039261] [lifecycle_manager_navigation]: Server docking_server connected with bond.
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.863103048] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+integration-1  | [lifecycle_manager-23] [INFO] [1795128568.863117610] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+integration-1  | [camera_adapter-9] [INFO] [1795128572.575425373] [vslam_camera_adapter]: RGBD pairs=185, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128577.712517477] [vslam_camera_adapter]: RGBD pairs=255, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128582.875206035] [vslam_camera_adapter]: RGBD pairs=320, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128588.114514097] [vslam_camera_adapter]: RGBD pairs=390, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128593.332719348] [vslam_camera_adapter]: RGBD pairs=454, calibration=True, queues=[1, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128598.490800496] [vslam_camera_adapter]: RGBD pairs=520, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128603.647965182] [vslam_camera_adapter]: RGBD pairs=590, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128608.835819138] [vslam_camera_adapter]: RGBD pairs=649, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128614.023640949] [vslam_camera_adapter]: RGBD pairs=718, calibration=True, queues=[0, 1]
+integration-1  | [camera_adapter-9] [INFO] [1795128619.123987401] [vslam_camera_adapter]: RGBD pairs=790, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128624.338275869] [vslam_camera_adapter]: RGBD pairs=848, calibration=True, queues=[0, 0]
+integration-1  | [bt_navigator-18] [INFO] [1795128625.923230194] [bt_navigator]: Begin navigating from current location (0.00, 0.00) to (0.50, 0.00)
+integration-1  | [planner_server-15] [WARN] [1795128625.959219938] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 19.6078 Hz
+integration-1  | [controller_server-13] [INFO] [1795128625.974944080] [controller_server]: Received a goal, begin computing control effort.
+integration-1  | [controller_server-13] [WARN] [1795128625.975041286] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+integration-1  | [controller_server-13] [WARN] [1795128625.975053963] [controller_server]: No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+integration-1  | [parameter_bridge-2] [INFO] [1795128626.009380215] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/TwistStamped to Gazebo gz.msgs.Twist (showing msg only once per type)
+integration-1  | [controller_server-13] [INFO] [1795128627.075379370] [controller_server]: Passing new path to controller.
+integration-1  | [controller_server-13] [INFO] [1795128628.083446058] [controller_server]: Passing new path to controller.
+integration-1  | [controller_server-13] [INFO] [1795128629.183440051] [controller_server]: Passing new path to controller.
+integration-1  | [camera_adapter-9] [INFO] [1795128629.606778903] [vslam_camera_adapter]: RGBD pairs=920, calibration=True, queues=[0, 0]
+integration-1  | [planner_server-15] [WARN] [1795128630.150488961] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 18.5185 Hz
+integration-1  | [controller_server-13] [INFO] [1795128630.183450118] [controller_server]: Passing new path to controller.
+integration-1  | [controller_server-13] [INFO] [1795128631.183644116] [controller_server]: Reached the goal!
+integration-1  | [controller_server-13] [INFO] [1795128631.192422560] [controller_server]: Received a goal, begin computing control effort.
+integration-1  | [controller_server-13] [INFO] [1795128631.192681133] [controller_server]: Reached the goal!
+integration-1  | [bt_navigator-18] [INFO] [1795128631.222342543] [bt_navigator]: Goal succeeded
+integration-1  | [camera_adapter-9] [INFO] [1795128634.836335798] [vslam_camera_adapter]: RGBD pairs=985, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128639.964758688] [vslam_camera_adapter]: RGBD pairs=1047, calibration=True, queues=[0, 0]
+integration-1  | [camera_adapter-9] [INFO] [1795128645.170562135] [vslam_camera_adapter]: RGBD pairs=1115, calibration=True, queues=[0, 0]
+integration-1  | [planner_server-15] [INFO] [1795128648.365943720] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 87.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [camera_adapter-9] [INFO] [1795128650.346868319] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [INFO] [1795128650.956095207] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 89.601 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [INFO] [1795128653.697947279] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 92.202 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [camera_adapter-9] [INFO] [1795128655.513364177] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [INFO] [1795128656.330148456] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 94.800 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128658.955330226] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 88.380000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128658.994628383] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 97.401 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128659.996245392] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 89.388000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128660.655676490] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128661.106688231] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 90.396000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128661.735372215] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 100.002 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128662.145282492] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 91.404000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128663.155009762] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 92.412000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128664.187406496] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 93.456000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128664.334825241] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 102.600 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128665.217211893] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 94.464000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128665.758002887] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128666.276774664] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 95.472000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [bt_navigator-18] [ERROR] [1795128666.509281926] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 95.688000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [bt_navigator-18] 
+integration-1  | [bt_navigator-18] [ERROR] [1795128666.509424337] [bt_navigator]: Initial robot pose is not available.
+integration-1  | [bt_navigator-18] [WARN] [1795128666.509479257] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+integration-1  | [planner_server-15] [INFO] [1795128667.044821208] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 105.201 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128667.347279828] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 96.480000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128668.415973925] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 97.488000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128669.480399532] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 98.496000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128669.830502097] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 107.802 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128670.566329522] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 99.540000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128671.033177904] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128671.578659546] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 100.548000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128672.498324424] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 110.400 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128672.675284929] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 101.556000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128673.718324050] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 102.564000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128674.839459815] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 103.572000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128675.270051260] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 113.001 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128675.902632800] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 104.616000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128676.294921310] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128676.912812326] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 105.624000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128677.884156200] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 115.602 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128678.953710623] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 107.640000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128680.014355913] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 108.648000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128680.586812782] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 118.200 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128681.075897978] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 109.656000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128681.423629936] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128682.137333074] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 110.664000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128683.155232445] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 111.672000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128683.291447333] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 120.801 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128684.164800978] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 112.680000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128685.173659271] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 113.688000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128685.915517814] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 123.402 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128686.234429130] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 114.696000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128686.529633810] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128687.273013142] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 115.704000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128688.369107456] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 116.712000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128688.674441993] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 126.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128689.397974669] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 117.720000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128690.416613505] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 118.728000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128691.282987034] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 128.601 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128691.426333249] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 119.736000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128691.668722853] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128692.455961065] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 120.744000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128693.527628784] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 121.752000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128693.948948291] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 131.202 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128694.577470060] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 122.760000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128695.681433491] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 123.804000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128696.678724909] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 133.800 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128696.689026839] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 124.812000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128696.878090320] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128697.697026899] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 125.820000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128698.725640993] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 126.864000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128699.290881867] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 136.401 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128699.774317795] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 127.872000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128700.813544731] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 128.880000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128701.905809810] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 129.888000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128702.010393279] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [INFO] [1795128702.044591824] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 139.002 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128702.945034190] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 130.896000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128703.953483712] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 131.904000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128704.659621397] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 141.600 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128705.974580796] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 133.884000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128707.032219863] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 134.892000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128707.109884839] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [INFO] [1795128707.311750423] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 144.201 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128708.081900708] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 135.900000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128709.160700268] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 136.944000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128710.029469585] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 146.802 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128710.177742929] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 137.952000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128711.185643844] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 138.960000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128712.195379361] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 139.968000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128712.227047952] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [INFO] [1795128712.641710469] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 149.400 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128713.233682302] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 140.976000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128714.283012282] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 141.984000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128715.381740482] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 142.992000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128715.398096828] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 152.001 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128716.419355724] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 144.000000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128717.409382896] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128717.429374084] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 145.008000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128718.014186154] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 154.602 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128718.458333492] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 146.016000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128719.476600697] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 147.060000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128720.545423158] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 148.068000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128720.677935141] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 157.200 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128721.595456862] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 149.076000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128722.601292247] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128722.722389193] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 150.084000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128723.450657117] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 159.801 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128723.753264016] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 151.092000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128724.775987216] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 152.136000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128725.784913284] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 153.144000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128726.048838820] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 162.402 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128726.822805161] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 154.152000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128727.699167274] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128727.882801263] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 155.160000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128728.797479914] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 165.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128728.951452295] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 156.168000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128729.999366611] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 157.176000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128731.018252560] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 158.184000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128731.418445437] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 167.601 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [camera_adapter-9] [INFO] [1795128732.816915872] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128733.022154522] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 160.200000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128734.099678833] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 170.202 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128734.102052563] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 161.208000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128735.152560915] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 162.216000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128736.220866951] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 163.224000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128736.823830913] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 172.800 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128737.240313869] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 164.232000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128738.014596455] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128738.249586355] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 165.240000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128739.268280585] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 166.248000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128739.414132149] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 175.401 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128740.306767979] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 167.256000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128741.353876992] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 168.264000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128742.158033797] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 178.002 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128742.435410682] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 169.272000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128743.162677632] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128743.496106563] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 170.280000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128744.513266453] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 171.288000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128744.806088029] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 180.600 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128745.532530411] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 172.332000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128746.552380420] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 173.340000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128747.457078276] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 183.201 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128747.611339423] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 174.348000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128748.268831162] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128748.665491229] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 175.356000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128749.734925642] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 176.364000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128750.193030858] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 185.802 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128750.762710714] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 177.372000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [ERROR] [1795128751.782327850] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 178.380000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [planner_server-15] [INFO] [1795128752.783983234] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_scan' at time 188.400 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+integration-1  | [planner_server-15] [ERROR] [1795128752.792127947] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 179.388000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 
+integration-1  | [camera_adapter-9] [INFO] [1795128753.374690963] [vslam_camera_adapter]: RGBD pairs=1143, calibration=True, queues=[20, 0]
+integration-1  | [planner_server-15] [ERROR] [1795128753.819937210] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 86.993000 but the earliest data is at time 180.396000, when looking up transform from frame [base_link] to frame [map]
+integration-1  | [planner_server-15] 

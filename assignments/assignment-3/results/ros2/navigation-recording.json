@@ -1,0 +1,8 @@
+{
+  "kind": "actual Gazebo RGB camera recording with measured visual pose",
+  "frames": 237,
+  "wall_duration_s": 55.0096252469998,
+  "encoded_fps": 5.0,
+  "video": "/work/assignments/assignment-3/data/navigation02.avi",
+  "note": "Frames sampled at most 5 Hz wall time; no Gazebo/RViz GUI recording claimed"
+}

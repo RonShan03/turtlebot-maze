@@ -1,0 +1,163 @@
+docker : #0 building with "desktop-linux" instance using docker driver
+At line:2 char:1
++ docker build --progress plain -f assignments/assignment-3/task2_stell ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (#0 building wit...g docker driver:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.15kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/turtlebot_behavior:overlay
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/turtlebot-maze-demo-slam:latest
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [examples 1/6] FROM 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33
+#5 resolve 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33 
+0.1s done
+#5 DONE 0.1s
+
+#6 [cached 1/1] FROM docker.io/library/turtlebot-maze-demo-slam:latest@sha256:209c78d938e6734f6089ea0463917a1231b964aa2
+ec2b324606f08ff17ff8b47
+#6 resolve docker.io/library/turtlebot-maze-demo-slam:latest@sha256:209c78d938e6734f6089ea0463917a1231b964aa2ec2b324606
+f08ff17ff8b47 0.0s done
+#6 DONE 0.1s
+
+#7 [internal] load build context
+#7 transferring context: 61.38kB 0.0s done
+#7 DONE 0.0s
+
+#8 [examples 3/6] COPY --from=cached /slam/vocab/orb_vocab.fbow /opt/vslam/orb_vocab.fbow
+#8 CACHED
+
+#9 [examples 4/6] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential cmake git curl 
+ca-certificates ffmpeg     libeigen3-dev libspdlog-dev libyaml-cpp-dev libsqlite3-dev libsuitesparse-dev     
+libgoogle-glog-dev libgflags-dev libatlas-base-dev libopencv-dev     ros-jazzy-tf2-eigen ros-jazzy-cv-bridge 
+ros-jazzy-image-transport     ros-jazzy-message-filters ros-jazzy-rosbag2-cpp python3-scipy python3-yaml 
+python3-msgpack     && rm -rf /var/lib/apt/lists/* && ldconfig
+#9 CACHED
+
+#10 [examples 5/6] RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core     && cd 
+/opt/vslam/core && git checkout e445b5452535e781fdf6777ec33a06f5f8f5e416 && git submodule update --init --recursive    
+ && sed -i 's|/build/stella_vslam/3rd/FBoW/include|/usr/local/include|g; 
+s|/build/stella_vslam/build/3rd/FBoW/|/usr/local/lib/|g' /usr/local/lib/fbow/fbowTargets.cmake     && cmake -S . -B 
+build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF     && cmake --build build -j2 && cmake --install build 
+&& ldconfig
+#10 CACHED
+
+#11 [examples 2/6] COPY --from=cached /usr/local/ /usr/local/
+#11 CACHED
+
+#12 [examples 6/6] RUN git clone https://github.com/stella-cv/stella_vslam_examples.git /opt/vslam/examples     && cd 
+/opt/vslam/examples && git checkout defc69eecc36e51cdda22885bb86954f08ad6887 && git submodule update --init 
+--recursive     && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release     && cmake --build build -j2 --target 
+run_video_slam run_camera_slam
+#12 CACHED
+
+#13 [integration 1/7] COPY assignments/assignment-3/task2_stella_vslam/patch_wrapper.py /opt/vslam/patch_wrapper.py
+#13 DONE 0.1s
+
+#14 [integration 2/7] RUN mkdir -p /opt/vslam/ros_ws/src     && git clone -b ros2 
+https://github.com/stella-cv/stella_vslam_ros.git /opt/vslam/ros_ws/src/stella_vslam_ros     && cd 
+/opt/vslam/ros_ws/src/stella_vslam_ros && git checkout 186f623dd1c24ee83678f8e1da593801f450bbb3 && git submodule 
+update --init --recursive     && python3 /opt/vslam/patch_wrapper.py 
+/opt/vslam/ros_ws/src/stella_vslam_ros/CMakeLists.txt     && source /opt/ros/jazzy/setup.bash && cd /opt/vslam/ros_ws  
+   && MAKEFLAGS=-j2 colcon build --executor sequential --cmake-args -DCMAKE_BUILD_TYPE=Release
+#14 0.276 Cloning into '/opt/vslam/ros_ws/src/stella_vslam_ros'...
+#14 0.757 Note: switching to '186f623dd1c24ee83678f8e1da593801f450bbb3'.
+#14 0.757 
+#14 0.757 You are in 'detached HEAD' state. You can look around, make experimental
+#14 0.757 changes and commit them, and you can discard any commits you make in this
+#14 0.757 state without impacting any branches by switching back to a branch.
+#14 0.757 
+#14 0.757 If you want to create a new branch to retain commits you create, you may
+#14 0.757 do so (now or later) by using -c with the switch command. Example:
+#14 0.757 
+#14 0.757   git switch -c <new-branch-name>
+#14 0.757 
+#14 0.757 Or undo this operation with:
+#14 0.757 
+#14 0.757   git switch -
+#14 0.757 
+#14 0.757 Turn off this advice by setting config variable advice.detachedHead to false
+#14 0.757 
+#14 0.757 HEAD is now at 186f623 Update Dockerfiles (Install Backward) (#191)
+#14 0.792 Submodule '3rd/filesystem' (https://github.com/gulrak/filesystem) registered for path '3rd/filesystem'
+#14 0.796 Cloning into '/opt/vslam/ros_ws/src/stella_vslam_ros/3rd/filesystem'...
+#14 1.339 Submodule path '3rd/filesystem': checked out 'cd6805e94dd5d6346be1b75a54cdc27787319dd2'
+#14 1.756 Starting >>> stella_vslam_ros
+#14 74.97 Finished <<< stella_vslam_ros [1min 13s]
+#14 74.97 --- stderr: stella_vslam_ros
+#14 74.97 CMake Deprecation Warning at CMakeLists.txt:11 (cmake_policy):
+#14 74.97   The OLD behavior for policy CMP0074 will be removed from a future version
+#14 74.97   of CMake.
+#14 74.97 
+#14 74.97   The cmake-policies(7) manual explains that the OLD behaviors of all
+#14 74.97   policies are deprecated and that a policy should be set to OLD only under
+#14 74.97   specific short-term circumstances.  Projects should be ported to the NEW
+#14 74.97   behavior and not rely on setting a policy to OLD.
+#14 74.97 
+#14 74.97 
+#14 74.97 /opt/vslam/ros_ws/src/stella_vslam_ros/src/run_slam.cc: In function ‘void tracking(const 
+std::shared_ptr<stella_vslam_ros::system>&, const std::shared_ptr<stella_vslam::config>&, const std::string&, const 
+std::string&, const std::string&)’:
+#14 74.97 /opt/vslam/ros_ws/src/stella_vslam_ros/src/run_slam.cc:39:60: warning: unused parameter ‘cfg’ 
+[-Wunused-parameter]
+#14 74.97    39 |               const std::shared_ptr<stella_vslam::config>& cfg,
+#14 74.97       |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+#14 74.97 /opt/vslam/ros_ws/src/stella_vslam_ros/src/run_slam_offline.cc: In function ‘void tracking(const 
+std::shared_ptr<stella_vslam_ros::system>&, const std::shared_ptr<stella_vslam::config>&, const std::string&, const 
+std::string&, const std::string&, const std::string&, const std::string&, const std::string&, const std::string&, 
+const std::string&, const std::string&, double, bool, const std::string&)’:
+#14 74.97 /opt/vslam/ros_ws/src/stella_vslam_ros/src/run_slam_offline.cc:45:60: warning: unused parameter ‘cfg’ 
+[-Wunused-parameter]
+#14 74.97    45 |               const std::shared_ptr<stella_vslam::config>& cfg,
+#14 74.97       |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+#14 74.97 ---
+#14 74.98 
+#14 74.98 Summary: 1 package finished [1min 13s]
+#14 74.98   1 package had stderr output: stella_vslam_ros
+#14 DONE 75.1s
+
+#15 [integration 3/7] COPY assignments/assignment-3/task3_ros2_nav2/ros2_ws/src/ds685_vslam_nav 
+/opt/vslam/nav_ws/src/ds685_vslam_nav
+#15 DONE 0.1s
+
+#16 [integration 4/7] RUN source /opt/ros/jazzy/setup.bash && cd /opt/vslam/nav_ws && colcon build --symlink-install
+#16 0.624 Starting >>> ds685_vslam_nav
+#16 2.060 Finished <<< ds685_vslam_nav [1.44s]
+#16 2.074 
+#16 2.074 Summary: 1 package finished [1.52s]
+#16 DONE 2.2s
+
+#17 [integration 5/7] COPY assignments/assignment-3/task3_ros2_nav2/scripts/entrypoint.sh /opt/vslam/entrypoint.sh
+#17 DONE 0.1s
+
+#18 [integration 6/7] RUN chmod +x /opt/vslam/entrypoint.sh
+#18 DONE 0.3s
+
+#19 [integration 7/7] WORKDIR /work
+#19 DONE 0.1s
+
+#20 exporting to image
+#20 exporting layers
+#20 exporting layers 22.6s done
+#20 exporting manifest sha256:5d768077f0f4576a92f0b7dc0688899d2b45261e36ce63508f5740e62d883119 0.0s done
+#20 exporting config sha256:caf4c1cbbdc7a94f82d70d727127a17e470473a9fdca0344156439001a05d892 0.0s done
+#20 exporting attestation manifest sha256:dfdaca184edfc8ff0d45d79b075776a671e2b405e00c4fa6c20edfc3382c7fa5 0.0s done
+#20 exporting manifest list sha256:df1f337320a4cd016dc52ddc12abdeecf3f1bce2f9ae19161794d03b6aeb3e0e 0.0s done
+#20 naming to docker.io/library/ds685-vslam:latest
+#20 naming to docker.io/library/ds685-vslam:latest done
+#20 unpacking to docker.io/library/ds685-vslam:latest
+#20 unpacking to docker.io/library/ds685-vslam:latest 5.3s done
+#20 DONE 28.2s

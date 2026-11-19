@@ -1,0 +1,485 @@
+docker : #0 building with "desktop-linux" instance using docker driver
+At line:2 char:1
++ docker build --progress plain -f assignments/assignment-3/task2_stell ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (#0 building wit...g docker driver:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.67kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/turtlebot-maze-demo-slam:latest
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/turtlebot_behavior:overlay
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [cached 1/1] FROM docker.io/library/turtlebot-maze-demo-slam:latest@sha256:209c78d938e6734f6089ea0463917a1231b964aa2
+ec2b324606f08ff17ff8b47
+#6 resolve docker.io/library/turtlebot-maze-demo-slam:latest@sha256:209c78d938e6734f6089ea0463917a1231b964aa2ec2b324606
+f08ff17ff8b47 0.0s done
+#6 DONE 0.2s
+
+#5 [internal] load build context
+#5 transferring context: 3.56kB done
+#5 DONE 0.1s
+
+#7 [stage-1  1/12] FROM 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33
+#7 resolve 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33 
+0.0s done
+#7 DONE 0.3s
+
+#8 [stage-1  2/12] COPY --from=cached /usr/local/ /usr/local/
+#8 DONE 4.8s
+
+#9 [stage-1  3/12] COPY --from=cached /slam/vocab/orb_vocab.fbow /opt/vslam/orb_vocab.fbow
+#9 DONE 0.2s
+
+#10 [stage-1  4/12] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential cmake git 
+curl ca-certificates ffmpeg     libeigen3-dev libspdlog-dev libyaml-cpp-dev libsqlite3-dev libsuitesparse-dev     
+libgoogle-glog-dev libgflags-dev libatlas-base-dev libopencv-dev     ros-jazzy-tf2-eigen ros-jazzy-cv-bridge 
+ros-jazzy-image-transport     ros-jazzy-message-filters ros-jazzy-rosbag2-cpp python3-scipy python3-yaml     && rm -rf 
+/var/lib/apt/lists/* && ldconfig
+#10 0.799 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+#10 0.855 Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+#10 0.932 Get:3 http://packages.ros.org/ros2/ubuntu noble InRelease [4679 B]
+#10 1.245 Get:4 http://packages.ros.org/ros2/ubuntu noble/main Sources [2277 kB]
+#10 1.385 Get:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]
+#10 1.460 Get:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+#10 1.557 Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1475 kB]
+#10 1.642 Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+#10 1.720 Get:9 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+#10 1.730 Get:10 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+#10 1.781 Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+#10 1.861 Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+#10 2.083 Get:13 http://packages.ros.org/ros2/ubuntu noble/main amd64 Packages [2153 kB]
+#10 2.089 Get:14 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2216 kB]
+#10 2.332 Get:15 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1560 kB]
+#10 2.656 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2371 kB]
+#10 2.778 Get:17 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2184 kB]
+#10 2.871 Get:18 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]
+#10 2.873 Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1822 kB]
+#10 2.954 Get:20 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+#10 2.956 Get:21 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+#10 2.956 Get:22 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+#10 3.369 Fetched 38.5 MB in 3s (13.1 MB/s)
+#10 3.369 Reading package lists...
+#10 4.203 Reading package lists...
+#10 5.034 Building dependency tree...
+#10 5.309 Reading state information...
+#10 5.740 build-essential is already the newest version (12.10ubuntu1).
+#10 5.740 cmake is already the newest version (3.28.3-1build7).
+#10 5.740 cmake set to manually installed.
+#10 5.740 libeigen3-dev is already the newest version (3.4.0-4build0.1).
+#10 5.740 libeigen3-dev set to manually installed.
+#10 5.740 libspdlog-dev is already the newest version (1:1.12.0+ds-2build1).
+#10 5.740 libspdlog-dev set to manually installed.
+#10 5.740 libyaml-cpp-dev is already the newest version (0.8.0+dfsg-6build1).
+#10 5.740 libyaml-cpp-dev set to manually installed.
+#10 5.740 libsuitesparse-dev is already the newest version (1:7.6.1+dfsg-1build1).
+#10 5.740 libsuitesparse-dev set to manually installed.
+#10 5.740 libgoogle-glog-dev is already the newest version (0.6.0-2.1build1).
+#10 5.740 libgoogle-glog-dev set to manually installed.
+#10 5.740 libgflags-dev is already the newest version (2.2.2-2build1).
+#10 5.740 libgflags-dev set to manually installed.
+#10 5.740 libopencv-dev is already the newest version (4.6.0+dfsg-13.1ubuntu1).
+#10 5.740 libopencv-dev set to manually installed.
+#10 5.740 python3-scipy is already the newest version (1.11.4-6build1).
+#10 5.740 python3-scipy set to manually installed.
+#10 5.740 python3-yaml is already the newest version (6.0.1-2build2).
+#10 5.740 python3-yaml set to manually installed.
+#10 5.740 The following additional packages will be installed:
+#10 5.741   git-man libatlas3-base libcurl3t64-gnutls libcurl4-openssl-dev libcurl4t64
+#10 5.743   libsqlite3-0
+#10 5.745 Suggested packages:
+#10 5.745   ffmpeg-doc gettext-base git-daemon-run | git-daemon-sysvinit git-doc
+#10 5.745   git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn libatlas-doc
+#10 5.745   liblapack-doc libcurl4-doc libidn-dev libldap2-dev librtmp-dev libssh2-1-dev
+#10 5.745   sqlite3-doc
+#10 5.745 Recommended packages:
+#10 5.745   less
+#10 5.811 The following NEW packages will be installed:
+#10 5.813   ffmpeg libatlas-base-dev libatlas3-base
+#10 5.814 The following packages will be upgraded:
+#10 5.815   ca-certificates curl git git-man libcurl3t64-gnutls libcurl4-openssl-dev
+#10 5.817   libcurl4t64 libsqlite3-0 libsqlite3-dev ros-jazzy-cv-bridge
+#10 5.817   ros-jazzy-image-transport ros-jazzy-message-filters ros-jazzy-rosbag2-cpp
+#10 5.817   ros-jazzy-tf2-eigen
+#10 5.908 14 upgraded, 3 newly installed, 0 to remove and 399 not upgraded.
+#10 5.908 Need to get 18.0 MB of archives.
+#10 5.908 After this operation, 39.0 MB of additional disk space will be used.
+#10 5.908 Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ca-certificates all 20260816ubuntu0.24.04.2 
+[140 kB]
+#10 5.964 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-dev amd64 3.45.1-1ubuntu2.9 [911 
+kB]
+#10 6.029 Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.9 [702 kB]
+#10 6.050 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4-openssl-dev amd64 
+8.5.0-2ubuntu10.16 [447 kB]
+#10 6.062 Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.16 [226 kB]
+#10 6.074 Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16 [344 kB]
+#10 6.084 Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 ffmpeg amd64 7:6.1.1-3ubuntu5 [1879 kB]
+#10 6.155 Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16 
+[337 kB]
+#10 6.166 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4 [1101 kB]
+#10 6.168 Get:10 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-cv-bridge amd64 
+4.1.0-1noble.20261105.092050 [125 kB]
+#10 6.193 Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4 [3681 kB]
+#10 6.313 Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 libatlas3-base amd64 3.10.3-13ubuntu1 [3544 kB]
+#10 6.456 Get:13 http://archive.ubuntu.com/ubuntu noble/universe amd64 libatlas-base-dev amd64 3.10.3-13ubuntu1 [3827 
+kB]
+#10 6.474 Get:14 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-message-filters amd64 
+4.11.18-1noble.20261105.090818 [49.4 kB]
+#10 6.480 Get:15 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-image-transport amd64 
+5.1.8-1noble.20261105.094051 [414 kB]
+#10 6.880 Get:16 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-rosbag2-cpp amd64 
+0.26.11-1noble.20261105.103444 [237 kB]
+#10 7.079 Get:17 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-tf2-eigen amd64 
+0.36.23-1noble.20261105.104956 [13.9 kB]
+#10 7.420 debconf: delaying package configuration, since apt-utils is not installed
+#10 7.490 Fetched 18.0 MB in 1s (14.4 MB/s)
+#10 7.578 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 136775 files and directories currently installed.)
+#10 8.637 Preparing to unpack .../00-ca-certificates_20260816ubuntu0.24.04.2_all.deb ...
+#10 8.655 Unpacking ca-certificates (20260816ubuntu0.24.04.2) over (20260601~24.04.1) ...
+#10 9.216 Preparing to unpack .../01-libsqlite3-dev_3.45.1-1ubuntu2.9_amd64.deb ...
+#10 9.234 Unpacking libsqlite3-dev:amd64 (3.45.1-1ubuntu2.9) over (3.45.1-1ubuntu2.7) ...
+#10 9.399 Preparing to unpack .../02-libsqlite3-0_3.45.1-1ubuntu2.9_amd64.deb ...
+#10 9.423 Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.9) over (3.45.1-1ubuntu2.7) ...
+#10 9.521 Preparing to unpack .../03-libcurl4-openssl-dev_8.5.0-2ubuntu10.16_amd64.deb ...
+#10 9.539 Unpacking libcurl4-openssl-dev:amd64 (8.5.0-2ubuntu10.16) over (8.5.0-2ubuntu10.13) ...
+#10 9.745 Preparing to unpack .../04-curl_8.5.0-2ubuntu10.16_amd64.deb ...
+#10 9.773 Unpacking curl (8.5.0-2ubuntu10.16) over (8.5.0-2ubuntu10.13) ...
+#10 9.883 Preparing to unpack .../05-libcurl4t64_8.5.0-2ubuntu10.16_amd64.deb ...
+#10 9.900 Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.16) over (8.5.0-2ubuntu10.13) ...
+#10 9.989 Selecting previously unselected package ffmpeg.
+#10 9.998 Preparing to unpack .../06-ffmpeg_7%3a6.1.1-3ubuntu5_amd64.deb ...
+#10 10.00 Unpacking ffmpeg (7:6.1.1-3ubuntu5) ...
+#10 10.09 Preparing to unpack .../07-libcurl3t64-gnutls_8.5.0-2ubuntu10.16_amd64.deb ...
+#10 10.11 Unpacking libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.16) over (8.5.0-2ubuntu10.13) ...
+#10 10.20 Preparing to unpack .../08-git-man_1%3a2.43.0-1ubuntu7.4_all.deb ...
+#10 10.22 Unpacking git-man (1:2.43.0-1ubuntu7.4) over (1:2.43.0-1ubuntu7.3) ...
+#10 10.32 Preparing to unpack .../09-git_1%3a2.43.0-1ubuntu7.4_amd64.deb ...
+#10 10.37 Unpacking git (1:2.43.0-1ubuntu7.4) over (1:2.43.0-1ubuntu7.3) ...
+#10 11.14 Selecting previously unselected package libatlas3-base:amd64.
+#10 11.15 Preparing to unpack .../10-libatlas3-base_3.10.3-13ubuntu1_amd64.deb ...
+#10 11.16 Unpacking libatlas3-base:amd64 (3.10.3-13ubuntu1) ...
+#10 11.29 Selecting previously unselected package libatlas-base-dev:amd64.
+#10 11.30 Preparing to unpack .../11-libatlas-base-dev_3.10.3-13ubuntu1_amd64.deb ...
+#10 11.31 Unpacking libatlas-base-dev:amd64 (3.10.3-13ubuntu1) ...
+#10 11.51 Preparing to unpack .../12-ros-jazzy-cv-bridge_4.1.0-1noble.20261105.092050_amd64.deb ...
+#10 11.53 Unpacking ros-jazzy-cv-bridge (4.1.0-1noble.20261105.092050) over (4.1.0-1noble.20260902.080510) ...
+#10 11.79 Preparing to unpack .../13-ros-jazzy-message-filters_4.11.18-1noble.20261105.090818_amd64.deb ...
+#10 11.80 Unpacking ros-jazzy-message-filters (4.11.18-1noble.20261105.090818) over (4.11.17-1noble.20260902.103742) 
+...
+#10 12.17 Preparing to unpack .../14-ros-jazzy-image-transport_5.1.8-1noble.20261105.094051_amd64.deb ...
+#10 12.19 Unpacking ros-jazzy-image-transport (5.1.8-1noble.20261105.094051) over (5.1.8-1noble.20260903.065618) ...
+#10 12.48 Preparing to unpack .../15-ros-jazzy-rosbag2-cpp_0.26.11-1noble.20261105.103444_amd64.deb ...
+#10 12.50 Unpacking ros-jazzy-rosbag2-cpp (0.26.11-1noble.20261105.103444) over (0.26.11-1noble.20260902.083107) ...
+#10 12.84 Preparing to unpack .../16-ros-jazzy-tf2-eigen_0.36.23-1noble.20261105.104956_amd64.deb ...
+#10 12.85 Unpacking ros-jazzy-tf2-eigen (0.36.23-1noble.20261105.104956) over (0.36.22-1noble.20260903.022246) ...
+#10 13.03 Setting up ros-jazzy-rosbag2-cpp (0.26.11-1noble.20261105.103444) ...
+#10 13.05 Setting up libatlas3-base:amd64 (3.10.3-13ubuntu1) ...
+#10 13.08 update-alternatives: using /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3 to provide 
+/usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+#10 13.09 update-alternatives: using /usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3 to provide 
+/usr/lib/x86_64-linux-gnu/liblapack.so.3 (liblapack.so.3-x86_64-linux-gnu) in auto mode
+#10 13.10 Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.16) ...
+#10 13.12 Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.9) ...
+#10 13.14 Setting up libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.16) ...
+#10 13.16 Setting up libatlas-base-dev:amd64 (3.10.3-13ubuntu1) ...
+#10 13.17 update-alternatives: using /usr/lib/x86_64-linux-gnu/atlas/libblas.so to provide 
+/usr/lib/x86_64-linux-gnu/libblas.so (libblas.so-x86_64-linux-gnu) in auto mode
+#10 13.18 update-alternatives: using /usr/lib/x86_64-linux-gnu/atlas/liblapack.so to provide 
+/usr/lib/x86_64-linux-gnu/liblapack.so (liblapack.so-x86_64-linux-gnu) in auto mode
+#10 13.19 Setting up ca-certificates (20260816ubuntu0.24.04.2) ...
+#10 13.28 debconf: unable to initialize frontend: Dialog
+#10 13.28 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#10 13.28 debconf: falling back to frontend: Readline
+#10 13.29 debconf: unable to initialize frontend: Readline
+#10 13.29 debconf: (This frontend requires a controlling tty.)
+#10 13.29 debconf: falling back to frontend: Teletype
+#10 15.26 Updating certificates in /etc/ssl/certs...
+#10 16.52 rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+#10 16.52 4 added, 5 removed; done.
+#10 16.52 Running hooks in /etc/ca-certificates/update.d...
+#10 16.53 done.
+#10 16.56 Setting up libsqlite3-dev:amd64 (3.45.1-1ubuntu2.9) ...
+#10 16.57 Setting up ros-jazzy-tf2-eigen (0.36.23-1noble.20261105.104956) ...
+#10 16.59 Setting up libcurl4-openssl-dev:amd64 (8.5.0-2ubuntu10.16) ...
+#10 16.61 Setting up ros-jazzy-message-filters (4.11.18-1noble.20261105.090818) ...
+#10 16.62 Setting up git-man (1:2.43.0-1ubuntu7.4) ...
+#10 16.64 Setting up curl (8.5.0-2ubuntu10.16) ...
+#10 16.66 Setting up ffmpeg (7:6.1.1-3ubuntu5) ...
+#10 16.68 Setting up ros-jazzy-cv-bridge (4.1.0-1noble.20261105.092050) ...
+#10 16.70 Setting up git (1:2.43.0-1ubuntu7.4) ...
+#10 16.73 Setting up ros-jazzy-image-transport (5.1.8-1noble.20261105.094051) ...
+#10 16.75 Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+#10 DONE 18.6s
+
+#11 [stage-1  5/12] RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core     && cd 
+/opt/vslam/core && git checkout e445b5452535e781fdf6777ec33a06f5f8f5e416 && git submodule update --init --recursive    
+ && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF     && cmake --build build -j2 && 
+cmake --install build && ldconfig
+#11 0.316 Cloning into '/opt/vslam/core'...
+#11 1.302 Note: switching to 'e445b5452535e781fdf6777ec33a06f5f8f5e416'.
+#11 1.302 
+#11 1.302 You are in 'detached HEAD' state. You can look around, make experimental
+#11 1.302 changes and commit them, and you can discard any commits you make in this
+#11 1.302 state without impacting any branches by switching back to a branch.
+#11 1.302 
+#11 1.302 If you want to create a new branch to retain commits you create, you may
+#11 1.302 do so (now or later) by using -c with the switch command. Example:
+#11 1.302 
+#11 1.302   git switch -c <new-branch-name>
+#11 1.302 
+#11 1.302 Or undo this operation with:
+#11 1.302 
+#11 1.302   git switch -
+#11 1.302 
+#11 1.302 Turn off this advice by setting config variable advice.detachedHead to false
+#11 1.302 
+#11 1.302 HEAD is now at e445b54 Add LiftFeat ONNX-based feature extractor with CUDA support (#664)
+#11 1.341 Submodule '3rd/FBoW' (https://github.com/stella-cv/FBoW.git) registered for path '3rd/FBoW'
+#11 1.342 Submodule '3rd/tinycolormap' (https://github.com/yuki-koyama/tinycolormap.git) registered for path 
+'3rd/tinycolormap'
+#11 1.347 Cloning into '/opt/vslam/core/3rd/FBoW'...
+#11 3.905 Cloning into '/opt/vslam/core/3rd/tinycolormap'...
+#11 4.311 Submodule path '3rd/FBoW': checked out 'c6e3c29e3332a0b0834021797e2aa4e8eb66a3c1'
+#11 4.327 Submodule path '3rd/tinycolormap': checked out '67198d2b2b48ca5e97600c83b5c0f2310cfd4c03'
+#11 4.419 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+#11 4.419   Compatibility with CMake < 3.5 will be removed from a future version of
+#11 4.419   CMake.
+#11 4.419 
+#11 4.419   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+#11 4.419   CMake that the project does not need compatibility with older versions.
+#11 4.419 
+#11 4.419 
+#11 4.875 -- The CXX compiler identification is GNU 13.3.0
+#11 5.172 -- The C compiler identification is GNU 13.3.0
+#11 5.218 -- Detecting CXX compiler ABI info
+#11 5.381 -- Detecting CXX compiler ABI info - done
+#11 5.388 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+#11 5.390 -- Detecting CXX compile features
+#11 5.391 -- Detecting CXX compile features - done
+#11 5.405 -- Detecting C compiler ABI info
+#11 5.521 -- Detecting C compiler ABI info - done
+#11 5.527 -- Check for working C compiler: /usr/bin/cc - skipped
+#11 5.527 -- Detecting C compile features
+#11 5.528 -- Detecting C compile features - done
+#11 5.529 CMake Deprecation Warning at CMakeLists.txt:14 (cmake_policy):
+#11 5.529   The OLD behavior for policy CMP0074 will be removed from a future version
+#11 5.529   of CMake.
+#11 5.529 
+#11 5.529   The cmake-policies(7) manual explains that the OLD behaviors of all
+#11 5.529   policies are deprecated and that a policy should be set to OLD only under
+#11 5.529   specific short-term circumstances.  Projects should be ported to the NEW
+#11 5.529   behavior and not rely on setting a policy to OLD.
+#11 5.529 
+#11 5.529 
+#11 5.529 -- Build type: Release
+#11 5.530 -- ccache: Disabled
+#11 5.530 -- Address/Memory sanitizer: DISABLED
+#11 5.530 -- Architecture-aware optimization: DISABLED
+#11 5.530 -- ONNX Runtime: NOT found (LiftFeat extractor disabled)
+#11 5.533 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+#11 5.692 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+#11 5.694 -- Found Threads: TRUE  
+#11 6.067 -- Found OpenMP_C: -fopenmp (found version "4.5") 
+#11 6.183 -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+#11 6.183 -- Found OpenMP: TRUE (found version "4.5")  
+#11 6.207 -- Found Eigen3: /usr/include/eigen3 (Required is at least version "3.3") 
+#11 6.235 -- Use OpenCV 4.6.0
+#11 6.238 -- aruco: enabled (Found in /usr/include/opencv4/opencv2)
+#11 6.252 -- Use spdlog on system: 1.12.0
+#11 6.264 -- Found SQLite3: /usr/include (found version "3.45.1") 
+#11 6.269 -- gtsam: disabled
+#11 6.273 -- Found CXSparse: /usr/include/suitesparse (found version "4.3.1") 
+#11 6.788 -- Found AMD library: /usr/lib/x86_64-linux-gnu/libamd.so
+#11 6.788 -- Found AMD header in: /usr/include/suitesparse
+#11 6.789 -- Found CAMD library: /usr/lib/x86_64-linux-gnu/libcamd.so
+#11 6.790 -- Found CAMD header in: /usr/include/suitesparse
+#11 6.790 -- Found COLAMD library: /usr/lib/x86_64-linux-gnu/libcolamd.so
+#11 6.791 -- Found COLAMD header in: /usr/include/suitesparse
+#11 6.791 -- Found CCOLAMD library: /usr/lib/x86_64-linux-gnu/libccolamd.so
+#11 6.792 -- Found CCOLAMD header in: /usr/include/suitesparse
+#11 6.792 -- Found SuiteSparse_config library: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+#11 6.793 -- Found SuiteSparse_config header in: /usr/include/suitesparse
+#11 6.794 -- Adding librt: /usr/lib/x86_64-linux-gnu/librt.a to SuiteSparse_config libraries (required on Linux & Unix 
+[not OSX] if SuiteSparse is compiled with timing).
+#11 6.799 -- Did not find METIS library (optional SuiteSparse dependency)
+#11 6.800 -- Found SuiteSparse: TRUE (found version "..") 
+#11 6.803 -- Could NOT find cuda_efficient_features (missing: cuda_efficient_features_LIBRARY 
+cuda_efficient_features_INCLUDE_DIR) 
+#11 6.803 -- cuda_efficient_features: disabled
+#11 6.803 -- OpenMP: DISABLED
+#11 6.803 -- SSE3 for ORB extraction: DISABLED
+#11 6.803 -- SSE for floating-point operation: DISABLED
+#11 6.803 -- BoW framework: FBoW (found in /usr/local/include)
+#11 6.803 -- ONNX Runtime: DISABLED
+#11 6.803 -- trace level log: DISABLED
+#11 6.803 -- Determinism: DISABLED
+#11 6.803 -- tracy: DISABLED
+#11 6.823 -- Configuring done (2.4s)
+#11 6.838 CMake Error in src/stella_vslam/CMakeLists.txt:
+#11 6.838   Imported target "fbow" includes non-existent path
+#11 6.838 
+#11 6.838     "/build/stella_vslam/3rd/FBoW/include"
+#11 6.838 
+#11 6.838   in its INTERFACE_INCLUDE_DIRECTORIES.  Possible reasons include:
+#11 6.838 
+#11 6.838   * The path was deleted, renamed, or moved to another location.
+#11 6.838 
+#11 6.838   * An install or uninstall procedure did not complete successfully.
+#11 6.838 
+#11 6.838   * The installation package was faulty and references files it does not
+#11 6.838   provide.
+#11 6.838 
+#11 6.838 
+#11 6.838 
+#11 6.864 -- Generating done (0.0s)
+#11 6.871 CMake Generate step failed.  Build files cannot be regenerated correctly.
+#11 ERROR: process "/bin/bash -c git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core     && cd 
+/opt/vslam/core && git checkout ${STELLA_REF} && git submodule update --init --recursive     && cmake -S . -B build 
+-DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF     && cmake --build build -j${BUILD_JOBS} && cmake --install 
+build && ldconfig" did not complete successfully: exit code: 1
+------
+ > [stage-1  5/12] RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core     && cd 
+/opt/vslam/core && git checkout e445b5452535e781fdf6777ec33a06f5f8f5e416 && git submodule update --init --recursive    
+ && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF     && cmake --build build -j2 && 
+cmake --install build && ldconfig:
+6.838 
+6.838   * An install or uninstall procedure did not complete successfully.
+6.838 
+6.838   * The installation package was faulty and references files it does not
+6.838   provide.
+6.838 
+6.838 
+6.838 
+6.864 -- Generating done (0.0s)
+6.871 CMake Generate step failed.  Build files cannot be regenerated correctly.
+------
+Dockerfile:21
+--------------------
+  20 |     ARG BUILD_JOBS=2
+  21 | >>> RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core \
+  22 | >>>     && cd /opt/vslam/core && git checkout ${STELLA_REF} && git submodule update --init --recursive \
+  23 | >>>     && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF \
+  24 | >>>     && cmake --build build -j${BUILD_JOBS} && cmake --install build && ldconfig
+  25 |     RUN git clone https://github.com/stella-cv/stella_vslam_examples.git /opt/vslam/examples \
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/bash -c git clone https://github.com/stella-cv/stella_vslam.git 
+/opt/vslam/core     && cd /opt/vslam/core && git checkout ${STELLA_REF} && git submodule update --init --recursive     
+&& cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF     && cmake --build build 
+-j${BUILD_JOBS} && cmake --install build && ldconfig" did not complete successfully: exit code: 1
+27556 v0.32.1-desktop.1 C:\Program Files\Docker\cli-plugins\docker-buildx.exe buildx build --progress plain -f 
+assignments/assignment-3/task2_stella_vslam/Dockerfile -t ds685-vslam:latest .
+github.com/docker/buildx/commands.runBuildWithOptions
+	github.com/docker/buildx/commands/build.go:479
+github.com/docker/buildx/commands.runBuild
+	github.com/docker/buildx/commands/build.go:399
+github.com/docker/buildx/commands.buildCmd.func1
+	github.com/docker/buildx/commands/build.go:515
+github.com/docker/cli/cli-plugins/plugin.RunPlugin.func1.1.2
+	github.com/docker/cli@v29.2.1+incompatible/cli-plugins/plugin/plugin.go:65
+github.com/spf13/cobra.(*Command).execute
+	github.com/spf13/cobra@v1.10.2/command.go:1015
+github.com/spf13/cobra.(*Command).ExecuteC
+	github.com/spf13/cobra@v1.10.2/command.go:1148
+github.com/spf13/cobra.(*Command).Execute
+	github.com/spf13/cobra@v1.10.2/command.go:1071
+github.com/docker/cli/cli-plugins/plugin.RunPlugin
+	github.com/docker/cli@v29.2.1+incompatible/cli-plugins/plugin/plugin.go:80
+main.runPlugin
+	github.com/docker/buildx/cmd/buildx/main.go:66
+main.run
+	github.com/docker/buildx/cmd/buildx/main.go:80
+main.main
+	github.com/docker/buildx/cmd/buildx/main.go:90
+runtime.main
+	runtime/proc.go:285
+runtime.goexit
+	runtime/asm_amd64.s:1693
+
+129  /usr/local/bin/dockerd --config-file /run/config/docker/daemon.json
+github.com/moby/buildkit/executor/runcexecutor.exitError
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/executor/runcexecutor/executor.go:395
+github.com/moby/buildkit/executor/runcexecutor.(*runcExecutor).Run
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/executor/runcexecutor/executor.go:343
+github.com/moby/buildkit/solver/llbsolver/ops.(*ExecOp).Exec
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/llbsolver/ops/exec.go:498
+github.com/moby/buildkit/solver.(*sharedOp).Exec.func2
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/jobs.go:1181
+github.com/moby/buildkit/util/flightcontrol.(*call[...]).run
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/util/flightcontrol/flightcontrol.go:122
+sync.(*Once).doSlow
+	/usr/local/go/src/sync/once.go:78
+sync.(*Once).Do
+	/usr/local/go/src/sync/once.go:69
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1693
+
+27556 v0.32.1-desktop.1 C:\Program Files\Docker\cli-plugins\docker-buildx.exe buildx build --progress plain -f 
+assignments/assignment-3/task2_stella_vslam/Dockerfile -t ds685-vslam:latest .
+google.golang.org/grpc.(*ClientConn).Invoke
+	google.golang.org/grpc@v1.78.0/call.go:35
+github.com/moby/buildkit/api/services/control.(*controlClient).Solve
+	github.com/moby/buildkit@v0.28.0/api/services/control/control_grpc.pb.go:88
+github.com/moby/buildkit/client.(*Client).solve.func2
+	github.com/moby/buildkit@v0.28.0/client/solve.go:319
+golang.org/x/sync/errgroup.(*Group).Go.func1
+	golang.org/x/sync@v0.19.0/errgroup/errgroup.go:93
+runtime.goexit
+	runtime/asm_amd64.s:1693
+
+129  /usr/local/bin/dockerd --config-file /run/config/docker/daemon.json
+github.com/moby/buildkit/solver.(*edge).execOp
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/edge.go:963
+github.com/moby/buildkit/solver/internal/pipe.NewWithFunction[...].func2
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/internal/pipe/pipe.go:78
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1693
+
+27556 v0.32.1-desktop.1 C:\Program Files\Docker\cli-plugins\docker-buildx.exe buildx build --progress plain -f 
+assignments/assignment-3/task2_stella_vslam/Dockerfile -t ds685-vslam:latest .
+github.com/moby/buildkit/client.(*Client).solve.func2
+	github.com/moby/buildkit@v0.28.0/client/solve.go:321
+golang.org/x/sync/errgroup.(*Group).Go.func1
+	golang.org/x/sync@v0.19.0/errgroup/errgroup.go:93
+
+129  /usr/local/bin/dockerd --config-file /run/config/docker/daemon.json
+github.com/moby/buildkit/solver/llbsolver/ops.(*ExecOp).Exec
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/llbsolver/ops/exec.go:519
+github.com/moby/buildkit/solver.(*sharedOp).Exec.func2
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/jobs.go:1181
+

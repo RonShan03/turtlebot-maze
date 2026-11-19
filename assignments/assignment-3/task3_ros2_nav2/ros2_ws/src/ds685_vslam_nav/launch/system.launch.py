@@ -31,7 +31,7 @@ def generate_launch_description():
         'mkdir -p '+root+'/results/ros2/live; '
         'exec ros2 run stella_vslam_ros run_slam -v /opt/vslam/orb_vocab.fbow -c '+root+'/data/sim-camera.yaml '
         '--viewer none --eval-log-dir '+root+'/results/ros2/live --map-db-out '+root+'/data/simulation-map.msg '
-        '--ros-args -p use_sim_time:=true -p publish_tf:=false '
+        '--ros-args -p use_sim_time:=true -p publish_tf:=false -p use_exact_time:=true '
         '-p camera_frame:=assignment3_camera -r camera/color/image_raw:=/vslam/color/image_raw '
         '-r camera/depth/image_raw:=/vslam/depth/image_raw'],output='screen',sigterm_timeout='30')
     pose=Node(package='ds685_vslam_nav',executable='pose_bridge',parameters=[{'use_sim_time':True}])

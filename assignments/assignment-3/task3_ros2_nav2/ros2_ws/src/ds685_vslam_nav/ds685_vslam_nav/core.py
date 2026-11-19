@@ -25,6 +25,20 @@ class LocalizationBridge:
         return planar(T_map_base @ np.linalg.inv(T_odom_base)), planar(T_map_base)
 
 
+class StampedPairs:
+    """Bounded exact pairing for aligned Gazebo RGB-D; no timestamp rewriting."""
+    def __init__(self, limit=20): self.queues=[{},{}]; self.limit=limit
+
+    def push(self, side, stamp_ns, message):
+        queue=self.queues[side]; queue[stamp_ns]=message
+        while len(queue)>self.limit: del queue[min(queue)]
+        if stamp_ns not in self.queues[1-side]: return None
+        pair=tuple(q.pop(stamp_ns) for q in self.queues)
+        for q in self.queues:
+            for old in [t for t in q if t<stamp_ns]: del q[old]
+        return pair
+
+
 def bresenham(x0,y0,x1,y1):
     dx,dy=abs(x1-x0),-abs(y1-y0); sx=1 if x0<x1 else -1; sy=1 if y0<y1 else -1
     err=dx+dy

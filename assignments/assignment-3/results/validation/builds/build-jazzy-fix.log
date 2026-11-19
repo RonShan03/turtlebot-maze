@@ -1,0 +1,881 @@
+docker : #0 building with "desktop-linux" instance using docker driver
+At line:2 char:1
++ docker build --progress plain -f assignments/assignment-3/task2_stell ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (#0 building wit...g docker driver:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.09kB done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/turtlebot-maze-demo-slam:latest
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/turtlebot_behavior:overlay
+#3 DONE 0.3s
+
+#2 [internal] load metadata for docker.io/library/turtlebot-maze-demo-slam:latest
+#2 DONE 0.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [examples 1/6] FROM 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33
+#6 resolve 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33
+#6 resolve 
+docker.io/library/turtlebot_behavior:overlay@sha256:af65ba300f3599bec6fca10fd381a39b6320f0e2052513efa35abb4faa8ccf33 
+0.2s done
+#6 DONE 0.2s
+
+#7 [cached 1/1] FROM docker.io/library/turtlebot-maze-demo-slam:latest@sha256:209c78d938e6734f6089ea0463917a1231b964aa2
+ec2b324606f08ff17ff8b47
+#7 resolve docker.io/library/turtlebot-maze-demo-slam:latest@sha256:209c78d938e6734f6089ea0463917a1231b964aa2ec2b324606
+f08ff17ff8b47 0.2s done
+#7 DONE 0.2s
+
+#8 [examples 2/6] COPY --from=cached /usr/local/ /usr/local/
+#8 CACHED
+
+#9 [examples 3/6] COPY --from=cached /slam/vocab/orb_vocab.fbow /opt/vslam/orb_vocab.fbow
+#9 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 28.57kB 0.0s done
+#5 DONE 0.1s
+
+#10 [examples 4/6] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential cmake git curl 
+ca-certificates ffmpeg     libeigen3-dev libspdlog-dev libyaml-cpp-dev libsqlite3-dev libsuitesparse-dev     
+libgoogle-glog-dev libgflags-dev libatlas-base-dev libopencv-dev     ros-jazzy-tf2-eigen ros-jazzy-cv-bridge 
+ros-jazzy-image-transport     ros-jazzy-message-filters ros-jazzy-rosbag2-cpp python3-scipy python3-yaml 
+python3-msgpack     && rm -rf /var/lib/apt/lists/* && ldconfig
+#10 1.229 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+#10 1.260 Get:2 http://packages.ros.org/ros2/ubuntu noble InRelease [4679 B]
+#10 1.288 Get:3 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+#10 1.564 Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+#10 1.616 Get:5 http://packages.ros.org/ros2/ubuntu noble/main Sources [2277 kB]
+#10 1.757 Get:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+#10 1.839 Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1475 kB]
+#10 1.843 Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+#10 2.530 Get:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2216 kB]
+#10 2.624 Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+#10 2.687 Get:11 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+#10 2.692 Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+#10 2.704 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]
+#10 2.708 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2184 kB]
+#10 2.734 Get:15 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]
+#10 2.736 Get:16 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1560 kB]
+#10 2.798 Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1822 kB]
+#10 2.876 Get:18 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2371 kB]
+#10 2.925 Get:19 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+#10 2.925 Get:20 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+#10 2.925 Get:21 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+#10 3.071 Get:22 http://packages.ros.org/ros2/ubuntu noble/main amd64 Packages [2153 kB]
+#10 4.192 Fetched 38.5 MB in 3s (11.3 MB/s)
+#10 4.192 Reading package lists...
+#10 5.150 Reading package lists...
+#10 6.063 Building dependency tree...
+#10 6.404 Reading state information...
+#10 6.742 build-essential is already the newest version (12.10ubuntu1).
+#10 6.742 cmake is already the newest version (3.28.3-1build7).
+#10 6.742 cmake set to manually installed.
+#10 6.742 libeigen3-dev is already the newest version (3.4.0-4build0.1).
+#10 6.742 libeigen3-dev set to manually installed.
+#10 6.742 libspdlog-dev is already the newest version (1:1.12.0+ds-2build1).
+#10 6.742 libspdlog-dev set to manually installed.
+#10 6.742 libyaml-cpp-dev is already the newest version (0.8.0+dfsg-6build1).
+#10 6.742 libyaml-cpp-dev set to manually installed.
+#10 6.742 libsuitesparse-dev is already the newest version (1:7.6.1+dfsg-1build1).
+#10 6.742 libsuitesparse-dev set to manually installed.
+#10 6.742 libgoogle-glog-dev is already the newest version (0.6.0-2.1build1).
+#10 6.742 libgoogle-glog-dev set to manually installed.
+#10 6.742 libgflags-dev is already the newest version (2.2.2-2build1).
+#10 6.742 libgflags-dev set to manually installed.
+#10 6.742 libopencv-dev is already the newest version (4.6.0+dfsg-13.1ubuntu1).
+#10 6.742 libopencv-dev set to manually installed.
+#10 6.742 python3-scipy is already the newest version (1.11.4-6build1).
+#10 6.742 python3-scipy set to manually installed.
+#10 6.742 python3-yaml is already the newest version (6.0.1-2build2).
+#10 6.742 python3-yaml set to manually installed.
+#10 6.742 The following additional packages will be installed:
+#10 6.745   git-man libatlas3-base libcurl3t64-gnutls libcurl4-openssl-dev libcurl4t64
+#10 6.746   libsqlite3-0
+#10 6.748 Suggested packages:
+#10 6.748   ffmpeg-doc gettext-base git-daemon-run | git-daemon-sysvinit git-doc
+#10 6.748   git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn libatlas-doc
+#10 6.748   liblapack-doc libcurl4-doc libidn-dev libldap2-dev librtmp-dev libssh2-1-dev
+#10 6.748   sqlite3-doc
+#10 6.748 Recommended packages:
+#10 6.748   less
+#10 6.819 The following NEW packages will be installed:
+#10 6.823   ffmpeg libatlas-base-dev libatlas3-base python3-msgpack
+#10 6.825 The following packages will be upgraded:
+#10 6.826   ca-certificates curl git git-man libcurl3t64-gnutls libcurl4-openssl-dev
+#10 6.828   libcurl4t64 libsqlite3-0 libsqlite3-dev ros-jazzy-cv-bridge
+#10 6.828   ros-jazzy-image-transport ros-jazzy-message-filters ros-jazzy-rosbag2-cpp
+#10 6.829   ros-jazzy-tf2-eigen
+#10 6.986 14 upgraded, 4 newly installed, 0 to remove and 399 not upgraded.
+#10 6.986 Need to get 18.1 MB of archives.
+#10 6.986 After this operation, 39.2 MB of additional disk space will be used.
+#10 6.986 Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ca-certificates all 20260816ubuntu0.24.04.2 
+[140 kB]
+#10 7.112 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-dev amd64 3.45.1-1ubuntu2.9 [911 
+kB]
+#10 7.193 Get:3 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-cv-bridge amd64 
+4.1.0-1noble.20261105.092050 [125 kB]
+#10 7.273 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.9 [702 kB]
+#10 7.313 Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4-openssl-dev amd64 
+8.5.0-2ubuntu10.16 [447 kB]
+#10 7.336 Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.16 [226 kB]
+#10 7.348 Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16 [344 kB]
+#10 7.370 Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 ffmpeg amd64 7:6.1.1-3ubuntu5 [1879 kB]
+#10 7.448 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16 
+[337 kB]
+#10 7.466 Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4 [1101 kB]
+#10 7.497 Get:11 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-message-filters amd64 
+4.11.18-1noble.20261105.090818 [49.4 kB]
+#10 7.498 Get:12 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-image-transport amd64 
+5.1.8-1noble.20261105.094051 [414 kB]
+#10 7.510 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4 [3681 kB]
+#10 7.680 Get:14 http://archive.ubuntu.com/ubuntu noble/universe amd64 libatlas3-base amd64 3.10.3-13ubuntu1 [3544 kB]
+#10 7.838 Get:15 http://archive.ubuntu.com/ubuntu noble/universe amd64 libatlas-base-dev amd64 3.10.3-13ubuntu1 [3827 
+kB]
+#10 7.899 Get:16 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-rosbag2-cpp amd64 
+0.26.11-1noble.20261105.103444 [237 kB]
+#10 7.957 Get:17 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-msgpack amd64 1.0.3-3build2 [80.1 kB]
+#10 8.001 Get:18 http://packages.ros.org/ros2/ubuntu noble/main amd64 ros-jazzy-tf2-eigen amd64 
+0.36.23-1noble.20261105.104956 [13.9 kB]
+#10 8.351 debconf: delaying package configuration, since apt-utils is not installed
+#10 8.443 Fetched 18.1 MB in 1s (15.6 MB/s)
+#10 8.513 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 136775 files and directories currently installed.)
+#10 9.376 Preparing to unpack .../00-ca-certificates_20260816ubuntu0.24.04.2_all.deb ...
+#10 9.395 Unpacking ca-certificates (20260816ubuntu0.24.04.2) over (20260601~24.04.1) ...
+#10 10.02 Preparing to unpack .../01-libsqlite3-dev_3.45.1-1ubuntu2.9_amd64.deb ...
+#10 10.04 Unpacking libsqlite3-dev:amd64 (3.45.1-1ubuntu2.9) over (3.45.1-1ubuntu2.7) ...
+#10 10.22 Preparing to unpack .../02-libsqlite3-0_3.45.1-1ubuntu2.9_amd64.deb ...
+#10 10.25 Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.9) over (3.45.1-1ubuntu2.7) ...
+#10 10.35 Preparing to unpack .../03-libcurl4-openssl-dev_8.5.0-2ubuntu10.16_amd64.deb ...
+#10 10.37 Unpacking libcurl4-openssl-dev:amd64 (8.5.0-2ubuntu10.16) over (8.5.0-2ubuntu10.13) ...
+#10 10.53 Preparing to unpack .../04-curl_8.5.0-2ubuntu10.16_amd64.deb ...
+#10 10.55 Unpacking curl (8.5.0-2ubuntu10.16) over (8.5.0-2ubuntu10.13) ...
+#10 10.65 Preparing to unpack .../05-libcurl4t64_8.5.0-2ubuntu10.16_amd64.deb ...
+#10 10.67 Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.16) over (8.5.0-2ubuntu10.13) ...
+#10 10.76 Selecting previously unselected package ffmpeg.
+#10 10.77 Preparing to unpack .../06-ffmpeg_7%3a6.1.1-3ubuntu5_amd64.deb ...
+#10 10.78 Unpacking ffmpeg (7:6.1.1-3ubuntu5) ...
+#10 10.86 Preparing to unpack .../07-libcurl3t64-gnutls_8.5.0-2ubuntu10.16_amd64.deb ...
+#10 10.88 Unpacking libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.16) over (8.5.0-2ubuntu10.13) ...
+#10 10.99 Preparing to unpack .../08-git-man_1%3a2.43.0-1ubuntu7.4_all.deb ...
+#10 11.01 Unpacking git-man (1:2.43.0-1ubuntu7.4) over (1:2.43.0-1ubuntu7.3) ...
+#10 11.13 Preparing to unpack .../09-git_1%3a2.43.0-1ubuntu7.4_amd64.deb ...
+#10 11.18 Unpacking git (1:2.43.0-1ubuntu7.4) over (1:2.43.0-1ubuntu7.3) ...
+#10 12.01 Selecting previously unselected package libatlas3-base:amd64.
+#10 12.02 Preparing to unpack .../10-libatlas3-base_3.10.3-13ubuntu1_amd64.deb ...
+#10 12.03 Unpacking libatlas3-base:amd64 (3.10.3-13ubuntu1) ...
+#10 12.17 Selecting previously unselected package libatlas-base-dev:amd64.
+#10 12.18 Preparing to unpack .../11-libatlas-base-dev_3.10.3-13ubuntu1_amd64.deb ...
+#10 12.19 Unpacking libatlas-base-dev:amd64 (3.10.3-13ubuntu1) ...
+#10 12.40 Selecting previously unselected package python3-msgpack.
+#10 12.41 Preparing to unpack .../12-python3-msgpack_1.0.3-3build2_amd64.deb ...
+#10 12.42 Unpacking python3-msgpack (1.0.3-3build2) ...
+#10 12.50 Preparing to unpack .../13-ros-jazzy-cv-bridge_4.1.0-1noble.20261105.092050_amd64.deb ...
+#10 12.52 Unpacking ros-jazzy-cv-bridge (4.1.0-1noble.20261105.092050) over (4.1.0-1noble.20260902.080510) ...
+#10 12.77 Preparing to unpack .../14-ros-jazzy-message-filters_4.11.18-1noble.20261105.090818_amd64.deb ...
+#10 12.79 Unpacking ros-jazzy-message-filters (4.11.18-1noble.20261105.090818) over (4.11.17-1noble.20260902.103742) 
+...
+#10 13.19 Preparing to unpack .../15-ros-jazzy-image-transport_5.1.8-1noble.20261105.094051_amd64.deb ...
+#10 13.21 Unpacking ros-jazzy-image-transport (5.1.8-1noble.20261105.094051) over (5.1.8-1noble.20260903.065618) ...
+#10 13.52 Preparing to unpack .../16-ros-jazzy-rosbag2-cpp_0.26.11-1noble.20261105.103444_amd64.deb ...
+#10 13.54 Unpacking ros-jazzy-rosbag2-cpp (0.26.11-1noble.20261105.103444) over (0.26.11-1noble.20260902.083107) ...
+#10 13.88 Preparing to unpack .../17-ros-jazzy-tf2-eigen_0.36.23-1noble.20261105.104956_amd64.deb ...
+#10 13.90 Unpacking ros-jazzy-tf2-eigen (0.36.23-1noble.20261105.104956) over (0.36.22-1noble.20260903.022246) ...
+#10 14.10 Setting up ros-jazzy-rosbag2-cpp (0.26.11-1noble.20261105.103444) ...
+#10 14.11 Setting up libatlas3-base:amd64 (3.10.3-13ubuntu1) ...
+#10 14.15 update-alternatives: using /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3 to provide 
+/usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+#10 14.16 update-alternatives: using /usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3 to provide 
+/usr/lib/x86_64-linux-gnu/liblapack.so.3 (liblapack.so.3-x86_64-linux-gnu) in auto mode
+#10 14.16 Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.16) ...
+#10 14.18 Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.9) ...
+#10 14.20 Setting up libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.16) ...
+#10 14.22 Setting up libatlas-base-dev:amd64 (3.10.3-13ubuntu1) ...
+#10 14.23 update-alternatives: using /usr/lib/x86_64-linux-gnu/atlas/libblas.so to provide 
+/usr/lib/x86_64-linux-gnu/libblas.so (libblas.so-x86_64-linux-gnu) in auto mode
+#10 14.24 update-alternatives: using /usr/lib/x86_64-linux-gnu/atlas/liblapack.so to provide 
+/usr/lib/x86_64-linux-gnu/liblapack.so (liblapack.so-x86_64-linux-gnu) in auto mode
+#10 14.25 Setting up ca-certificates (20260816ubuntu0.24.04.2) ...
+#10 14.35 debconf: unable to initialize frontend: Dialog
+#10 14.35 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#10 14.35 debconf: falling back to frontend: Readline
+#10 14.36 debconf: unable to initialize frontend: Readline
+#10 14.36 debconf: (This frontend requires a controlling tty.)
+#10 14.36 debconf: falling back to frontend: Teletype
+#10 16.29 Updating certificates in /etc/ssl/certs...
+#10 17.46 rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+#10 17.47 4 added, 5 removed; done.
+#10 17.47 Running hooks in /etc/ca-certificates/update.d...
+#10 17.47 done.
+#10 17.50 Setting up libsqlite3-dev:amd64 (3.45.1-1ubuntu2.9) ...
+#10 17.51 Setting up ros-jazzy-tf2-eigen (0.36.23-1noble.20261105.104956) ...
+#10 17.53 Setting up libcurl4-openssl-dev:amd64 (8.5.0-2ubuntu10.16) ...
+#10 17.55 Setting up ros-jazzy-message-filters (4.11.18-1noble.20261105.090818) ...
+#10 17.57 Setting up git-man (1:2.43.0-1ubuntu7.4) ...
+#10 17.58 Setting up python3-msgpack (1.0.3-3build2) ...
+#10 17.73 Setting up curl (8.5.0-2ubuntu10.16) ...
+#10 17.75 Setting up ffmpeg (7:6.1.1-3ubuntu5) ...
+#10 17.77 Setting up ros-jazzy-cv-bridge (4.1.0-1noble.20261105.092050) ...
+#10 17.79 Setting up git (1:2.43.0-1ubuntu7.4) ...
+#10 17.82 Setting up ros-jazzy-image-transport (5.1.8-1noble.20261105.094051) ...
+#10 17.84 Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+#10 DONE 18.1s
+
+#11 [examples 5/6] RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core     && cd 
+/opt/vslam/core && git checkout e445b5452535e781fdf6777ec33a06f5f8f5e416 && git submodule update --init --recursive    
+ && sed -i 's|/build/stella_vslam/3rd/FBoW/include|/usr/local/include|g; 
+s|/build/stella_vslam/build/3rd/FBoW/|/usr/local/lib/|g' /usr/local/lib/fbow/fbowTargets.cmake     && cmake -S . -B 
+build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF     && cmake --build build -j2 && cmake --install build 
+&& ldconfig
+#11 0.375 Cloning into '/opt/vslam/core'...
+#11 1.455 Note: switching to 'e445b5452535e781fdf6777ec33a06f5f8f5e416'.
+#11 1.455 
+#11 1.455 You are in 'detached HEAD' state. You can look around, make experimental
+#11 1.455 changes and commit them, and you can discard any commits you make in this
+#11 1.455 state without impacting any branches by switching back to a branch.
+#11 1.455 
+#11 1.455 If you want to create a new branch to retain commits you create, you may
+#11 1.455 do so (now or later) by using -c with the switch command. Example:
+#11 1.455 
+#11 1.455   git switch -c <new-branch-name>
+#11 1.455 
+#11 1.455 Or undo this operation with:
+#11 1.455 
+#11 1.455   git switch -
+#11 1.455 
+#11 1.455 Turn off this advice by setting config variable advice.detachedHead to false
+#11 1.455 
+#11 1.455 HEAD is now at e445b54 Add LiftFeat ONNX-based feature extractor with CUDA support (#664)
+#11 1.493 Submodule '3rd/FBoW' (https://github.com/stella-cv/FBoW.git) registered for path '3rd/FBoW'
+#11 1.493 Submodule '3rd/tinycolormap' (https://github.com/yuki-koyama/tinycolormap.git) registered for path 
+'3rd/tinycolormap'
+#11 1.499 Cloning into '/opt/vslam/core/3rd/FBoW'...
+#11 3.177 Cloning into '/opt/vslam/core/3rd/tinycolormap'...
+#11 3.621 Submodule path '3rd/FBoW': checked out 'c6e3c29e3332a0b0834021797e2aa4e8eb66a3c1'
+#11 3.643 Submodule path '3rd/tinycolormap': checked out '67198d2b2b48ca5e97600c83b5c0f2310cfd4c03'
+#11 3.661 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+#11 3.661   Compatibility with CMake < 3.5 will be removed from a future version of
+#11 3.661   CMake.
+#11 3.661 
+#11 3.661   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+#11 3.661   CMake that the project does not need compatibility with older versions.
+#11 3.661 
+#11 3.661 
+#11 3.732 -- The CXX compiler identification is GNU 13.3.0
+#11 3.787 -- The C compiler identification is GNU 13.3.0
+#11 3.807 -- Detecting CXX compiler ABI info
+#11 3.933 -- Detecting CXX compiler ABI info - done
+#11 3.939 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+#11 3.940 -- Detecting CXX compile features
+#11 3.940 -- Detecting CXX compile features - done
+#11 3.954 -- Detecting C compiler ABI info
+#11 4.062 -- Detecting C compiler ABI info - done
+#11 4.069 -- Check for working C compiler: /usr/bin/cc - skipped
+#11 4.069 -- Detecting C compile features
+#11 4.070 -- Detecting C compile features - done
+#11 4.071 -- Build type: Release
+#11 4.071 CMake Deprecation Warning at CMakeLists.txt:14 (cmake_policy):
+#11 4.071   The OLD behavior for policy CMP0074 will be removed from a future version
+#11 4.071   of CMake.
+#11 4.071 
+#11 4.071   The cmake-policies(7) manual explains that the OLD behaviors of all
+#11 4.071   policies are deprecated and that a policy should be set to OLD only under
+#11 4.071   specific short-term circumstances.  Projects should be ported to the NEW
+#11 4.071   behavior and not rely on setting a policy to OLD.
+#11 4.071 
+#11 4.071 
+#11 4.071 -- ccache: Disabled
+#11 4.071 -- Address/Memory sanitizer: DISABLED
+#11 4.071 -- Architecture-aware optimization: DISABLED
+#11 4.072 -- ONNX Runtime: NOT found (LiftFeat extractor disabled)
+#11 4.073 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+#11 4.188 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+#11 4.189 -- Found Threads: TRUE  
+#11 4.543 -- Found OpenMP_C: -fopenmp (found version "4.5") 
+#11 4.666 -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+#11 4.666 -- Found OpenMP: TRUE (found version "4.5")  
+#11 4.676 -- Found Eigen3: /usr/include/eigen3 (Required is at least version "3.3") 
+#11 4.699 -- Use OpenCV 4.6.0
+#11 4.699 -- aruco: enabled (Found in /usr/include/opencv4/opencv2)
+#11 4.706 -- Use spdlog on system: 1.12.0
+#11 4.714 -- Found SQLite3: /usr/include (found version "3.45.1") 
+#11 4.720 -- gtsam: disabled
+#11 4.722 -- Found CXSparse: /usr/include/suitesparse (found version "4.3.1") 
+#11 5.267 -- Found AMD library: /usr/lib/x86_64-linux-gnu/libamd.so
+#11 5.267 -- Found AMD header in: /usr/include/suitesparse
+#11 5.268 -- Found CAMD library: /usr/lib/x86_64-linux-gnu/libcamd.so
+#11 5.269 -- Found CAMD header in: /usr/include/suitesparse
+#11 5.269 -- Found COLAMD library: /usr/lib/x86_64-linux-gnu/libcolamd.so
+#11 5.270 -- Found COLAMD header in: /usr/include/suitesparse
+#11 5.271 -- Found CCOLAMD library: /usr/lib/x86_64-linux-gnu/libccolamd.so
+#11 5.271 -- Found CCOLAMD header in: /usr/include/suitesparse
+#11 5.272 -- Found SuiteSparse_config library: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+#11 5.272 -- Found SuiteSparse_config header in: /usr/include/suitesparse
+#11 5.273 -- Adding librt: /usr/lib/x86_64-linux-gnu/librt.a to SuiteSparse_config libraries (required on Linux & Unix 
+[not OSX] if SuiteSparse is compiled with timing).
+#11 5.276 -- Did not find METIS library (optional SuiteSparse dependency)
+#11 5.277 -- Found SuiteSparse: TRUE (found version "..") 
+#11 5.282 -- Could NOT find cuda_efficient_features (missing: cuda_efficient_features_LIBRARY 
+cuda_efficient_features_INCLUDE_DIR) 
+#11 5.282 -- cuda_efficient_features: disabled
+#11 5.283 -- OpenMP: DISABLED
+#11 5.283 -- SSE3 for ORB extraction: DISABLED
+#11 5.283 -- SSE for floating-point operation: DISABLED
+#11 5.283 -- BoW framework: FBoW (found in /usr/local/include)
+#11 5.283 -- ONNX Runtime: DISABLED
+#11 5.283 -- trace level log: DISABLED
+#11 5.283 -- Determinism: DISABLED
+#11 5.283 -- tracy: DISABLED
+#11 5.305 -- Configuring done (1.6s)
+#11 5.343 -- Generating done (0.0s)
+#11 5.347 -- Build files have been written to: /opt/vslam/core/build
+#11 5.424 [  2%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/config.cc.o
+#11 5.424 [  2%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/system.cc.o
+#11 9.997 [  4%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/tracking_module.cc.o
+#11 18.43 [  5%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/mapping_module.cc.o
+#11 24.77 [  6%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/global_optimization_module.cc.o
+#11 31.87 [  8%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/camera/base.cc.o
+#11 34.84 [  9%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/camera/perspective.cc.o
+#11 38.26 [ 10%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/camera/fisheye.cc.o
+#11 39.54 [ 12%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/camera/equirectangular.cc.o
+#11 42.92 [ 13%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/camera/radial_division.cc.o
+#11 44.06 [ 15%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/bow_vocabulary.cc.o
+#11 45.66 [ 16%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/common.cc.o
+#11 47.48 [ 17%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/frame.cc.o
+#11 50.31 [ 19%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/keyframe.cc.o
+#11 50.72 [ 20%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/landmark.cc.o
+#11 57.62 [ 21%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/marker.cc.o
+#11 59.37 [ 23%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/marker2d.cc.o
+#11 60.92 [ 24%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/graph_node.cc.o
+#11 62.77 [ 26%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/camera_database.cc.o
+#11 64.82 [ 27%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/orb_params_database.cc.o
+#11 68.86 [ 28%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/map_database.cc.o
+#11 69.59 [ 30%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/bow_database.cc.o
+#11 71.21 /opt/vslam/core/src/stella_vslam/data/map_database.cc: In member function ‘void 
+stella_vslam::data::map_database::register_keyframe(stella_vslam::data::camera_database*, 
+stella_vslam::data::orb_params_database*, stella_vslam::data::bow_vocabulary*, unsigned int, const nlohmann::json&)’:
+#11 71.21 /opt/vslam/core/src/stella_vslam/data/map_database.cc:374:16: warning: unused variable ‘num_keypts’ 
+[-Wunused-variable]
+#11 71.21   374 |     const auto num_keypts = json_keyfrm.at("n_keypts").get<unsigned int>();
+#11 71.21       |                ^~~~~~~~~~
+#11 72.33 [ 31%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/data/frame_statistics.cc.o
+#11 75.26 [ 32%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/feature/orb_params.cc.o
+#11 77.95 [ 34%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/feature/orb_extractor.cc.o
+#11 78.36 [ 35%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/feature/orb_impl.cc.o
+#11 79.02 [ 36%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/initialize/base.cc.o
+#11 79.55 /opt/vslam/core/src/stella_vslam/feature/orb_extractor.cc: In constructor 
+‘stella_vslam::feature::orb_extractor::orb_extractor(const stella_vslam::feature::orb_params*, unsigned int, 
+stella_vslam::feature::descriptor_type, const std::vector<std::vector<float> >&, const std::string&)’:
+#11 79.55 /opt/vslam/core/src/stella_vslam/feature/orb_extractor.cc:20:49: warning: unused parameter ‘onnx_model_path’ 
+[-Wunused-parameter]
+#11 79.55    20 |                              const std::string& onnx_model_path)
+#11 79.55       |                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+#11 79.58 /opt/vslam/core/src/stella_vslam/feature/orb_extractor.cc: In member function ‘void 
+stella_vslam::feature::orb_extractor::extract_binary_descriptor(const cv::Mat&, const cv::Mat&, 
+std::vector<cv::KeyPoint>&, const cv::_OutputArray&)’:
+#11 79.58 /opt/vslam/core/src/stella_vslam/feature/orb_extractor.cc:289:62: warning: unused parameter ‘image’ 
+[-Wunused-parameter]
+#11 79.58   289 | void orb_extractor::extract_binary_descriptor(const cv::Mat& image, const cv::Mat& image_mask,
+#11 79.58       |                                               ~~~~~~~~~~~~~~~^~~~~
+#11 80.38 [ 38%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/initialize/perspective.cc.o
+#11 83.01 [ 39%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/initialize/bearing_vector.cc.o
+#11 83.23 [ 41%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/io/trajectory_io.cc.o
+#11 85.76 [ 42%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/io/map_database_io_msgpack.cc.o
+#11 90.72 [ 43%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/io/map_database_io_sqlite3.cc.o
+#11 92.60 /opt/vslam/core/src/stella_vslam/io/map_database_io_sqlite3.cc: In member function ‘virtual bool 
+stella_vslam::io::map_database_io_sqlite3::save(const std::string&, const stella_vslam::data::camera_database*, const 
+stella_vslam::data::orb_params_database*, const stella_vslam::data::map_database*)’:
+#11 92.60 /opt/vslam/core/src/stella_vslam/io/map_database_io_sqlite3.cc:20:75: warning: unused parameter 
+‘orb_params_db’ [-Wunused-parameter]
+#11 92.60    20 |                                    const data::orb_params_database* const orb_params_db,
+#11 92.60       |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+#11 92.89 [ 45%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/marker_detector/base.cc.o
+#11 94.43 [ 46%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/marker_detector/aruco.cc.o
+#11 95.27 [ 47%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/marker_model/aruco.cc.o
+#11 96.08 [ 49%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/marker_model/base.cc.o
+#11 97.89 [ 50%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/match/area.cc.o
+#11 98.69 [ 52%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/match/bow_tree.cc.o
+#11 99.70 [ 53%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/match/fuse.cc.o
+#11 100.8 [ 54%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/match/projection.cc.o
+#11 102.2 [ 56%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/match/robust.cc.o
+#11 104.0 [ 57%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/match/stereo.cc.o
+#11 104.6 [ 58%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/initializer.cc.o
+#11 105.6 [ 60%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/relocalizer.cc.o
+#11 107.3 /opt/vslam/core/src/stella_vslam/module/relocalizer.cc: In member function ‘bool 
+stella_vslam::module::relocalizer::relocalize_by_pnp_solver(stella_vslam::data::frame&, const 
+std::shared_ptr<stella_vslam::data::keyframe>&, bool, std::vector<unsigned int>&, 
+std::vector<std::shared_ptr<stella_vslam::data::landmark> >&) const’:
+#11 107.3 /opt/vslam/core/src/stella_vslam/module/relocalizer.cc:163:24: warning: unused variable 
+‘num_additional_matches’ [-Wunused-variable]
+#11 107.3   163 |             const auto num_additional_matches = use_robust_matcher ? 
+robust_matcher_.match_frame_and_keyframe(curr_frm, ngh_keyfrm, additional_matched_landmarks)
+#11 107.3       |                        ^~~~~~~~~~~~~~~~~~~~~~
+#11 107.4 /opt/vslam/core/src/stella_vslam/module/relocalizer.cc: In member function ‘bool 
+stella_vslam::module::relocalizer::refine_pose_by_local_map(stella_vslam::data::frame&, const 
+std::shared_ptr<stella_vslam::data::keyframe>&) const’:
+#11 107.4 /opt/vslam/core/src/stella_vslam/module/relocalizer.cc:361:14: warning: unused variable 
+‘num_additional_matches’ [-Wunused-variable]
+#11 107.4   361 |         auto num_additional_matches = projection_matcher.match_frame_and_landmarks(curr_frm, 
+local_landmarks, lm_to_reproj, lm_to_x_right, lm_to_scale, margin);
+#11 107.4       |              ^~~~~~~~~~~~~~~~~~~~~~
+#11 110.5 [ 61%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/frame_tracker.cc.o
+#11 111.5 [ 63%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/keyframe_inserter.cc.o
+#11 114.8 [ 64%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/marker_initializer.cc.o
+#11 114.9 [ 65%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/two_view_triangulator.cc.o
+#11 117.8 [ 67%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/local_map_cleaner.cc.o
+#11 118.9 [ 68%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/local_map_updater.cc.o
+#11 120.1 [ 69%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/loop_detector.cc.o
+#11 121.5 [ 71%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/module/loop_bundle_adjuster.cc.o
+#11 124.3 [ 72%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/optimize/pose_optimizer_g2o.cc.o
+#11 132.0 [ 73%] Building CXX object 
+src/stella_vslam/CMakeFiles/stella_vslam.dir/optimize/local_bundle_adjuster_g2o.cc.o
+#11 143.4 [ 75%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/optimize/transform_optimizer.cc.o
+#11 156.4 [ 76%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/optimize/graph_optimizer.cc.o
+#11 163.9 [ 78%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/optimize/global_bundle_adjuster.cc.o
+#11 174.1 [ 79%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/optimize/terminate_action.cc.o
+#11 175.4 [ 80%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/publish/frame_publisher.cc.o
+#11 180.3 [ 82%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/publish/map_publisher.cc.o
+#11 182.6 [ 83%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/solve/common.cc.o
+#11 183.2 [ 84%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/solve/homography_solver.cc.o
+#11 183.6 [ 86%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/solve/fundamental_solver.cc.o
+#11 194.3 /opt/vslam/core/src/stella_vslam/solve/homography_solver.cc: In static member function ‘static bool 
+stella_vslam::solve::homography_solver::decompose(const stella_vslam::Mat33_t&, const stella_vslam::Mat33_t&, const 
+stella_vslam::Mat33_t&, stella_vslam::eigen_alloc_vector<Eigen::Matrix<double, 3, 3> >&, 
+stella_vslam::eigen_alloc_vector<Eigen::Matrix<double, 3, 1> >&, 
+stella_vslam::eigen_alloc_vector<Eigen::Matrix<double, 3, 1> >&)’:
+#11 194.3 /opt/vslam/core/src/stella_vslam/solve/homography_solver.cc:162:28: warning: 
+‘svd.Eigen::JacobiSVD<Eigen::Matrix<double, 3, 3, 0, 3, 3>, 
+2>::<unnamed>.Eigen::SVDBase<Eigen::JacobiSVD<Eigen::Matrix<double, 3, 3, 0, 3, 3>, 2> 
+>::m_singularValues.Eigen::Matrix<double, 3, 1, 0, 3, 1>::<unnamed>.Eigen::PlainObjectBase<Eigen::Matrix<double, 3, 1, 
+0, 3, 1> >::m_storage.Eigen::DenseStorage<double, 3, 3, 1, 0>::m_data.Eigen::internal::plain_array<double, 3, 0, 
+0>::array[2]’ may be used uninitialized [-Wmaybe-uninitialized]
+#11 194.3   162 |     const float d3 = lambda(2);
+#11 194.3       |                      ~~~~~~^~~
+#11 194.3 /opt/vslam/core/src/stella_vslam/solve/homography_solver.cc:154:37: note: ‘svd’ declared here
+#11 194.3   154 |     const Eigen::JacobiSVD<Mat33_t> svd(A, Eigen::ComputeFullU | Eigen::ComputeFullV);
+#11 194.3       |                                     ^~~
+#11 196.3 [ 87%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/solve/essential_solver.cc.o
+#11 196.9 [ 89%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/solve/pnp_solver.cc.o
+#11 214.9 [ 90%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/util/angle.cc.o
+#11 215.0 [ 91%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/util/converter.cc.o
+#11 221.8 [ 93%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/util/image_converter.cc.o
+#11 223.4 [ 94%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/util/random_array.cc.o
+#11 224.2 [ 95%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/util/sqlite3.cc.o
+#11 226.9 [ 97%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/util/stereo_rectifier.cc.o
+#11 229.6 [ 98%] Building CXX object src/stella_vslam/CMakeFiles/stella_vslam.dir/util/yaml.cc.o
+#11 230.8 [100%] Linking CXX shared library ../../lib/libstella_vslam.so
+#11 231.1 [100%] Built target stella_vslam
+#11 231.1 -- Install configuration: "Release"
+#11 231.1 -- Installing: /usr/local/lib/cmake/stella_vslam/stella_vslamConfigVersion.cmake
+#11 231.1 -- Installing: /usr/local/lib/cmake/stella_vslam/stella_vslamConfig.cmake
+#11 231.1 -- Old export file "/usr/local/lib/cmake/stella_vslam/stella_vslamTargets.cmake" will be replaced.  Removing 
+files [/usr/local/lib/cmake/stella_vslam/stella_vslamTargets-relwithdebinfo.cmake].
+#11 231.1 -- Installing: /usr/local/lib/cmake/stella_vslam/stella_vslamTargets.cmake
+#11 231.1 -- Installing: /usr/local/lib/cmake/stella_vslam/stella_vslamTargets-release.cmake
+#11 231.1 -- Installing: /usr/local/lib/libstella_vslam.so
+#11 231.1 -- Set non-toolchain portion of runtime path of "/usr/local/lib/libstella_vslam.so" to ""
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/config.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/global_optimization_module.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/mapping_module.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/system.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/tracking_module.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/type.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/3rd/json/include/nlohmann/json.hpp
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/3rd/json/include/nlohmann/json_fwd.hpp
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/camera/base.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/camera/camera_factory.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/camera/equirectangular.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/camera/fisheye.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/camera/perspective.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/camera/radial_division.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/bow_database.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/bow_vocabulary.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/bow_vocabulary_fwd.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/camera_database.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/common.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/frame.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/frame_observation.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/frame_statistics.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/graph_node.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/keyframe.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/landmark.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/map_database.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/marker.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/marker2d.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/data/orb_params_database.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/feature/liftfeat_extractor.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/feature/orb_extractor.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/feature/orb_impl.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/feature/orb_params.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/feature/orb_point_pairs.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/initialize/base.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/initialize/bearing_vector.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/initialize/perspective.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/io/map_database_io_base.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/io/map_database_io_factory.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/io/map_database_io_msgpack.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/io/map_database_io_sqlite3.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/io/trajectory_io.h
+#11 231.1 -- Installing: /usr/local/include/stella_vslam/marker_detector/aruco.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/marker_detector/aruconano.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/marker_detector/base.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/marker_model/aruco.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/marker_model/aruconano.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/marker_model/base.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/match/area.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/match/base.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/match/bow_tree.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/match/fuse.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/match/projection.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/match/robust.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/match/stereo.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/frame_tracker.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/initializer.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/keyframe_inserter.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/local_map_cleaner.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/local_map_updater.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/loop_bundle_adjuster.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/loop_detector.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/marker_initializer.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/relocalizer.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/two_view_triangulator.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/module/type.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/global_bundle_adjuster.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/graph_optimizer.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/local_bundle_adjuster.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/local_bundle_adjuster_factory.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/local_bundle_adjuster_g2o.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/local_bundle_adjuster_gtsam.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/pose_optimizer.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/pose_optimizer_factory.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/pose_optimizer_g2o.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/pose_optimizer_gtsam.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/terminate_action.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/transform_optimizer.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/landmark_vertex.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/landmark_vertex_container.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/marker_vertex_container.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/se3/equirectangular_pose_opt_edge.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/se3/equirectangular_reproj_edge.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/se3/perspective_pose_opt_edge.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/se3/perspective_reproj_edge.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/se3/pose_opt_edge_wrapper.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/se3/reproj_edge_wrapper.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/se3/shot_vertex.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/se3/shot_vertex_container.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/sim3/backward_reproj_edge.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/sim3/forward_reproj_edge.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/sim3/graph_opt_edge.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/sim3/mutual_reproj_edge_wrapper.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/sim3/shot_vertex.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal/sim3/transform_vertex.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/optimize/internal_gtsam/projection_factor.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/publish/frame_publisher.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/publish/map_publisher.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/solve/common.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/solve/essential_5pt.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/solve/essential_solver.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/solve/fundamental_solver.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/solve/homography_solver.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/solve/pnp_solver.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/solve/triangulator.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/angle.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/converter.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/fancy_index.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/image_converter.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/random_array.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/sqlite3.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/stereo_rectifier.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/string.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/trigonometric.h
+#11 231.2 -- Installing: /usr/local/include/stella_vslam/util/yaml.h
+#11 DONE 231.3s
+
+#12 [examples 6/6] RUN git clone https://github.com/stella-cv/stella_vslam_examples.git /opt/vslam/examples     && cd 
+/opt/vslam/examples && git checkout defc69eecc36e51cdda22885bb86954f08ad6887 && git submodule update --init 
+--recursive     && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release     && cmake --build build -j2 --target 
+run_video_slam run_camera_slam
+#12 0.353 Cloning into '/opt/vslam/examples'...
+#12 0.737 Note: switching to 'defc69eecc36e51cdda22885bb86954f08ad6887'.
+#12 0.737 
+#12 0.737 You are in 'detached HEAD' state. You can look around, make experimental
+#12 0.737 changes and commit them, and you can discard any commits you make in this
+#12 0.737 state without impacting any branches by switching back to a branch.
+#12 0.737 
+#12 0.737 If you want to create a new branch to retain commits you create, you may
+#12 0.737 do so (now or later) by using -c with the switch command. Example:
+#12 0.737 
+#12 0.737   git switch -c <new-branch-name>
+#12 0.737 
+#12 0.737 Or undo this operation with:
+#12 0.737 
+#12 0.737   git switch -
+#12 0.737 
+#12 0.737 Turn off this advice by setting config variable advice.detachedHead to false
+#12 0.737 
+#12 0.737 HEAD is now at defc69e Add option --without-vocab
+#12 0.776 Submodule '3rd/filesystem' (https://github.com/gulrak/filesystem.git) registered for path '3rd/filesystem'
+#12 0.782 Cloning into '/opt/vslam/examples/3rd/filesystem'...
+#12 1.276 Submodule path '3rd/filesystem': checked out 'cd6805e94dd5d6346be1b75a54cdc27787319dd2'
+#12 1.291 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+#12 1.291   Compatibility with CMake < 3.5 will be removed from a future version of
+#12 1.291   CMake.
+#12 1.291 
+#12 1.291   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+#12 1.291   CMake that the project does not need compatibility with older versions.
+#12 1.291 
+#12 1.291 
+#12 1.355 -- The CXX compiler identification is GNU 13.3.0
+#12 1.406 -- The C compiler identification is GNU 13.3.0
+#12 1.427 -- Detecting CXX compiler ABI info
+#12 1.551 -- Detecting CXX compiler ABI info - done
+#12 1.558 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+#12 1.558 -- Detecting CXX compile features
+#12 1.559 -- Detecting CXX compile features - done
+#12 1.571 -- Detecting C compiler ABI info
+#12 1.684 -- Detecting C compiler ABI info - done
+#12 1.690 -- Check for working C compiler: /usr/bin/cc - skipped
+#12 1.691 -- Detecting C compile features
+#12 1.691 -- Detecting C compile features - done
+#12 1.694 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+#12 1.802 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+#12 1.803 -- Found Threads: TRUE  
+#12 2.146 -- Found OpenMP_C: -fopenmp (found version "4.5") 
+#12 2.265 -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+#12 2.265 -- Found OpenMP: TRUE (found version "4.5")  
+#12 2.273 -- Found OpenCV: /usr (found version "4.6.0") 
+#12 2.289 -- Stack trace logger: DISABLED
+#12 2.289 -- Google Perftools: DISABLED
+#12 2.323 -- Configuring done (1.0s)
+#12 2.359 -- Generating done (0.0s)
+#12 2.361 -- Build files have been written to: /opt/vslam/examples/build
+#12 2.439 [ 50%] Building CXX object CMakeFiles/run_video_slam.dir/src/run_video_slam.cc.o
+#12 6.747 [100%] Linking CXX executable run_video_slam
+#12 7.199 [100%] Built target run_video_slam
+#12 7.257 [ 50%] Building CXX object CMakeFiles/run_camera_slam.dir/src/run_camera_slam.cc.o
+#12 13.41 [100%] Linking CXX executable run_camera_slam
+#12 13.86 [100%] Built target run_camera_slam
+#12 DONE 13.9s
+
+#13 [integration 1/7] COPY assignments/assignment-3/task2_stella_vslam/patch_wrapper.py /opt/vslam/patch_wrapper.py
+#13 DONE 0.1s
+
+#14 [integration 2/7] RUN mkdir -p /opt/vslam/ros_ws/src     && git clone -b ros2 
+https://github.com/stella-cv/stella_vslam_ros.git /opt/vslam/ros_ws/src/stella_vslam_ros     && cd 
+/opt/vslam/ros_ws/src/stella_vslam_ros && git checkout 186f623dd1c24ee83678f8e1da593801f450bbb3 && git submodule 
+update --init --recursive     && python3 /opt/vslam/patch_wrapper.py 
+/opt/vslam/ros_ws/src/stella_vslam_ros/CMakeLists.txt     && source /opt/ros/jazzy/setup.bash && cd /opt/vslam/ros_ws  
+   && MAKEFLAGS=-j2 colcon build --executor sequential --cmake-args -DCMAKE_BUILD_TYPE=Release
+#14 0.330 Cloning into '/opt/vslam/ros_ws/src/stella_vslam_ros'...
+#14 0.776 Note: switching to '186f623dd1c24ee83678f8e1da593801f450bbb3'.
+#14 0.776 
+#14 0.776 You are in 'detached HEAD' state. You can look around, make experimental
+#14 0.776 changes and commit them, and you can discard any commits you make in this
+#14 0.776 state without impacting any branches by switching back to a branch.
+#14 0.776 
+#14 0.776 If you want to create a new branch to retain commits you create, you may
+#14 0.776 do so (now or later) by using -c with the switch command. Example:
+#14 0.776 
+#14 0.776   git switch -c <new-branch-name>
+#14 0.776 
+#14 0.776 Or undo this operation with:
+#14 0.776 
+#14 0.776   git switch -
+#14 0.776 
+#14 0.776 Turn off this advice by setting config variable advice.detachedHead to false
+#14 0.776 
+#14 0.776 HEAD is now at 186f623 Update Dockerfiles (Install Backward) (#191)
+#14 0.815 Submodule '3rd/filesystem' (https://github.com/gulrak/filesystem) registered for path '3rd/filesystem'
+#14 0.820 Cloning into '/opt/vslam/ros_ws/src/stella_vslam_ros/3rd/filesystem'...
+#14 1.428 Submodule path '3rd/filesystem': checked out 'cd6805e94dd5d6346be1b75a54cdc27787319dd2'
+#14 1.871 Starting >>> stella_vslam_ros
+#14 8.838 --- stderr: stella_vslam_ros
+#14 8.838 CMake Deprecation Warning at CMakeLists.txt:11 (cmake_policy):
+#14 8.838   The OLD behavior for policy CMP0074 will be removed from a future version
+#14 8.838   of CMake.
+#14 8.838 
+#14 8.838   The cmake-policies(7) manual explains that the OLD behaviors of all
+#14 8.838   policies are deprecated and that a policy should be set to OLD only under
+#14 8.838   specific short-term circumstances.  Projects should be ported to the NEW
+#14 8.838   behavior and not rely on setting a policy to OLD.
+#14 8.838 
+#14 8.838 
+#14 8.838 In file included from /opt/vslam/ros_ws/src/stella_vslam_ros/src/system.cc:14:
+#14 8.838 /opt/vslam/ros_ws/src/stella_vslam_ros/src/stella_vslam_ros.h:15:10: fatal error: cv_bridge/cv_bridge.h: No 
+such file or directory
+#14 8.838    15 | #include <cv_bridge/cv_bridge.h>
+#14 8.838       |          ^~~~~~~~~~~~~~~~~~~~~~~
+#14 8.838 compilation terminated.
+#14 8.838 gmake[2]: *** [CMakeFiles/stella_vslam_ros_system.dir/build.make:76: 
+CMakeFiles/stella_vslam_ros_system.dir/src/system.cc.o] Error 1
+#14 8.838 gmake[1]: *** [CMakeFiles/Makefile2:158: CMakeFiles/stella_vslam_ros_system.dir/all] Error 2
+#14 8.838 gmake[1]: *** Waiting for unfinished jobs....
+#14 8.838 gmake: *** [Makefile:146: all] Error 2
+#14 8.838 ---
+#14 8.838 Failed   <<< stella_vslam_ros [6.97s, exited with code 2]
+#14 8.852 
+#14 8.852 Summary: 0 packages finished [7.06s]
+#14 8.852   1 package failed: stella_vslam_ros
+#14 8.852   1 package had stderr output: stella_vslam_ros
+#14 ERROR: process "/bin/bash -c mkdir -p /opt/vslam/ros_ws/src     && git clone -b ros2 
+https://github.com/stella-cv/stella_vslam_ros.git /opt/vslam/ros_ws/src/stella_vslam_ros     && cd 
+/opt/vslam/ros_ws/src/stella_vslam_ros && git checkout ${ROS_REF} && git submodule update --init --recursive     && 
+python3 /opt/vslam/patch_wrapper.py /opt/vslam/ros_ws/src/stella_vslam_ros/CMakeLists.txt     && source 
+/opt/ros/jazzy/setup.bash && cd /opt/vslam/ros_ws     && MAKEFLAGS=-j${BUILD_JOBS} colcon build --executor sequential 
+--cmake-args -DCMAKE_BUILD_TYPE=Release" did not complete successfully: exit code: 2
+------
+ > [integration 2/7] RUN mkdir -p /opt/vslam/ros_ws/src     && git clone -b ros2 
+https://github.com/stella-cv/stella_vslam_ros.git /opt/vslam/ros_ws/src/stella_vslam_ros     && cd 
+/opt/vslam/ros_ws/src/stella_vslam_ros && git checkout 186f623dd1c24ee83678f8e1da593801f450bbb3 && git submodule 
+update --init --recursive     && python3 /opt/vslam/patch_wrapper.py 
+/opt/vslam/ros_ws/src/stella_vslam_ros/CMakeLists.txt     && source /opt/ros/jazzy/setup.bash && cd /opt/vslam/ros_ws  
+   && MAKEFLAGS=-j2 colcon build --executor sequential --cmake-args -DCMAKE_BUILD_TYPE=Release:
+8.838 gmake[2]: *** [CMakeFiles/stella_vslam_ros_system.dir/build.make:76: 
+CMakeFiles/stella_vslam_ros_system.dir/src/system.cc.o] Error 1
+8.838 gmake[1]: *** [CMakeFiles/Makefile2:158: CMakeFiles/stella_vslam_ros_system.dir/all] Error 2
+8.838 gmake[1]: *** Waiting for unfinished jobs....
+8.838 gmake: *** [Makefile:146: all] Error 2
+8.838 ---
+8.838 Failed   <<< stella_vslam_ros [6.97s, exited with code 2]
+8.852 
+8.852 Summary: 0 packages finished [7.06s]
+8.852   1 package failed: stella_vslam_ros
+8.852   1 package had stderr output: stella_vslam_ros
+------
+Dockerfile:32
+--------------------
+  31 |     COPY assignments/assignment-3/task2_stella_vslam/patch_wrapper.py /opt/vslam/patch_wrapper.py
+  32 | >>> RUN mkdir -p /opt/vslam/ros_ws/src \
+  33 | >>>     && git clone -b ros2 https://github.com/stella-cv/stella_vslam_ros.git 
+/opt/vslam/ros_ws/src/stella_vslam_ros \
+  34 | >>>     && cd /opt/vslam/ros_ws/src/stella_vslam_ros && git checkout ${ROS_REF} && git submodule update --init 
+--recursive \
+  35 | >>>     && python3 /opt/vslam/patch_wrapper.py /opt/vslam/ros_ws/src/stella_vslam_ros/CMakeLists.txt \
+  36 | >>>     && source /opt/ros/jazzy/setup.bash && cd /opt/vslam/ros_ws \
+  37 | >>>     && MAKEFLAGS=-j${BUILD_JOBS} colcon build --executor sequential --cmake-args -DCMAKE_BUILD_TYPE=Release
+  38 |     COPY assignments/assignment-3/task3_ros2_nav2/ros2_ws/src/ds685_vslam_nav 
+/opt/vslam/nav_ws/src/ds685_vslam_nav
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/bash -c mkdir -p /opt/vslam/ros_ws/src     && git clone -b ros2 
+https://github.com/stella-cv/stella_vslam_ros.git /opt/vslam/ros_ws/src/stella_vslam_ros     && cd 
+/opt/vslam/ros_ws/src/stella_vslam_ros && git checkout ${ROS_REF} && git submodule update --init --recursive     && 
+python3 /opt/vslam/patch_wrapper.py /opt/vslam/ros_ws/src/stella_vslam_ros/CMakeLists.txt     && source 
+/opt/ros/jazzy/setup.bash && cd /opt/vslam/ros_ws     && MAKEFLAGS=-j${BUILD_JOBS} colcon build --executor sequential 
+--cmake-args -DCMAKE_BUILD_TYPE=Release" did not complete successfully: exit code: 2
+20692 v0.32.1-desktop.1 C:\Program Files\Docker\cli-plugins\docker-buildx.exe buildx build --progress plain -f 
+assignments/assignment-3/task2_stella_vslam/Dockerfile -t ds685-vslam:latest .
+github.com/docker/buildx/commands.runBuildWithOptions
+	github.com/docker/buildx/commands/build.go:479
+github.com/docker/buildx/commands.runBuild
+	github.com/docker/buildx/commands/build.go:399
+github.com/docker/buildx/commands.buildCmd.func1
+	github.com/docker/buildx/commands/build.go:515
+github.com/docker/cli/cli-plugins/plugin.RunPlugin.func1.1.2
+	github.com/docker/cli@v29.2.1+incompatible/cli-plugins/plugin/plugin.go:65
+github.com/spf13/cobra.(*Command).execute
+	github.com/spf13/cobra@v1.10.2/command.go:1015
+github.com/spf13/cobra.(*Command).ExecuteC
+	github.com/spf13/cobra@v1.10.2/command.go:1148
+github.com/spf13/cobra.(*Command).Execute
+	github.com/spf13/cobra@v1.10.2/command.go:1071
+github.com/docker/cli/cli-plugins/plugin.RunPlugin
+	github.com/docker/cli@v29.2.1+incompatible/cli-plugins/plugin/plugin.go:80
+main.runPlugin
+	github.com/docker/buildx/cmd/buildx/main.go:66
+main.run
+	github.com/docker/buildx/cmd/buildx/main.go:80
+main.main
+	github.com/docker/buildx/cmd/buildx/main.go:90
+runtime.main
+	runtime/proc.go:285
+runtime.goexit
+	runtime/asm_amd64.s:1693
+
+129  /usr/local/bin/dockerd --config-file /run/config/docker/daemon.json
+github.com/moby/buildkit/executor/runcexecutor.exitError
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/executor/runcexecutor/executor.go:395
+github.com/moby/buildkit/executor/runcexecutor.(*runcExecutor).Run
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/executor/runcexecutor/executor.go:343
+github.com/moby/buildkit/solver/llbsolver/ops.(*ExecOp).Exec
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/llbsolver/ops/exec.go:498
+github.com/moby/buildkit/solver.(*sharedOp).Exec.func2
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/jobs.go:1181
+github.com/moby/buildkit/util/flightcontrol.(*call[...]).run
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/util/flightcontrol/flightcontrol.go:122
+sync.(*Once).doSlow
+	/usr/local/go/src/sync/once.go:78
+sync.(*Once).Do
+	/usr/local/go/src/sync/once.go:69
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1693
+
+20692 v0.32.1-desktop.1 C:\Program Files\Docker\cli-plugins\docker-buildx.exe buildx build --progress plain -f 
+assignments/assignment-3/task2_stella_vslam/Dockerfile -t ds685-vslam:latest .
+google.golang.org/grpc.(*ClientConn).Invoke
+	google.golang.org/grpc@v1.78.0/call.go:35
+github.com/moby/buildkit/api/services/control.(*controlClient).Solve
+	github.com/moby/buildkit@v0.28.0/api/services/control/control_grpc.pb.go:88
+github.com/moby/buildkit/client.(*Client).solve.func2
+	github.com/moby/buildkit@v0.28.0/client/solve.go:319
+golang.org/x/sync/errgroup.(*Group).Go.func1
+	golang.org/x/sync@v0.19.0/errgroup/errgroup.go:93
+runtime.goexit
+	runtime/asm_amd64.s:1693
+
+129  /usr/local/bin/dockerd --config-file /run/config/docker/daemon.json
+github.com/moby/buildkit/solver.(*edge).execOp
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/edge.go:963
+github.com/moby/buildkit/solver/internal/pipe.NewWithFunction[...].func2
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/internal/pipe/pipe.go:78
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1693
+
+20692 v0.32.1-desktop.1 C:\Program Files\Docker\cli-plugins\docker-buildx.exe buildx build --progress plain -f 
+assignments/assignment-3/task2_stella_vslam/Dockerfile -t ds685-vslam:latest .
+github.com/moby/buildkit/client.(*Client).solve.func2
+	github.com/moby/buildkit@v0.28.0/client/solve.go:321
+golang.org/x/sync/errgroup.(*Group).Go.func1
+	golang.org/x/sync@v0.19.0/errgroup/errgroup.go:93
+
+129  /usr/local/bin/dockerd --config-file /run/config/docker/daemon.json
+github.com/moby/buildkit/solver/llbsolver/ops.(*ExecOp).Exec
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/llbsolver/ops/exec.go:519
+github.com/moby/buildkit/solver.(*sharedOp).Exec.func2
+	/root/build-deb/engine/vendor/github.com/moby/buildkit/solver/jobs.go:1181
+
