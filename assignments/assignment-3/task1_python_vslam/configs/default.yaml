@@ -1,0 +1,9 @@
+features: 3500
+ratio: 0.75
+ransac_px: 1.5
+min_inliers: 20
+reprojection_px: 2.5
+parallax_deg: 0.5
+keyframe_interval: 5
+local_keyframes: 5
+seed: 7

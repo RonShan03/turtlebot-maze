@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ds685-visual-slam"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "opencv-python>=4.10,<6", "scipy>=1.13,<2", "matplotlib>=3.8,<4", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+download = ["gdown>=5,<6", "remotezip>=0.12,<1"]
+
+[project.scripts]
+ds685-vo = "task1_python_vslam.cli:main"
+ds685-camera = "task2_stella_vslam.camera:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["task1_python_vslam*", "task2_stella_vslam*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "task3_ros2_nav2/ros2_ws/src/ds685_vslam_nav"]
