@@ -1,0 +1,21 @@
+Allowed options:
+  -h, --help                 produce help message
+  -v, --vocab arg            vocabulary file path
+  --without-vocab            run without vocabulary file
+  -m, --video arg            video file path
+  -c, --config arg           config file path
+  --mask arg                 mask image path
+  --frame-skip arg (=1)      interval of frame skip
+  -s, --start-time arg (=0)  time to start playing [milli seconds]
+  --no-sleep                 not wait for next frame in real time
+  --wait-loop-ba             wait until the loop BA is finished
+  --auto-term                automatically terminate the viewer
+  --log-level arg (=info)    log level
+  --eval-log-dir arg         store trajectory and tracking times at this path (Specify the directory where it exists.)
+  -i, --map-db-in arg        load a map from this path
+  -o, --map-db-out arg       store a map database at this path after slam
+  --disable-mapping          disable mapping
+  --temporal-mapping         enable temporal mapping
+  -t, --start-timestamp arg  timestamp of the start of the video capture
+  --viewer arg               viewer [iridescence_viewer, pangolin_viewer, socket_publisher, none]
+

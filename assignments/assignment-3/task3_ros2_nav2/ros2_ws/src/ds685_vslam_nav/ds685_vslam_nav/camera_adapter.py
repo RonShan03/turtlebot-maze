@@ -20,8 +20,12 @@ class Adapter(Node):
         self.info_sub=self.create_subscription(CameraInfo,'/camera/color/camera_info',self.receive_info,qos_profile_sensor_data)
         self.color=message_filters.Subscriber(self,Image,'/camera/color/image_raw',qos_profile=qos_profile_sensor_data)
         self.depth=message_filters.Subscriber(self,Image,'/camera/depth/image_rect_raw',qos_profile=qos_profile_sensor_data)
-        self.sync=message_filters.ApproximateTimeSynchronizer([self.color,self.depth],20,.02)
+        self.sync=message_filters.TimeSynchronizer([self.color,self.depth],20)
         self.sync.registerCallback(self.receive)
+        self.timer=self.create_timer(5.,self.report)
+
+    def report(self):
+        self.get_logger().info(f'RGBD pairs={self.pairs}, calibration={self.info is not None}, queues={[len(q) for q in self.sync.queues]}')
 
     def receive_info(self,msg):
         if self.info is not None: return
@@ -47,8 +51,7 @@ class Adapter(Node):
             self.get_logger().error('RGB-D/calibration resolution mismatch'); return
         if depth.encoding!='32FC1' or color.encoding!='rgb8':
             self.get_logger().error('This simulator adapter requires rgb8 and 32FC1 metres'); return
-        # Gz RGB-D images are aligned; slop above tolerates transport scheduling only.
-        depth.header.stamp=color.header.stamp
+        # Gz RGB-D images are aligned and carry the same original timestamp.
         self.color_pub.publish(color); self.depth_pub.publish(depth); self.pairs+=1
 
 

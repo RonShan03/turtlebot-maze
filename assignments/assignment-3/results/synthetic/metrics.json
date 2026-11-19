@@ -1,0 +1,67 @@
+{
+  "dataset": "synthetic",
+  "sequence": "00",
+  "frames": 45,
+  "tracked_frames": 42,
+  "tracking_failures": 3,
+  "status_counts": {
+    "anchor": 1,
+    "lost": 3,
+    "essential_init": 1,
+    "pnp": 40
+  },
+  "mean_features": 3500.0,
+  "mean_inlier_ratio": 0.13869118054933374,
+  "elapsed_tracking_seconds": 13.518197699988377,
+  "config": {
+    "features": 3500,
+    "ratio": 0.75,
+    "ransac_px": 1.5,
+    "min_inliers": 20,
+    "reprojection_px": 2.5,
+    "parallax_deg": 0.5,
+    "keyframe_interval": 5,
+    "local_keyframes": 5,
+    "seed": 7
+  },
+  "versions": {
+    "python": "3.14.3",
+    "opencv": "5.1.0",
+    "numpy": "2.5.5"
+  },
+  "scale_policy": "unit initialization baseline, landmark PnP; fallback reuses last step, global alignment only for evaluation",
+  "alignment": {
+    "scale": 0.551330872226831,
+    "rotation": [
+      [
+        0.8501758020475074,
+        -0.35535308386878994,
+        0.38849104416680935
+      ],
+      [
+        0.5257176737527758,
+        0.5327809065272944,
+        -0.6631481230795452
+      ],
+      [
+        0.028671119909188386,
+        0.7680290954286138,
+        0.639772831134816
+      ]
+    ],
+    "translation": [
+      -0.3871598031718564,
+      -0.24900339659577647,
+      -0.25194824549030537
+    ],
+    "position_rank": 3,
+    "fit": "global least-squares Sim(3)"
+  },
+  "ate_rmse_m": 0.16049451934185957,
+  "ate_all_including_held_rmse_m": 0.21931752440009838,
+  "ate_median_m": 0.13184672695245148,
+  "rpe_translation_rmse_m": 0.031177227765679195,
+  "rpe_rotation_rmse_deg": 0.18541407935459736,
+  "rpe_delta_frames": 1,
+  "rpe_pairs": 40
+}

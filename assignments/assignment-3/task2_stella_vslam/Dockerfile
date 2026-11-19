@@ -22,7 +22,7 @@ ARG ROS_REF=186f623dd1c24ee83678f8e1da593801f450bbb3
 ARG BUILD_JOBS=2
 RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core \
     && cd /opt/vslam/core && git checkout ${STELLA_REF} && git submodule update --init --recursive \
-    && if test -f /usr/local/lib/fbow/fbowTargets.cmake; then sed -i 's|/build/stella_vslam/3rd/FBoW/include|/usr/local/include|g; s|/build/stella_vslam/build/3rd/FBoW/|/usr/local/lib/|g' /usr/local/lib/fbow/fbowTargets.cmake; fi \
+    && sed -i 's|/build/stella_vslam/3rd/FBoW/include|/usr/local/include|g; s|/build/stella_vslam/build/3rd/FBoW/|/usr/local/lib/|g' /usr/local/lib/fbow/fbowTargets.cmake \
     && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF \
     && cmake --build build -j${BUILD_JOBS} && cmake --install build && ldconfig
 RUN git clone https://github.com/stella-cv/stella_vslam_examples.git /opt/vslam/examples \

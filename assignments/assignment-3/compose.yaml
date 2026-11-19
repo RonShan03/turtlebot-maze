@@ -14,6 +14,7 @@ x-runtime: &runtime
     - ../..:/work
     - ../../tb_worlds/launch/tb_world.launch.py:/overlay_ws/install/tb_worlds/share/tb_worlds/launch/tb_world.launch.py:ro
     - ../../tb_worlds/worlds:/overlay_ws/install/tb_worlds/share/tb_worlds/worlds:ro
+    - ./task3_ros2_nav2/ros2_ws/src/ds685_vslam_nav:/opt/vslam/nav_ws/src/ds685_vslam_nav:ro
   working_dir: /work/assignments/assignment-3
 services:
   baseline:

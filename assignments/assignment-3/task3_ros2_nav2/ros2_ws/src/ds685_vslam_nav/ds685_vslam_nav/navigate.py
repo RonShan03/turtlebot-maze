@@ -4,6 +4,7 @@ from pathlib import Path
 import time
 import math
 import rclpy
+from rclpy.utilities import remove_ros_args
 from rclpy.action import ActionClient
 from nav2_msgs.action import NavigateToPose
 from geometry_msgs.msg import TwistStamped
@@ -16,7 +17,7 @@ def main():
     p.add_argument('--x',type=float,default=.5); p.add_argument('--y',type=float,default=0.); p.add_argument('--yaw',type=float,default=0.)
     p.add_argument('--timeout',type=float,default=90); p.add_argument('--output',required=True)
     p.add_argument('--initialize-seconds',type=float,default=0.,help='slow forward motion only; use before starting navigation goals')
-    args=p.parse_args(); rclpy.init(); node=rclpy.create_node('ds685_navigation_probe')
+    args=p.parse_args(remove_ros_args()[1:]); rclpy.init(); node=rclpy.create_node('ds685_navigation_probe')
     report={'mode':'Nav2 goal','goal':[args.x,args.y,args.yaw],'accepted':False,'succeeded':False}
     start=time.monotonic()
     try:

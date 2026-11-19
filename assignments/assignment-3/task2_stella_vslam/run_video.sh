@@ -9,6 +9,6 @@ output=$(realpath "$output")
 exe=/opt/vslam/examples/build/run_video_slam
 "$exe" --help > "$output/executable-help.txt" 2>&1 || true
 "$exe" -v /opt/vslam/orb_vocab.fbow -m "$video" -c "$config" \
-  --frame-skip 3 --no-sleep --auto-term --eval-log-dir "$output" --map-db-out "$output/map.msg" \
+  --frame-skip 3 --no-sleep --auto-term --viewer none --eval-log-dir "$output" --map-db-out "$output/map.msg" \
   2>&1 | tee "$output/run.log"
 test -s "$output/map.msg"

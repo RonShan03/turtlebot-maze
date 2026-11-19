@@ -65,6 +65,9 @@ class OccupancyMapper:
         np.clip(self.log_odds,-4,4,out=self.log_odds)
 
     def grid(self):
-        values=np.rint(100/(1+np.exp(-self.log_odds))).astype(np.int8)
-        values[~self.observed]=-1
+        # Nav2's trinary StaticLayer expects occupied cells to reach 100.
+        # Saturating probabilities at .982 would otherwise never reach its default lethal threshold.
+        values=np.full(self.log_odds.shape,-1,np.int8)
+        values[self.observed & (self.log_odds<-.2)]=0
+        values[self.observed & (self.log_odds>.6)]=100
         return values

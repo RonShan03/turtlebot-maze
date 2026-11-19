@@ -1,0 +1,98 @@
+[2026-11-19 22:47:01.047] [I] config file loaded: /opt/vslam/core/example/aist/equirectangular.yaml
+--start-timestamp is not set. using system timestamp.
+If --no-sleep is set without --start-timestamp, timestamps may overlap between multiple runs.
+[2026-11-19 22:47:01.048] [I] 
+original version of OpenVSLAM,
+Copyright (C) 2019,
+National Institute of Advanced Industrial Science and Technology (AIST)
+All rights reserved.
+stella_vslam (the changes after forking from OpenVSLAM),
+Copyright (C) 2022, stella-cv, All rights reserved.
+
+This is free software,
+and you are welcome to redistribute it under certain conditions.
+See the LICENSE file.
+
+Camera:
+  name: RICOH THETA S 960
+  setup: monocular
+  model: equirectangular
+  fps: 30.0
+  cols: 1920
+  rows: 960
+  color_order: RGB
+Preprocessing:
+  min_size: 800
+  mask_rectangles:
+    - [0.0, 1.0, 0.0, 0.1]
+    - [0.0, 1.0, 0.84, 1.0]
+    - [0.0, 0.2, 0.7, 1.0]
+    - [0.8, 1.0, 0.7, 1.0]
+Feature:
+  name: default ORB feature extraction setting
+  scale_factor: 1.2
+  num_levels: 8
+  ini_fast_threshold: 20
+  min_fast_threshold: 7
+Mapping:
+  backend: g2o
+  baseline_dist_thr_ratio: 0.02
+  redundant_obs_ratio_thr: 0.95
+  num_covisibilities_for_landmark_generation: 20
+  num_covisibilities_for_landmark_fusion: 20
+  residual_deg_thr: 0.4
+Tracking:
+  backend: g2o
+LoopDetector:
+  backend: g2o
+  enabled: true
+  reject_by_graph_distance: true
+  min_distance_on_graph: 50
+GraphOptimizer:
+  min_num_shared_lms: 200
+GlobalOptimizer:
+  thr_neighbor_keyframes: 100
+System:
+  map_format: msgpack
+  num_grid_cols: 96
+  num_grid_rows: 48
+
+[2026-11-19 22:47:01.048] [I] loading ORB vocabulary: /opt/vslam/orb_vocab.fbow
+[2026-11-19 22:47:01.084] [I] load orb_params "default ORB feature extraction setting"
+[2026-11-19 22:47:01.086] [I] startup SLAM system
+[2026-11-19 22:47:01.086] [I] start mapping module
+[2026-11-19 22:47:01.086] [I] start global optimization module
+[2026-11-19 22:47:01.407] [I] initialization succeeded with E
+[2026-11-19 22:47:01.411] [I] new map created with 72 points: frame 0 - frame 1
+[2026-11-19 22:47:14.275] [I] detect loop: keyframe 31 - keyframe 114
+[2026-11-19 22:47:14.279] [I] pause mapping module
+[2026-11-19 22:47:14.307] [I] resume mapping module
+[2026-11-19 22:47:14.307] [I] start loop bundle adjustment
+[2026-11-19 22:47:14.969] [I] finish loop bundle adjustment
+[2026-11-19 22:47:14.969] [I] updating the map with pose propagation
+[2026-11-19 22:47:14.970] [I] pause mapping module
+[2026-11-19 22:47:14.981] [I] resume mapping module
+[2026-11-19 22:47:14.981] [I] updated the map
+[2026-11-19 22:47:32.122] [I] detect loop: keyframe 91 - keyframe 160
+[2026-11-19 22:47:32.129] [I] pause mapping module
+[2026-11-19 22:47:32.171] [I] resume mapping module
+[2026-11-19 22:47:32.171] [I] start loop bundle adjustment
+[2026-11-19 22:47:33.183] [I] finish loop bundle adjustment
+[2026-11-19 22:47:33.183] [I] updating the map with pose propagation
+[2026-11-19 22:47:33.220] [I] pause mapping module
+[2026-11-19 22:47:33.239] [I] resume mapping module
+[2026-11-19 22:47:33.239] [I] updated the map
+[2026-11-19 22:47:45.061] [I] terminate global optimization module
+[2026-11-19 22:47:45.064] [I] terminate mapping module
+[2026-11-19 22:47:45.064] [I] shutdown SLAM system
+[2026-11-19 22:47:45.068] [I] dump frame trajectory in "TUM" format from frame 0 to frame 1358 (1359 frames)
+[2026-11-19 22:47:45.397] [I] dump keyframe trajectory in "TUM" format from keyframe 0 to keyframe 224 (225 keyframes)
+median tracking time: 0.0263319[s]
+mean tracking time: 0.0267612[s]
+[2026-11-19 22:47:45.760] [I] encoding 1 camera(s) to store
+[2026-11-19 22:47:45.761] [I] encoding 1 orb_params to store
+[2026-11-19 22:47:45.761] [I] encoding 225 keyframes to store
+[2026-11-19 22:47:46.814] [I] encoding 7215 landmarks to store
+[2026-11-19 22:47:47.066] [I] save the MessagePack file of database to /work/assignments/assignment-3/results/stella/aist/map.msg
+[2026-11-19 22:47:47.919] [I] clear BoW database
+[2026-11-19 22:47:48.221] [I] clear map database

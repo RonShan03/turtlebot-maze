@@ -1,0 +1,13 @@
+{
+  "mode": "Nav2 goal",
+  "goal": [
+    2.0,
+    0.0,
+    0.0
+  ],
+  "accepted": true,
+  "succeeded": false,
+  "action_status": 6,
+  "error_code": 0,
+  "elapsed_seconds": 0.12059459099964442
+}

@@ -1,0 +1,66 @@
+{
+  "dataset": "KITTI odometry",
+  "sequence": "00",
+  "frames": 150,
+  "tracked_frames": 150,
+  "tracking_failures": 0,
+  "status_counts": {
+    "anchor": 1,
+    "essential_init": 1,
+    "pnp": 148
+  },
+  "mean_features": 3500.0,
+  "mean_inlier_ratio": 0.13610648089873925,
+  "elapsed_tracking_seconds": 40.74187169999641,
+  "config": {
+    "features": 3500,
+    "ratio": 0.75,
+    "ransac_px": 1.5,
+    "min_inliers": 20,
+    "reprojection_px": 2.5,
+    "parallax_deg": 0.5,
+    "keyframe_interval": 5,
+    "local_keyframes": 5,
+    "seed": 7
+  },
+  "versions": {
+    "python": "3.14.3",
+    "opencv": "5.1.0",
+    "numpy": "2.5.5"
+  },
+  "scale_policy": "unit initialization baseline, landmark PnP; fallback reuses last step, global alignment only for evaluation",
+  "alignment": {
+    "scale": 2.484805169170262,
+    "rotation": [
+      [
+        0.9957383454441955,
+        0.04097251140096478,
+        0.08262203532686857
+      ],
+      [
+        -0.04048246612129412,
+        0.9991513569142102,
+        -0.007598415178893016
+      ],
+      [
+        -0.08286324486040085,
+        0.004221289612236681,
+        0.9965519872867725
+      ]
+    ],
+    "translation": [
+      1.4516593649824439,
+      -1.254262115813296,
+      -19.359740114145247
+    ],
+    "position_rank": 3,
+    "fit": "global least-squares Sim(3)"
+  },
+  "ate_rmse_m": 7.51216174940121,
+  "ate_all_including_held_rmse_m": 7.51216174940121,
+  "ate_median_m": 6.264545775699082,
+  "rpe_translation_rmse_m": 0.5052189935635204,
+  "rpe_rotation_rmse_deg": 0.19584429733910622,
+  "rpe_delta_frames": 1,
+  "rpe_pairs": 149
+}

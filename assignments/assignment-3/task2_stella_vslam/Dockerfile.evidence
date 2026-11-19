@@ -1,0 +1,7 @@
+ARG EVIDENCE_BASE=ds685-vslam:latest
+FROM ${EVIDENCE_BASE}
+USER root
+SHELL ["/bin/bash","-c"]
+COPY assignments/assignment-3/task2_stella_vslam/patch_examples.py /opt/vslam/patch_examples.py
+RUN python3 /opt/vslam/patch_examples.py /opt/vslam/examples/src/run_video_slam.cc \
+    && cmake --build /opt/vslam/examples/build -j2 --target run_video_slam

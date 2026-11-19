@@ -1,0 +1,16 @@
+{
+  "trajectory_samples": 1359,
+  "timestamp_duration_s": 135.43543004989624,
+  "path_length_arbitrary_units": 56.59495503509689,
+  "note": "Monocular AIST map scale is arbitrary; no reference ground truth error reported",
+  "map_sections": [
+    "cameras",
+    "keyframe_next_id",
+    "keyframes",
+    "landmark_next_id",
+    "landmarks",
+    "orb_params"
+  ],
+  "landmarks": 7215,
+  "keyframes": 225
+}

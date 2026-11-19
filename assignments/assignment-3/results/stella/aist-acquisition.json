@@ -1,0 +1,10 @@
+{
+  "dataset": "aist_living_lab_1",
+  "source": "https://stella-cv.readthedocs.io/en/latest/simple_tutorial.html",
+  "drive_id": "1d8kADKWBptEqTF7jEVhKatBEdN7g0ikY",
+  "archive_bytes": 79699023,
+  "sha256": "566ab0bcb89f605c2838107808df75d8015021e66092443cb0394d60e2984f78",
+  "videos": [
+    "data\\aist\\aist_living_lab_1\\video.mp4"
+  ]
+}

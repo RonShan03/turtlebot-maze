@@ -18,6 +18,7 @@ RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/core \
     && git submodule update --init --recursive \
     && cmake -S 3rd/FBoW -B 3rd/FBoW/build -DCMAKE_BUILD_TYPE=Release \
     && cmake --build 3rd/FBoW/build -j2 && cmake --install 3rd/FBoW/build \
+    && mkdir -p /usr/local/lib/fbow && touch /usr/local/lib/fbow/fbowTargets.cmake \
     && mkdir -p /slam/vocab \
     && curl --fail --location --retry 2 https://github.com/stella-cv/FBoW_orb_vocab/raw/main/orb_vocab.fbow -o /slam/vocab/orb_vocab.fbow
 
