@@ -1,0 +1,40 @@
+# Fresh Linux fallback when the workstation's cached course images are absent.
+# Build each target with the tags used by task2_stella_vslam/Dockerfile.
+FROM ubuntu:24.04 AS slam-cache
+SHELL ["/bin/bash","-c"]
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential cmake git curl ca-certificates libeigen3-dev libsuitesparse-dev \
+    libopencv-dev libyaml-cpp-dev libspdlog-dev libsqlite3-dev libatlas-base-dev \
+    && rm -rf /var/lib/apt/lists/*
+RUN git clone --branch 20230223_git --depth 1 https://github.com/RainerKuemmerle/g2o.git /opt/g2o \
+    && cmake -S /opt/g2o -B /opt/g2o/build -DCMAKE_BUILD_TYPE=Release \
+       -DBUILD_SHARED_LIBS=ON -DBUILD_UNITTESTS=OFF -DG2O_USE_CHOLMOD=OFF -DG2O_USE_CSPARSE=ON \
+       -DG2O_USE_OPENGL=OFF -DG2O_USE_OPENMP=OFF -DG2O_BUILD_APPS=OFF -DG2O_BUILD_EXAMPLES=OFF \
+       -DG2O_BUILD_LINKED_APPS=OFF \
+    && cmake --build /opt/g2o/build -j2 && cmake --install /opt/g2o/build
+RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/core \
+    && cd /opt/core && git checkout e445b5452535e781fdf6777ec33a06f5f8f5e416 \
+    && git submodule update --init --recursive \
+    && cmake -S 3rd/FBoW -B 3rd/FBoW/build -DCMAKE_BUILD_TYPE=Release \
+    && cmake --build 3rd/FBoW/build -j2 && cmake --install 3rd/FBoW/build \
+    && mkdir -p /slam/vocab \
+    && curl --fail --location --retry 2 https://github.com/stella-cv/FBoW_orb_vocab/raw/main/orb_vocab.fbow -o /slam/vocab/orb_vocab.fbow
+
+FROM ros:jazzy AS course
+SHELL ["/bin/bash","-c"]
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-jazzy-nav2-bringup ros-jazzy-nav2-minimal-tb3-sim ros-jazzy-ros-gz \
+    ros-jazzy-xacro ros-jazzy-robot-state-publisher ros-jazzy-rmw-cyclonedds-cpp \
+    python3-colcon-common-extensions python3-opencv python3-scipy python3-matplotlib python3-yaml \
+    libegl1 libgl1 libgles2 mesa-utils mesa-vulkan-drivers \
+    && rm -rf /var/lib/apt/lists/*
+RUN mkdir -p /turtlebot_ws/src && source /opt/ros/jazzy/setup.bash \
+    && cd /turtlebot_ws && colcon build
+COPY tb_worlds /overlay_ws/src/tb_worlds
+RUN source /opt/ros/jazzy/setup.bash && cd /overlay_ws \
+    && colcon build --packages-select tb_worlds --symlink-install
+ENV TURTLEBOT_MODEL=3
+ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+ENTRYPOINT ["/ros_entrypoint.sh"]

@@ -1,0 +1,35 @@
+name: ds685-visual-slam
+x-runtime: &runtime
+  image: ds685-vslam:latest
+  # One container holds all ROS nodes. No published ports or host network required.
+  init: true
+  shm_size: 1gb
+  environment:
+    ROS_DOMAIN_ID: '68'
+    ROS_LOCALHOST_ONLY: '1'
+    TURTLEBOT_MODEL: '3'
+    QT_QPA_PLATFORM: offscreen
+    LIBGL_ALWAYS_SOFTWARE: '1'
+  volumes:
+    - ../..:/work
+    - ../../tb_worlds/launch/tb_world.launch.py:/overlay_ws/install/tb_worlds/share/tb_worlds/launch/tb_world.launch.py:ro
+    - ../../tb_worlds/worlds:/overlay_ws/install/tb_worlds/share/tb_worlds/worlds:ro
+  working_dir: /work/assignments/assignment-3
+services:
+  baseline:
+    <<: *runtime
+    image: turtlebot_behavior:overlay
+    profiles: [baseline]
+    entrypoint: [bash, /work/assignments/assignment-3/task3_ros2_nav2/scripts/entrypoint.sh]
+    command: [ros2, launch, tb_worlds, tb_world.launch.py, 'headless:=true', 'robot_sdf:=/work/assignments/assignment-3/task3_ros2_nav2/generated/robot.sdf.xacro']
+  integration:
+    <<: *runtime
+    build:
+      context: ../..
+      dockerfile: assignments/assignment-3/task2_stella_vslam/Dockerfile
+    profiles: [integration]
+    command: [ros2, launch, ds685_vslam_nav, system.launch.py]
+  reference:
+    <<: *runtime
+    profiles: [reference]
+    command: [bash, task2_stella_vslam/run_video.sh, data/aist/aist_living_lab_1/video.mp4, /opt/vslam/core/example/aist/equirectangular.yaml, results/stella/aist]

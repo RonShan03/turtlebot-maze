@@ -10,7 +10,7 @@ dependencies = ["numpy>=1.26,<3", "opencv-python>=4.10,<6", "scipy>=1.13,<2", "m
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]
-download = ["gdown>=5,<6", "remotezip>=0.12,<1"]
+download = ["gdown>=5,<7", "remotezip>=0.12,<1", "msgpack>=1,<2"]
 
 [project.scripts]
 ds685-vo = "task1_python_vslam.cli:main"
