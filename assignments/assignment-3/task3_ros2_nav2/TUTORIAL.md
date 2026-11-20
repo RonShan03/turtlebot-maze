@@ -18,6 +18,8 @@ The default build expects the existing `turtlebot_behavior:overlay` and `turtleb
 
 ```bash
 bash assignments/assignment-3/task3_ros2_nav2/scripts/bootstrap_linux.sh
+# On a managed cloud host whose Git traffic is proxied, pass its trusted CA bundle.
+DS685_BUILD_CA=/etc/ssl/certs/ca-certificates.crt bash assignments/assignment-3/task3_ros2_nav2/scripts/bootstrap_linux.sh
 ```
 
 The fresh-host route builds pinned g2o/FBoW plus a minimal ROS Jazzy/Gazebo course layer. It requires network access, several GB of disk and a suitable CPU/RAM budget. Source/package pins are in the Dockerfiles; apt/base tags are documented rather than byte-for-byte locked. The cached workstation route has the direct runtime evidence. Validate fresh-host builds separately; do not infer successful Gazebo execution from a successful image build.
@@ -33,7 +35,7 @@ docker compose -f assignments/assignment-3/compose.yaml stop baseline
 
 The unextended baseline tests wheel/IMU/range/RGB-D connectivity. The smoke subscriber also lists some requested topics itself, so **a topic name alone is not evidence of publication**; require positive message counts. The baseline does not yet start visual localization, camera-info bridging or the new static camera TF. Saved failures for those checks are expected at this stage.
 
-Measured baseline: in 12 wall-clock seconds, the new 640×480 sensor delivered 32 RGB and 54 depth messages, with 318 odometry, 2,324 IMU and 57 LiDAR messages. The first depth image was 98.80% finite/positive and reached 3.489 m. RGB and depth sampling counts differ because the diagnostic subscriber receives each stream independently; this does not prove RGB-D pair synchronization. The adapter checks pairs in the integration stage.
+Measured baseline: in 12 wall-clock seconds, the new 640×480 sensor delivered 32 RGB and 54 depth messages, with 318 odometry, 2,324 IMU and 57 LiDAR messages. The first depth image was 98.80% finite/positive and reached 3.489 m. RGB and depth sampling counts differ because the diagnostic subscriber receives each stream independently; this does not prove RGB-D pair synchronization. The wrapper checks pairs in the integration stage.
 
 The cached image's launch attempted a GUI and crashed on OpenGL. The assignment mounts the existing corrected `tb_world.launch.py`, which invokes `gz sim -s --headless-rendering`. Headless software-rendered RGB/depth images worked under Docker Desktop; this is useful evidence for remote Linux feasibility, not a guarantee for every VM's EGL/CPU configuration.
 
@@ -48,11 +50,11 @@ The launch starts the existing enhanced maze with textured walls, the assignment
 
 | Data | Actual source / consumer |
 |---|---|
-| `/camera/color/image_raw`, `rgb8` | Gazebo RGB-D sensor → existing bridge → adapter |
-| `/camera/depth/image_rect_raw`, `32FC1` metres | Same aligned sensor → adapter |
+| `/camera/color/image_raw`, `rgb8` | Gazebo RGB-D sensor → existing bridge → StellaVSLAM |
+| `/camera/depth/image_rect_raw`, `32FC1` metres | Same aligned sensor → StellaVSLAM |
 | `/camera/color/camera_info` | Extra bridge from `/camera/realsense_d435i/camera_info` |
-| `/vslam/color/image_raw`, `/vslam/depth/image_raw` | Adapter's synchronized reliable publishers → wrapper message filters |
-| `data/sim-camera.yaml` | Derived from actual CameraInfo, not copied physical-camera values |
+| `/vslam/color/image_raw`, `/vslam/depth/image_raw` | Optional relay outputs when launched with `relay_images:=true` |
+| `/tmp/ds685-camera-*.yaml` | Derived from CameraInfo in the current launch |
 | `/run_slam/camera_pose`, `nav_msgs/Odometry` | Official wrapper, map coordinates and ROS camera-body axes |
 | `/vslam/base_pose` | Bridge-adjusted planar robot pose; conservative configured covariance |
 | `/odom`, `/tf` | Gazebo differential-drive odometry and existing robot-state publisher |
@@ -60,7 +62,9 @@ The launch starts the existing enhanced maze with textured walls, the assignment
 | `/scan` | LiDAR → occupancy inserter and Nav2 obstacle layers |
 | `/cmd_vel`, `TwistStamped` | Nav2 → existing Gazebo bridge |
 
-The CameraInfo adapter subscribes using sensor QoS, validates dimensions/encoding, preserves the image timestamps and emits matched RGB-D pairs using reliable QoS because the upstream RGB-D wrapper's filters use reliable subscriptions. The latest source uses a bounded exact-stamp pairing buffer, and the wrapper also uses exact synchronization. Gazebo supplies equal RGB/depth stamps; mismatched frames are dropped rather than relabeled. `Preprocessing.depthmap_factor=1.0` is required for Gazebo's floating-point metric depth. Intermittent subscription/pairing stalls remain a runtime blocker even though independent probes receive raw frames; inspect the diagnostics described below.
+The CameraInfo node writes a fresh calibration file and the wrapper waits up to 180 seconds for it. The pinned wrapper is patched to use sensor QoS for its RGB-D subscriptions. It takes images directly from the Gazebo bridge and pairs their original timestamps exactly. Gazebo provides aligned `rgb8` and `32FC1` images, with depth in metres and `Preprocessing.depthmap_factor=1.0`.
+
+Rebuild the integration image before using this launch with a cached image. The prior logs show raw delivery to the Python relay freezing even as a separate subscriber still received frames. To compare the two paths, restart from a clean simulation with `docker compose -f assignments/assignment-3/compose.yaml --profile integration run --rm integration ros2 launch ds685_vslam_nav system.launch.py relay_images:=true`. Use a separate result directory for each smoke window and preserve the launch log. The relay checks encoding and resolution and publishes only exact pairs; in direct mode check these properties in the smoke report.
 
 TF authority is deliberately unique:
 
@@ -77,12 +81,12 @@ The camera setup is **RGBD**, so the localization translation has depth-derived 
 ## 4. Validate tracking, TF and costmaps
 
 ```powershell
-docker compose -f assignments/assignment-3/compose.yaml exec integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav smoke_test --seconds 20 --output /work/assignments/assignment-3/results/ros2/integration-new --ros-args -p use_sim_time:=true
+docker compose -f assignments/assignment-3/compose.yaml exec integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav smoke_test --require-navigation --seconds 20 --output /work/assignments/assignment-3/results/ros2/integration-new --ros-args -p use_sim_time:=true
 docker compose -f assignments/assignment-3/compose.yaml exec integration /opt/vslam/entrypoint.sh ros2 run tf2_ros tf2_echo map base_link
 docker compose -f assignments/assignment-3/compose.yaml exec integration /opt/vslam/entrypoint.sh ros2 lifecycle get /controller_server
 ```
 
-Inspect `smoke.json`: require actual RGB/depth/info/visual-pose/map messages and valid `map <- odom`, `map <- base_link`, and `base_link <- assignment3_camera_optical`. Inspect saved CameraInfo values and camera/depth images. Require occupied/free grid cells and published Nav2 costmaps. Nav2 servers must reach `active`.
+Inspect `smoke.json`: require actual RGB/depth/info/visual-pose/map messages and valid `map <- odom`, `map <- base_link`, and `base_link <- assignment3_camera_optical`. Inspect saved CameraInfo values and camera/depth images. Require occupied/free grid cells and published Nav2 costmaps. Nav2 servers must reach `active`. Repeat the strict smoke check with a new output directory after waiting at least 60 seconds, and again after the route. A nonzero status preserves the JSON report and flags missing streams, repeated or missing visual timestamps, stale map TF, or an empty occupancy grid.
 
 The baseline's original blank gray walls provide very few visual corners, so the full launch uses the repository's existing enhanced textured world. This is a legitimate feature-rich test scene. If textures fail to render or initialization is poor, inspect the actual RGB snapshot and material paths before tuning feature thresholds. Do not substitute Gazebo ground truth, an identity map transform or LiDAR localization.
 

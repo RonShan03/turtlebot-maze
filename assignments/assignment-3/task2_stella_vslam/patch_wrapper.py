@@ -19,3 +19,15 @@ text=header.read_text()
 old_header='#include <cv_bridge/cv_bridge.h>'
 if text.count(old_header)!=1: raise RuntimeError('upstream cv_bridge include changed; inspect before patching')
 header.write_text(text.replace(old_header,'#include <cv_bridge/cv_bridge.hpp>'))
+
+# Match the simulator's sensor publishers directly, while remaining compatible
+# with reliable publishers when the relay is enabled for diagnosis.
+implementation = path.parent / 'src/stella_vslam_ros.cc'
+source = implementation.read_text()
+for stream in ('color', 'depth'):
+    old = f'{stream}_sf_(node_, "camera/{stream}/image_raw")'
+    new = f'{stream}_sf_(node_, "camera/{stream}/image_raw", rmw_qos_profile_sensor_data)'
+    if source.count(old) != 1:
+        raise RuntimeError(f'upstream RGB-D {stream} subscription changed')
+    source = source.replace(old, new)
+implementation.write_text(source)

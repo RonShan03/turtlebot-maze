@@ -146,6 +146,12 @@ The successful integrated 12-second smoke window received **157 visual camera po
 
 This is **partial navigation validation**. An intermittent adapter subscription/pairing stall subsequently stopped new visual poses while independent raw-image probes still received images. The 2 m goal aborted (status 6), and a later fresh-run 1 m goal was rejected while Nav2 lacked map TF. Exact synchronization and a small directly testable pairing buffer were investigated; the latest buffer's algorithm tests pass, but the latest runtime remained stalled. `integration02/` preserves the successful configuration's evidence; `integration-latest.log`, `sync-diagnostic.json`, `goal02.json` and `goal03.json` preserve failures. Full-maze traversal is not complete. The 54.4 s ROS bag contains 21,971 messages but zero `/cmd_vel` messages because recording began after the successful short goal; it must not be presented as a recording of that completed motion. A separate actual camera-view recording is saved locally and identified by its metadata.
 
+## Cloud continuation
+
+The cloud update makes StellaVSLAM subscribe directly to the simulator's synchronized RGB-D images using sensor QoS. The Python camera node still derives calibration from live CameraInfo. Its relay remains selectable for comparison. The launch waits for a fresh per-run camera calibration file. The [tutorial](task3_ros2_nav2/TUTORIAL.md) includes repeated smoke checks that flag stale visual TF and missing costmaps.
+
+The cloud Python suite passed all **18 tests**. A new 30-frame synthetic run returned **29 tracked/anchor frames** and **0.122 m** aligned ATE. Cloud Docker reached g2o compilation after supplying the proxy CA bundle. The ROS Jazzy build exhausted the cloud disk during base image extraction. The revised RGB-D path therefore remains unverified in live simulation. The earlier KITTI, AIST and Nav2 evidence is preserved in its respective results directory.
+
 ## Reproducibility, travel and submission
 
 The [before-travel guide](docs/BEFORE_TRAVEL.md) prioritizes camera inputs and image backups. [REMOTE_ACCESS.md](docs/REMOTE_ACCESS.md) gives manual Tailscale/RDP/SSH setup and verification. The Compose environment publishes no public ports, uses one container for the ROS processes, and can run under Linux Docker with software rendering. `bootstrap_linux.sh` supplies fresh-host build targets when cached course images are unavailable; that slower fallback must be validated independently on its target Linux host.

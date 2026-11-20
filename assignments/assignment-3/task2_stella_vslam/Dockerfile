@@ -20,18 +20,27 @@ ARG STELLA_REF=e445b5452535e781fdf6777ec33a06f5f8f5e416
 ARG EXAMPLES_REF=defc69eecc36e51cdda22885bb86954f08ad6887
 ARG ROS_REF=186f623dd1c24ee83678f8e1da593801f450bbb3
 ARG BUILD_JOBS=2
-RUN git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core \
+RUN --mount=type=secret,id=build_ca \
+    if [ -r /run/secrets/build_ca ]; then \
+        export GIT_SSL_CAINFO=/run/secrets/build_ca CURL_CA_BUNDLE=/run/secrets/build_ca; \
+    fi && git clone https://github.com/stella-cv/stella_vslam.git /opt/vslam/core \
     && cd /opt/vslam/core && git checkout ${STELLA_REF} && git submodule update --init --recursive \
     && sed -i 's|/build/stella_vslam/3rd/FBoW/include|/usr/local/include|g; s|/build/stella_vslam/build/3rd/FBoW/|/usr/local/lib/|g' /usr/local/lib/fbow/fbowTargets.cmake \
     && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_MARCH_NATIVE=OFF \
     && cmake --build build -j${BUILD_JOBS} && cmake --install build && ldconfig
-RUN git clone https://github.com/stella-cv/stella_vslam_examples.git /opt/vslam/examples \
+RUN --mount=type=secret,id=build_ca \
+    if [ -r /run/secrets/build_ca ]; then \
+        export GIT_SSL_CAINFO=/run/secrets/build_ca CURL_CA_BUNDLE=/run/secrets/build_ca; \
+    fi && git clone https://github.com/stella-cv/stella_vslam_examples.git /opt/vslam/examples \
     && cd /opt/vslam/examples && git checkout ${EXAMPLES_REF} && git submodule update --init --recursive \
     && cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     && cmake --build build -j${BUILD_JOBS} --target run_video_slam run_camera_slam
 FROM examples AS integration
 COPY assignments/assignment-3/task2_stella_vslam/patch_wrapper.py /opt/vslam/patch_wrapper.py
-RUN mkdir -p /opt/vslam/ros_ws/src \
+RUN --mount=type=secret,id=build_ca \
+    if [ -r /run/secrets/build_ca ]; then \
+        export GIT_SSL_CAINFO=/run/secrets/build_ca CURL_CA_BUNDLE=/run/secrets/build_ca; \
+    fi && mkdir -p /opt/vslam/ros_ws/src \
     && git clone -b ros2 https://github.com/stella-cv/stella_vslam_ros.git /opt/vslam/ros_ws/src/stella_vslam_ros \
     && cd /opt/vslam/ros_ws/src/stella_vslam_ros && git checkout ${ROS_REF} && git submodule update --init --recursive \
     && python3 /opt/vslam/patch_wrapper.py /opt/vslam/ros_ws/src/stella_vslam_ros/CMakeLists.txt \

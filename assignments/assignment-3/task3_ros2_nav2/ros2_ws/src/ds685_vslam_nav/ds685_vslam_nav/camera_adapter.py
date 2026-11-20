@@ -14,10 +14,13 @@ class Adapter(Node):
         super().__init__('vslam_camera_adapter')
         self.declare_parameter('config_path','/work/assignments/assignment-3/data/sim-camera.yaml')
         self.declare_parameter('fps',15.)
+        self.declare_parameter('relay_images', True)
         self.info=None; self.pairs=0
+        self.info_sub=self.create_subscription(CameraInfo,'/camera/color/camera_info',self.receive_info,qos_profile_sensor_data)
+        if not self.get_parameter('relay_images').value:
+            return
         self.color_pub=self.create_publisher(Image,'/vslam/color/image_raw',10)
         self.depth_pub=self.create_publisher(Image,'/vslam/depth/image_raw',10)
-        self.info_sub=self.create_subscription(CameraInfo,'/camera/color/camera_info',self.receive_info,qos_profile_sensor_data)
         self.sync=StampedPairs(); self.raw_counts=[0,0]
         self.color=self.create_subscription(Image,'/camera/color/image_raw',lambda m:self.raw(0,m),qos_profile_sensor_data)
         self.depth=self.create_subscription(Image,'/camera/depth/image_rect_raw',lambda m:self.raw(1,m),qos_profile_sensor_data)

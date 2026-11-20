@@ -1,10 +1,12 @@
 import os
+from uuid import uuid4
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess, TimerAction
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess, TimerAction, OpaqueFunction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 
 
 def generate_launch_description():
@@ -24,19 +26,35 @@ def generate_launch_description():
     info=Node(package='ros_gz_bridge',executable='parameter_bridge',name='assignment3_camera_info',
               arguments=['/camera/realsense_d435i/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo'],
               remappings=[('/camera/realsense_d435i/camera_info','/camera/color/camera_info')],parameters=[{'use_sim_time':True}])
-    adapter=Node(package='ds685_vslam_nav',executable='camera_adapter',parameters=[{'use_sim_time':True}])
-    wrapper=ExecuteProcess(cmd=['bash','-lc',
-        'source /opt/ros/jazzy/setup.bash; source /opt/vslam/ros_ws/install/setup.bash; '
-        'for i in $(seq 1 180); do test -s '+root+'/data/sim-camera.yaml && break; sleep 1; done; '
-        'mkdir -p '+root+'/results/ros2/live; '
-        'exec ros2 run stella_vslam_ros run_slam -v /opt/vslam/orb_vocab.fbow -c '+root+'/data/sim-camera.yaml '
-        '--viewer none --eval-log-dir '+root+'/results/ros2/live --map-db-out '+root+'/data/simulation-map.msg '
-        '--ros-args -p use_sim_time:=true -p publish_tf:=false -p use_exact_time:=true '
-        '-p camera_frame:=assignment3_camera -r camera/color/image_raw:=/vslam/color/image_raw '
-        '-r camera/depth/image_raw:=/vslam/depth/image_raw'],output='screen',sigterm_timeout='30')
+    relay = LaunchConfiguration('relay_images')
+    # A new run must get calibration from its own CameraInfo publisher.
+    config_path = f'/tmp/ds685-camera-{uuid4().hex}.yaml'
+    adapter = Node(package='ds685_vslam_nav', executable='camera_adapter',
+                   parameters=[{'use_sim_time': True, 'config_path': config_path, 'relay_images': ParameterValue(relay, value_type=bool)}])
+
+    def start_wrapper(context):
+        use_relay = relay.perform(context).lower() == 'true'
+        color = '/vslam/color/image_raw' if use_relay else '/camera/color/image_raw'
+        depth = '/vslam/depth/image_raw' if use_relay else '/camera/depth/image_rect_raw'
+        return [ExecuteProcess(cmd=['bash', '-lc',
+            'set -e; source /opt/ros/jazzy/setup.bash; source /opt/vslam/ros_ws/install/setup.bash; '
+            'for i in $(seq 1 180); do test -s "$1" && break; sleep 1; done; '
+            'test -s "$1" || { echo "No current CameraInfo calibration received" >&2; exit 1; }; '
+            'mkdir -p "$2/results/ros2/live"; '
+            'exec ros2 run stella_vslam_ros run_slam -v /opt/vslam/orb_vocab.fbow -c "$1" '
+            '--viewer none --eval-log-dir "$2/results/ros2/live" --map-db-out "$2/data/simulation-map.msg" '
+            '--ros-args -p use_sim_time:=true -p publish_tf:=false -p use_exact_time:=true '
+            '-p camera_frame:=assignment3_camera -r "camera/color/image_raw:=$3" '
+            '-r "camera/depth/image_raw:=$4"', 'stella-start', config_path, root, color, depth],
+            output='screen', sigterm_timeout='30')]
+
     pose=Node(package='ds685_vslam_nav',executable='pose_bridge',parameters=[{'use_sim_time':True}])
     mapper=Node(package='ds685_vslam_nav',executable='occupancy_mapper',parameters=[{'use_sim_time':True}])
     navigation=IncludeLaunchDescription(PythonLaunchDescriptionSource(os.path.join(nav,'launch','navigation_launch.py')),
         launch_arguments={'use_sim_time':'true','autostart':'true','use_composition':'False',
                           'params_file':os.path.join(share,'config','nav2.yaml')}.items())
-    return LaunchDescription([sim,mount,optical,info,adapter,wrapper,pose,mapper,TimerAction(period=12.,actions=[navigation])])
+    return LaunchDescription([
+        DeclareLaunchArgument('relay_images', default_value='false', choices=['true', 'false']),
+        sim, mount, optical, info, adapter, OpaqueFunction(function=start_wrapper), pose, mapper,
+        TimerAction(period=12., actions=[navigation]),
+    ])
