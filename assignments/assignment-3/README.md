@@ -152,6 +152,8 @@ The cloud update makes StellaVSLAM subscribe directly to the simulator's synchro
 
 The cloud Python suite passed all **18 tests**. A new 30-frame synthetic run returned **29 tracked/anchor frames** and **0.122 m** aligned ATE. Cloud Docker reached g2o compilation after supplying the proxy CA bundle. The ROS Jazzy build exhausted the cloud disk during base image extraction. The revised RGB-D path therefore remains unverified in live simulation. The earlier KITTI, AIST and Nav2 evidence is preserved in its respective results directory.
 
+The cloud rerun of the official KITTI sequence 00 prefix tracked **150/150 frames**. With OpenCV 5.1.0 and one global Sim(3) alignment, it measured **3.194 m ATE**, **0.236 m** one-frame translational RPE and **0.160°** one-frame rotational RPE. This rerun used the same source and frame range as the archived result, with a different software environment. See the [metrics](results/kitti-00-cloud/metrics.json), [trajectory overlay](results/kitti-00-cloud/trajectory_xz.png) and [acquisition provenance](results/kitti-00-cloud/acquisition.json).
+
 ## Reproducibility, travel and submission
 
 The [before-travel guide](docs/BEFORE_TRAVEL.md) prioritizes camera inputs and image backups. [REMOTE_ACCESS.md](docs/REMOTE_ACCESS.md) gives manual Tailscale/RDP/SSH setup and verification. The Compose environment publishes no public ports, uses one container for the ROS processes, and can run under Linux Docker with software rendering. `bootstrap_linux.sh` supplies fresh-host build targets when cached course images are unavailable; that slower fallback must be validated independently on its target Linux host.
