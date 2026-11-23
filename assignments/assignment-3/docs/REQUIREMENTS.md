@@ -17,8 +17,8 @@ The table records which assignment deliverables have supporting evidence.
 | AIST feature/map screenshots and database | `results/stella/aist/` | Executed: 225 keyframes, 7,215 landmarks, genuine tracker frames; large map local/ignored |
 | Physical calibration and quality report | README calibration summary | 23 phone checkerboard views, 0.577 px RMS |
 | Perspective YAML and video validation | Camera `yaml` and `video` commands | Measured YAML generated in the cloud workspace. The personal clip decoded all 2,512 frames. |
-| Personal room reconstruction | StellaVSLAM video example | Reconstruction evidence pending |
-| YouTube explanation and link | `DEMONSTRATION.md` | Script prepared; owner must record/publish actual video |
+| Personal room reconstruction | [Task 2 demo](https://youtu.be/vi-8dxjenc0) | 543 saved camera poses, 65 keyframes, and 1,531 landmarks |
+| YouTube explanation and link | [Task 2 demo](https://youtu.be/vi-8dxjenc0) | Published and linked in the README |
 | ROS/Gazebo/TurtleBot reuse and live connectivity | Baseline inventory, smoke JSON, RGB/depth PNGs | Executed headlessly |
 | Wrapper RGB-D topics, metric scale and TF | ROS package, CameraInfo adapter, pose bridge | Implemented; runtime validation reported by stage |
 | Occupancy/obstacle geometry without LiDAR localization substitution | Log-odds ray inserter, Nav2 parameters and core tests | Implemented and algorithm-tested; visual TF required |

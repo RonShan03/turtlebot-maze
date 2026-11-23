@@ -13,9 +13,9 @@ The project implements a Python monocular visual-odometry pipeline, a calibrated
 | Official KITTI acquisition/evaluation | Executed on 150 official sequence-00 frames | [metrics](results/kitti-00/metrics.json), [acquisition provenance](results/validation/kitti-acquisition.json) |
 | Headless ROS/Gazebo baseline | Executed with real simulated sensors | [smoke report](results/ros2/headless-baseline/smoke.json), [RGB](results/ros2/headless-baseline/camera.png), [depth](results/ros2/headless-baseline/depth.png) |
 | StellaVSLAM reference | Executed successfully; map, trajectories and tracking frames saved | [summary](results/stella/aist/summary.json), [reconstruction](results/stella/aist/reconstruction.png), [tracking](results/stella/aist/tracking_900.jpg) |
-| Personal calibration and reconstruction | Phone calibration completed with 23 views. Reconstruction evidence pending. | [camera CLI](task2_stella_vslam/camera.py) |
+| Personal calibration and reconstruction | Calibrated with 23 checkerboard views. StellaVSLAM recovered 543 camera poses and 1,531 landmarks. | [Task 2 YouTube demo](https://youtu.be/vi-8dxjenc0) |
 | ROS wrapper, TF bridge, occupancy insertion, Nav2 launch | Hosted simulation maintained visual tracking and reached a 0.5 m goal without a prior map. | [hosted run](https://github.com/RonShan03/turtlebot-maze/actions/runs/45091811727), [integration tutorial](task3_ros2_nav2/TUTORIAL.md) |
-| YouTube / full maze demonstration | Requires an actual completed recording and publication | [demonstration script](docs/DEMONSTRATION.md) |
+| Task 3 navigation demo | Recording pending | [demonstration steps](docs/DEMONSTRATION.md) |
 
 ## Install and run
 
@@ -118,7 +118,9 @@ For genuine feature-tracking snapshots in a headless run, build `Dockerfile.evid
 
 For a personal webcam use [BEFORE_TRAVEL.md](docs/BEFORE_TRAVEL.md). `camera.py` captures original calibration images, detects inner chessboard corners, estimates intrinsics/distortion with Zhang-style planar calibration, and reports overall/per-view pixel RMS and image coverage. It rejects missing views and mixed resolutions. The YAML generator uses measured values with `model: perspective`. Video validation checks decode success, resolution, fps and blur; optional undistortion/resizing writes matching derived intrinsics and zero distortion. Do not undistort twice. Lock focus/zoom and preserve the calibration resolution.
 
-The phone footage uses a perspective camera model. See the measured calibration below. The personal reconstruction evidence and YouTube link are pending.
+The phone footage uses a perspective camera model. StellaVSLAM processed all 2,512 input frames and saved 543 camera poses (21.6% coverage), 65 keyframes, and 1,531 landmarks. The demo shows the gaps in tracking and the reconstruction at arbitrary monocular scale.
+
+[Task 2 personal reconstruction demo on YouTube](https://youtu.be/vi-8dxjenc0)
 
 ## Task 3: ROS/Nav2
 
