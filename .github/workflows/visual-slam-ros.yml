@@ -1,0 +1,57 @@
+name: Visual SLAM headless ROS validation
+on:
+  push:
+    branches: ['codex/visual-slam']
+    paths:
+      - '.github/workflows/visual-slam-ros.yml'
+      - 'assignments/assignment-3/compose.yaml'
+      - 'assignments/assignment-3/task2_stella_vslam/Dockerfile'
+      - 'assignments/assignment-3/task2_stella_vslam/patch_wrapper.py'
+      - 'assignments/assignment-3/task3_ros2_nav2/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  headless-navigation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    env:
+      COMPOSE_FILE: assignments/assignment-3/compose.yaml
+      EVIDENCE: assignments/assignment-3/results/ros2/hosted
+      CONTAINER_EVIDENCE: /work/assignments/assignment-3/results/ros2/hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Jazzy and StellaVSLAM images
+        run: |
+          mkdir -p "$EVIDENCE"
+          df -h
+          bash assignments/assignment-3/task3_ros2_nav2/scripts/bootstrap_linux.sh 2>&1 | tee "$EVIDENCE/build.log"
+      - name: Launch headless and wait for visual localization
+        run: |
+          docker compose up -d --no-build integration
+          for attempt in {1..8}; do
+            if docker compose exec -T integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav smoke_test \
+              --require-navigation --seconds 15 --output "$CONTAINER_EVIDENCE/start-${attempt}" --ros-args -p use_sim_time:=true; then
+              exit 0
+            fi
+          done
+          exit 1
+      - name: Check sustained tracking and a navigation goal
+        run: |
+          sleep 60
+          docker compose exec -T integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav smoke_test \
+            --require-navigation --seconds 20 --output "$CONTAINER_EVIDENCE/sustained" --ros-args -p use_sim_time:=true
+          docker compose exec -T integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav navigate \
+            --x 0.5 --y 0 --timeout 120 --output "$CONTAINER_EVIDENCE/goal.json" --ros-args -p use_sim_time:=true
+          jq -e '.accepted and .succeeded and .error_code == 0' "$EVIDENCE/goal.json"
+      - name: Preserve simulator logs and stop
+        if: always()
+        run: |
+          mkdir -p "$EVIDENCE"
+          docker compose stop -t 45 integration || true
+          docker compose logs --no-color integration > "$EVIDENCE/integration.log" 2>&1 || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-slam-headless-evidence
+          path: ${{ env.EVIDENCE }}
