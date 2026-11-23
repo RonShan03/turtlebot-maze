@@ -1,6 +1,6 @@
 # Deliverable coverage
 
-This is the user-requested submission checklist, expressed as a coverage table. Statuses distinguish real execution from source preparation. It is not an assertion that pending experiments passed.
+The table records which assignment deliverables have supporting evidence.
 
 | Requirement | Artifact / evidence | Status / remaining action |
 |---|---|---|
@@ -15,17 +15,16 @@ This is the user-requested submission checklist, expressed as a coverage table. 
 | Stella official installation and compatible CLI | Task-2 Dockerfile, guarded Jazzy patches, build logs | Core, examples, official ROS wrapper and custom ROS package built successfully |
 | AIST dataset, vocabulary, official camera YAML | `acquire_reference.py`, pinned image assets | Acquired; reference experiment results recorded separately |
 | AIST feature/map screenshots and database | `results/stella/aist/` | Executed: 225 keyframes, 7,215 landmarks, genuine tracker frames; large map local/ignored |
-| Physical calibration and quality report | `camera.py`, before-travel guide | Tools tested; real images, square measurement and camera required |
-| Perspective YAML and video validation | Camera `yaml` / `video` commands and tests | Implemented; actual personal calibration still required |
-| Personal room reconstruction | Exact run commands in README | Pending actual footage/calibration |
+| Physical calibration and quality report | README calibration summary | 23 phone checkerboard views, 0.577 px RMS |
+| Perspective YAML and video validation | Camera `yaml` and `video` commands | Measured YAML generated in the cloud workspace. The personal clip decoded all 2,512 frames. |
+| Personal room reconstruction | StellaVSLAM video example | Reconstruction evidence pending |
 | YouTube explanation and link | `DEMONSTRATION.md` | Script prepared; owner must record/publish actual video |
 | ROS/Gazebo/TurtleBot reuse and live connectivity | Baseline inventory, smoke JSON, RGB/depth PNGs | Executed headlessly |
 | Wrapper RGB-D topics, metric scale and TF | ROS package, CameraInfo adapter, pose bridge | Implemented; runtime validation reported by stage |
 | Occupancy/obstacle geometry without LiDAR localization substitution | Log-odds ray inserter, Nav2 parameters and core tests | Implemented and algorithm-tested; visual TF required |
-| Unknown-maze Nav2 navigation | `integration02/smoke.json`, `goal01.json` | Short goal succeeded without prior map; longer goals failed after intermittent stream stalls; full route remains incomplete |
+| Unknown-maze Nav2 navigation | [Hosted run](https://github.com/RonShan03/turtlebot-maze/actions/runs/45091811727) | Direct RGB-D path sustained tracking and reached a 0.5 m goal without a prior map. Demo video pending. |
 | Classmate tutorial and exact reproduction commands | `task3_ros2_nav2/TUTORIAL.md` | Written; runtime findings preserved |
-| Headless remote operation and cloud fallback | Compose, bootstrap Dockerfile/script, remote-access guide | Local headless baseline proven; new-host bootstrap untested separately |
+| Headless remote operation | Compose and Linux bootstrap script | Verified on GitHub-hosted Ubuntu 24.04 |
 | Automated checks, dependency documentation, logs | `tests/`, lock snapshot, build/test logs, GitHub workflow | Local tests executed; no physical-camera claim |
-| Frequent commit/push | Branch history at authorized remote | Milestones pushed; final handoff includes exact hash |
-| Private repository and TA access | Owner GitHub settings | User authorized existing public remote; course guide requests private visibility and TA access |
-| Final directory URL on submitted main | `https://github.com/RonShan03/turtlebot-maze/tree/main/assignments/assignment-3` | Only valid after owner-approved merge within deadline; not submitted automatically |
+| Private repository and TA access | [Submission guide](https://aegean.ai/aiml-common/resources/environment/assignment-submission) | Private course repository and grader access pending |
+| Assignment directory URL | `assignments/assignment-3` on `main` | Submit the private course repository directory URL in Canvas or Brightspace |

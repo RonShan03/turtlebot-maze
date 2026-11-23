@@ -1,8 +1,8 @@
 # DS685 Robotics: Visual SLAM and navigation
 
-Prepared November 19, 2026. Development branch: `codex/visual-slam`. **This is a development report, not a claim of final course submission.** The official assignment is [Visual SLAM](https://aegean.ai/aiml-common/projects/robotics/visual-slam/visual-slam).
+The DS685 [Visual SLAM assignment](https://aegean.ai/aiml-common/projects/robotics/visual-slam/visual-slam) covers monocular odometry, indoor reconstruction, and visual localization for robot navigation.
 
-The project implements a Python monocular visual-odometry pipeline, a calibrated perspective-camera workflow, pinned official StellaVSLAM applications, and an RGB-D StellaVSLAM/Nav2 integration. Workstation-dependent simulation and camera preparation were prioritized for travel. Earlier assignments are preserved; the new camera model and navigation parameters live here.
+The project implements a Python monocular visual-odometry pipeline, a calibrated perspective-camera workflow, pinned official StellaVSLAM applications, and an RGB-D StellaVSLAM/Nav2 integration.
 
 ## Execution status and evidence
 
@@ -13,10 +13,9 @@ The project implements a Python monocular visual-odometry pipeline, a calibrated
 | Official KITTI acquisition/evaluation | Executed on 150 official sequence-00 frames | [metrics](results/kitti-00/metrics.json), [acquisition provenance](results/validation/kitti-acquisition.json) |
 | Headless ROS/Gazebo baseline | Executed with real simulated sensors | [smoke report](results/ros2/headless-baseline/smoke.json), [RGB](results/ros2/headless-baseline/camera.png), [depth](results/ros2/headless-baseline/depth.png) |
 | StellaVSLAM reference | Executed successfully; map, trajectories and tracking frames saved | [summary](results/stella/aist/summary.json), [reconstruction](results/stella/aist/reconstruction.png), [tracking](results/stella/aist/tracking_900.jpg) |
-| Personal calibration/reconstruction | Tools implemented; actual camera images and room footage required | [before-travel guide](docs/BEFORE_TRAVEL.md), [camera CLI](task2_stella_vslam/camera.py) |
-| ROS wrapper, TF bridge, occupancy insertion, Nav2 launch | Built and executed; short goal succeeded; intermittent stream stalls remain | [successful smoke](results/ros2/integration02/smoke.json), [successful goal](results/ros2/goal01.json), [integration tutorial](task3_ros2_nav2/TUTORIAL.md) |
+| Personal calibration and reconstruction | Phone calibration completed with 23 views. Reconstruction evidence pending. | [camera CLI](task2_stella_vslam/camera.py) |
+| ROS wrapper, TF bridge, occupancy insertion, Nav2 launch | Hosted simulation maintained visual tracking and reached a 0.5 m goal without a prior map. | [hosted run](https://github.com/RonShan03/turtlebot-maze/actions/runs/45091811727), [integration tutorial](task3_ros2_nav2/TUTORIAL.md) |
 | YouTube / full maze demonstration | Requires an actual completed recording and publication | [demonstration script](docs/DEMONSTRATION.md) |
-| Remote access | Manual setup and verification instructions prepared | [remote-access guide](docs/REMOTE_ACCESS.md); no remote software/firewall changes performed |
 
 ## Install and run
 
@@ -119,7 +118,7 @@ For genuine feature-tracking snapshots in a headless run, build `Dockerfile.evid
 
 For a personal webcam use [BEFORE_TRAVEL.md](docs/BEFORE_TRAVEL.md). `camera.py` captures original calibration images, detects inner chessboard corners, estimates intrinsics/distortion with Zhang-style planar calibration, and reports overall/per-view pixel RMS and image coverage. It rejects missing views and mixed resolutions. The YAML generator uses measured values with `model: perspective`. Video validation checks decode success, resolution, fps and blur; optional undistortion/resizing writes matching derived intrinsics and zero distortion. Do not undistort twice. Lock focus/zoom and preserve the calibration resolution.
 
-Personal calibration values, reconstruction results and a YouTube URL remain absent until real inputs and publication exist. Standard webcams cannot use the panoramic model even though the assignment mentions the panoramic file as a template.
+The phone footage uses a perspective camera model. See the measured calibration below. The personal reconstruction evidence and YouTube link are pending.
 
 ## Task 3: ROS/Nav2
 
@@ -144,13 +143,13 @@ The first cached launch crashed on OpenGL GUI initialization. The isolated corre
 
 The successful integrated 12-second smoke window received **157 visual camera poses, 5 occupancy grids, 5 global and 20 local costmaps**, plus RGB, metric depth, CameraInfo, wheel odometry, IMU and LiDAR. `map <- odom`, `map <- base_link` and the camera extrinsic were valid. The controller and navigator reached lifecycle state `active`. A goal at **(0.5, 0.0)** was accepted and finished with action status **4**, error code 0, in **5.345 s**. No prior map or alternate localization was loaded.
 
-This is **partial navigation validation**. An intermittent adapter subscription/pairing stall subsequently stopped new visual poses while independent raw-image probes still received images. The 2 m goal aborted (status 6), and a later fresh-run 1 m goal was rejected while Nav2 lacked map TF. Exact synchronization and a small directly testable pairing buffer were investigated; the latest buffer's algorithm tests pass, but the latest runtime remained stalled. `integration02/` preserves the successful configuration's evidence; `integration-latest.log`, `sync-diagnostic.json`, `goal02.json` and `goal03.json` preserve failures. Full-maze traversal is not complete. The 54.4 s ROS bag contains 21,971 messages but zero `/cmd_vel` messages because recording began after the successful short goal; it must not be presented as a recording of that completed motion. A separate actual camera-view recording is saved locally and identified by its metadata.
+This is **partial navigation validation**. An intermittent adapter subscription/pairing stall subsequently stopped new visual poses while independent raw-image probes still received images. The 2 m goal aborted (status 6), and a later fresh-run 1 m goal was rejected while Nav2 lacked map TF. Exact synchronization and a small directly testable pairing buffer were investigated; the pairing buffer passed its unit tests, but the relay still stalled in the archived runs. `integration02/` preserves the successful configuration's evidence; `integration-latest.log`, `sync-diagnostic.json`, `goal02.json` and `goal03.json` preserve failures. Full-maze traversal is not complete. The 54.4 s ROS bag contains 21,971 messages but zero `/cmd_vel` messages because recording began after the successful short goal; it must not be presented as a recording of that completed motion. A separate actual camera-view recording is saved locally and identified by its metadata.
 
-## Cloud continuation
+## Cloud validation
 
 The cloud update makes StellaVSLAM subscribe directly to the simulator's synchronized RGB-D images using sensor QoS. The Python camera node still derives calibration from live CameraInfo. Its relay remains selectable for comparison. The launch waits for a fresh per-run camera calibration file. The [tutorial](task3_ros2_nav2/TUTORIAL.md) includes repeated smoke checks that flag stale visual TF and missing costmaps.
 
-The cloud Python suite passed all **18 tests**. A new 30-frame synthetic run returned **29 tracked/anchor frames** and **0.122 m** aligned ATE. Cloud Docker reached g2o compilation after supplying the proxy CA bundle. The ROS Jazzy build exhausted the cloud disk during base image extraction. The revised RGB-D path therefore remains unverified in live simulation. The earlier KITTI, AIST and Nav2 evidence is preserved in its respective results directory.
+The cloud Python suite passed all **20 tests**. The 30-frame synthetic run returned **29 tracked/anchor frames** and **0.122 m** aligned ATE.
 
 The cloud rerun of the official KITTI sequence 00 prefix tracked **150/150 frames**. With OpenCV 5.1.0 and one global Sim(3) alignment, it measured **3.194 m ATE**, **0.236 m** one-frame translational RPE and **0.160°** one-frame rotational RPE. This rerun used the same source and frame range as the archived result, with a different software environment. See the [metrics](results/kitti-00-cloud/metrics.json), [trajectory overlay](results/kitti-00-cloud/trajectory_xz.png) and [acquisition provenance](results/kitti-00-cloud/acquisition.json).
 
@@ -158,15 +157,11 @@ The [GitHub-hosted ROS validation run](https://github.com/RonShan03/turtlebot-ma
 
 For the personal phone video, the checkerboard had 10×10 inner corners and an estimated square width of 11/16 inch (17.46 mm). Both clips were processed with the same 180° raster rotation and downscaled from 1920×1080 to 960×540. OpenCV detected the board in 23 of 49 sampled frames and fit a perspective model with 0.577 px overall reprojection RMS. Individual views ranged from 0.337 to 0.892 px RMS. The personal footage is stored outside the repository.
 
-## Reproducibility, travel and submission
+## Reproducibility and submission
 
-The [before-travel guide](docs/BEFORE_TRAVEL.md) prioritizes camera inputs and image backups. [REMOTE_ACCESS.md](docs/REMOTE_ACCESS.md) gives manual Tailscale/RDP/SSH setup and verification. The Compose environment publishes no public ports, uses one container for the ROS processes, and can run under Linux Docker with software rendering. `bootstrap_linux.sh` supplies fresh-host build targets when cached course images are unavailable; that slower fallback must be validated independently on its target Linux host.
+The [Python workflow](../../.github/workflows/visual-slam.yml) runs the geometry, occupancy, and camera tests and evaluates a synthetic sequence on Linux. The [ROS workflow](../../.github/workflows/visual-slam-ros.yml) builds the Jazzy stack and checks visual localization and Nav2 in headless Gazebo. See the [integration tutorial](task3_ros2_nav2/TUTORIAL.md) for Docker setup and reproduction commands.
 
-The [GitHub workflow](../../.github/workflows/visual-slam.yml) installs Python dependencies, runs geometry/occupancy/camera tests and renders/evaluates a synthetic sequence on Linux. It does not claim to test Gazebo or a physical camera. A suitable Linux Docker runner can execute the tutorial's runtime smoke commands; a successful Python CI job alone is insufficient integration evidence.
-
-See [REQUIREMENTS.md](docs/REQUIREMENTS.md) for the deliverables mapping and remaining actions. Submission must ultimately use the full `assignments/assignment-3` directory URL on `main`, after all required experiments and review. This work is pushed on the dedicated branch and does not change `main`, publish a video, or submit to the course portal. The user authorized the current public GitHub remote; the official course guide requests a private repository and TA collaborator access, so repository visibility remains an owner/course-policy decision. No deadline was found in the project page or local materials; do not merge/push a graded submission after its applicable deadline.
-
-The repository's `AGENTS.md` requests `bd` issue tracking. `bd onboard`/`bd ready` were attempted, but the executable is unavailable in this session. The requested deliverables table records submission coverage; no external issue-tracker messages were sent.
+See [deliverable coverage](docs/REQUIREMENTS.md) for experiment and recording status. The course requires the full `assignments/assignment-3` directory URL from the private course repository, with TA collaborator access. [Submission guide](https://aegean.ai/aiml-common/resources/environment/assignment-submission)
 
 ## References
 
