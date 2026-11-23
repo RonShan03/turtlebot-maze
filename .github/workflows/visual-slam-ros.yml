@@ -15,6 +15,9 @@ jobs:
   headless-navigation:
     runs-on: ubuntu-24.04
     timeout-minutes: 55
+    defaults:
+      run:
+        shell: bash
     env:
       COMPOSE_FILE: assignments/assignment-3/compose.yaml
       EVIDENCE: assignments/assignment-3/results/ros2/hosted
@@ -36,14 +39,39 @@ jobs:
             fi
           done
           exit 1
-      - name: Check sustained tracking and a navigation goal
+      - name: Check sustained visual tracking
         run: |
           sleep 60
           docker compose exec -T integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav smoke_test \
             --require-navigation --seconds 20 --output "$CONTAINER_EVIDENCE/sustained" --ros-args -p use_sim_time:=true
+      - name: Record the robot navigating with the live map
+        run: |
+          docker compose exec -T integration /opt/vslam/entrypoint.sh \
+            python3 /work/assignments/assignment-3/task3_ros2_nav2/scripts/record_visual.py \
+            --output "$CONTAINER_EVIDENCE" --seconds 105 > "$EVIDENCE/recorder.log" 2>&1 &
+          recorder=$!
+          trap 'touch "$EVIDENCE/recording.stop"; wait "$recorder" || true' EXIT
+          for attempt in {1..15}; do
+            [[ -f "$EVIDENCE/recording.ready" ]] && break
+            kill -0 "$recorder"
+            sleep 1
+          done
+          test -f "$EVIDENCE/recording.ready"
           docker compose exec -T integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav navigate \
-            --x 0.5 --y 0 --timeout 120 --output "$CONTAINER_EVIDENCE/goal.json" --ros-args -p use_sim_time:=true
-          jq -e '.accepted and .succeeded and .error_code == 0' "$EVIDENCE/goal.json"
+            --x 0.5 --y 0 --timeout 40 --output "$CONTAINER_EVIDENCE/goal-1.json" --ros-args -p use_sim_time:=true
+          if jq -e '.accepted and .succeeded and .error_code == 0' "$EVIDENCE/goal-1.json"; then
+            docker compose exec -T integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav navigate \
+              --x 1.25 --y 0 --timeout 40 --output "$CONTAINER_EVIDENCE/goal-2.json" --ros-args -p use_sim_time:=true
+          fi
+          sleep 2
+          touch "$EVIDENCE/recording.stop"
+          wait "$recorder"
+          trap - EXIT
+          jq -e '.camera_frames > 20 and .nonzero_commands > 0 and .visual_displacement_m > 0.2' "$EVIDENCE/recording.json"
+          jq -e '.accepted and .succeeded and .error_code == 0' "$EVIDENCE/goal-1.json"
+          docker compose exec -T integration ffmpeg -v error -xerror -i "$CONTAINER_EVIDENCE/navigation-live.avi" \
+            -an -c:v libx264 -preset veryfast -crf 21 -pix_fmt yuv420p -movflags +faststart "$CONTAINER_EVIDENCE/task3-demo.mp4"
+          docker compose exec -T integration ffmpeg -v error -xerror -i "$CONTAINER_EVIDENCE/task3-demo.mp4" -f null -
       - name: Preserve simulator logs and stop
         if: always()
         run: |
@@ -54,4 +82,6 @@ jobs:
         if: always()
         with:
           name: visual-slam-headless-evidence
-          path: ${{ env.EVIDENCE }}
+          path: |
+            ${{ env.EVIDENCE }}
+            !${{ env.EVIDENCE }}/navigation-live.avi
