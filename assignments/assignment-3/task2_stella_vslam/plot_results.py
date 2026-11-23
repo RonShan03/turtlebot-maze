@@ -9,14 +9,17 @@ import numpy as np
 
 
 def main():
-    p=argparse.ArgumentParser(); p.add_argument('--results',required=True); args=p.parse_args()
+    p=argparse.ArgumentParser()
+    p.add_argument('--results', required=True)
+    p.add_argument('--dataset', default='AIST')
+    args=p.parse_args()
     folder=Path(args.results)
     rows=np.loadtxt(folder/'frame_trajectory.txt',ndmin=2)
     if rows.shape[1]!=8 or not len(rows): raise ValueError('expected nonempty TUM timestamp xyz quaternion trajectory')
     xyz=rows[:,1:4]
     report=dict(trajectory_samples=len(rows),timestamp_duration_s=float(rows[-1,0]-rows[0,0]),
                 path_length_arbitrary_units=float(np.linalg.norm(np.diff(xyz,axis=0),axis=1).sum()),
-                note='Monocular AIST map scale is arbitrary; no reference ground truth error reported')
+                note=f'Monocular {args.dataset} map scale is arbitrary; no reference ground truth error reported')
     landmarks=None
     if (folder/'map.msg').exists():
         import msgpack
@@ -33,7 +36,7 @@ def main():
     if landmarks is not None:
         ax.scatter(*landmarks[::max(1,len(landmarks)//15000)].T,s=.4,alpha=.2,label='saved sparse landmarks')
     ax.plot(*xyz.T,c='red',label='saved frame trajectory')
-    ax.set(xlabel='X (arbitrary units)',ylabel='Y',zlabel='Z',title='Actual StellaVSLAM AIST reconstruction')
+    ax.set(xlabel='X (arbitrary units)',ylabel='Y',zlabel='Z',title=f'StellaVSLAM {args.dataset} reconstruction')
     ax.legend(); fig.tight_layout(); fig.savefig(folder/'reconstruction.png',dpi=160); plt.close(fig)
     (folder/'summary.json').write_text(json.dumps(report,indent=2))
     print(json.dumps(report,indent=2))

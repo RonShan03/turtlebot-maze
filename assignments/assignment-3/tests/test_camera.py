@@ -34,3 +34,26 @@ def test_video_validation_resizing_and_derived_calibration(tmp_path):
 def test_calibration_refuses_unavailable_chessboards(tmp_path):
     cv2.imwrite(str(tmp_path/'blank.png'),np.zeros((480,640),np.uint8))
     with pytest.raises(ValueError,match='usable chessboards'): calibrate(tmp_path,(9,6),.025,tmp_path/'calibration.json')
+
+
+@pytest.mark.parametrize("column_shape", [False, True])
+def test_per_view_rms_compares_corresponding_corners(tmp_path, monkeypatch, column_shape):
+    cv2.imwrite(str(tmp_path / "board.png"), np.zeros((120, 160), np.uint8))
+    intrinsic = np.array(fixture_calibration()["K"])
+    distortion = np.zeros(5)
+    rotation = np.zeros(3)
+    translation = np.array([0., 0., 1.])
+    points = np.zeros((9, 3), dtype=np.float32)
+    points[:, :2] = np.mgrid[:3, :3].T.reshape(-1, 2) * .025
+    projected, _ = cv2.projectPoints(points, rotation, translation, intrinsic, distortion)
+    corners = (projected.reshape(-1, 2) + [3, 4]).astype(np.float32)
+    if column_shape:
+        corners = corners.reshape(-1, 1, 2)
+    monkeypatch.setattr(cv2, "findChessboardCornersSB", lambda *args, **kwargs: (True, corners))
+    monkeypatch.setattr(cv2, "calibrateCamera", lambda *args: (
+        5., intrinsic, distortion, [rotation], [translation],
+    ))
+
+    report = calibrate(tmp_path, (3, 3), .025, tmp_path / "calibration.json", min_views=1)
+
+    assert report["per_view_rms_px"] == pytest.approx([5.])

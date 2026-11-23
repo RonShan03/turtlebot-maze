@@ -85,7 +85,8 @@ def calibrate(folder, board, square_m, output, min_views=12):
     errors = []
     for obj, img, rv, tv in zip(object_points,image_points,rvecs,tvecs):
         projected, _ = cv2.projectPoints(obj,rv,tv,K,D)
-        errors.append(float(np.sqrt(np.mean(np.sum((projected-img)**2,axis=2)))))
+        residuals = projected.reshape(-1, 2) - img.reshape(-1, 2)
+        errors.append(float(np.sqrt(np.mean(np.sum(residuals**2, axis=1)))))
     all_points = np.concatenate(image_points).reshape(-1,2)
     centers = np.array([p.mean(axis=0).ravel() for p in image_points])
     warnings = []
