@@ -1,6 +1,6 @@
 # Narrated demonstration and visual evidence
 
-No YouTube upload or link is claimed. Publish only after you have the actual recording and are comfortable showing the interior of your space.
+Task 2 is available on [YouTube](https://youtu.be/vi-8dxjenc0). The [Task 3 MP4](../results/ros2/demo/task3-demo.mp4) shows the recorded Gazebo camera, live occupancy map, pose estimates, and both action outcomes.
 
 Suggested 4–6 minute sequence:
 
@@ -22,6 +22,7 @@ Evidence required for a complete course submission:
 | Personal indoor reconstruction | Real perspective footage, tracker view, saved map/trajectory |
 | TF and navigation | Runtime `smoke.json`, occupancy/costmap captures, actual action-result JSON and recording |
 | GUI screenshots if used | Capture the actual running Gazebo/RViz/viewer windows with the OS recording tool |
-| Narrated demonstration link | Actual YouTube URL, added after owner publication |
+| Task 2 demonstration link | [YouTube](https://youtu.be/vi-8dxjenc0) |
+| Task 3 demonstration video | [Recorded navigation MP4](../results/ros2/demo/task3-demo.mp4) |
 
 Raw bags/videos and large maps belong in private storage outside Git. Commit small selected evidence and enough metadata to reproduce it. Run `git status` and push the branch before shutting down the workstation. Verify the backup from the travel machine.

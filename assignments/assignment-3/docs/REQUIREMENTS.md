@@ -22,7 +22,7 @@ The table records which assignment deliverables have supporting evidence.
 | ROS/Gazebo/TurtleBot reuse and live connectivity | Baseline inventory, smoke JSON, RGB/depth PNGs | Executed headlessly |
 | Wrapper RGB-D topics, metric scale and TF | ROS package, CameraInfo adapter, pose bridge | Implemented; runtime validation reported by stage |
 | Occupancy/obstacle geometry without LiDAR localization substitution | Log-odds ray inserter, Nav2 parameters and core tests | Implemented and algorithm-tested; visual TF required |
-| Unknown-maze Nav2 navigation | [Hosted run](https://github.com/RonShan03/turtlebot-maze/actions/runs/45091811727) | Direct RGB-D path sustained tracking and reached a 0.5 m goal without a prior map. Demo video pending. |
+| Unknown-maze Nav2 navigation | [Hosted run](https://github.com/RonShan03/turtlebot-maze/actions/runs/45123583442), [demo video](../results/ros2/demo/task3-demo.mp4) | Direct RGB-D path sustained tracking without a prior map. First action reported success. Second action timed out. |
 | Classmate tutorial and exact reproduction commands | `task3_ros2_nav2/TUTORIAL.md` | Written; runtime findings preserved |
 | Headless remote operation | Compose and Linux bootstrap script | Verified on GitHub-hosted Ubuntu 24.04 |
 | Automated checks, dependency documentation, logs | `tests/`, lock snapshot, build/test logs, GitHub workflow | Local tests executed; no physical-camera claim |

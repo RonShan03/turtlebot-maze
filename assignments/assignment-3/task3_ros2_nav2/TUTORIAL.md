@@ -100,15 +100,40 @@ This publishes 0.06 m/s forward only when recent front-sector LiDAR clearance ex
 
 The mapper performs **ray insertion only**, without scan matching. It publishes free=0, occupied=100 and unknown=−1 cells after log-odds updates. This matters because Nav2's trinary StaticLayer otherwise treats sub-100 occupied probabilities as free. Nav2's local range layer supplies immediate obstacles; accumulated `/map` supplies persistent geometry. A 40×40 m grid at 0.05 m resolution is adequate for this scene, not an unbounded world.
 
-## 5. Execute and record a real goal
+## 5. Record Nav2 goals in the maze
 
-```powershell
-docker compose -f assignments/assignment-3/compose.yaml exec integration /opt/vslam/entrypoint.sh ros2 run ds685_vslam_nav navigate --x 0.5 --y 0.0 --timeout 120 --output /work/assignments/assignment-3/results/ros2/goal-new.json --ros-args -p use_sim_time:=true
+```bash
+compose=assignments/assignment-3/compose.yaml
+output=assignments/assignment-3/results/ros2/demo-$(date -u +%Y%m%dT%H%M%SZ)
+container_output=/work/$output
+mkdir -p "$output"
+docker compose -f "$compose" exec -T integration /opt/vslam/entrypoint.sh \
+  python3 task3_ros2_nav2/scripts/record_visual.py --output "$container_output" &
+recorder=$!
+for attempt in {1..15}; do
+  test -f "$output/recording.ready" && break
+  sleep 1
+done
+if test -f "$output/recording.ready"; then
+  docker compose -f "$compose" exec -T integration /opt/vslam/entrypoint.sh \
+    ros2 run ds685_vslam_nav navigate --x 0.5 --y 0 --timeout 40 \
+    --output "$container_output/goal-1.json" --ros-args -p use_sim_time:=true
+  if jq -e '.accepted and .succeeded and .error_code == 0' "$output/goal-1.json"; then
+    docker compose -f "$compose" exec -T integration /opt/vslam/entrypoint.sh \
+      ros2 run ds685_vslam_nav navigate --x 0.1 --y -1.0 --timeout 40 \
+      --output "$container_output/goal-2.json" --ros-args -p use_sim_time:=true
+  fi
+fi
+touch "$output/recording.stop"
+wait "$recorder"
+docker compose -f "$compose" exec -T integration ffmpeg -v error \
+  -i "$container_output/navigation-live.avi" -an -c:v libx264 -pix_fmt yuv420p \
+  -movflags +faststart "$container_output/task3-demo.mp4"
 ```
 
-The probe records goal acceptance, terminal action status, any error code and elapsed time; status 4 means success. A successful short goal establishes basic integration, not completion of the maze. Add successive reachable goals around the actual walls, collect a rosbag and a narrated screen recording, and preserve failures. Goals in unknown space are allowed by the global planner, but the robot must discover obstacles and replan; no frontier-exploration policy is implemented.
+The shell waits for the recorder to receive camera frames, the live occupancy map, and visual poses before sending the first goal. In the map panel, the blue trail comes from `/vslam/base_pose`, and the crosses mark the requested Nav2 goals. The action report records acceptance, elapsed time, and the terminal result. Status 4 with error code 0 means success. The recording report also counts nonzero velocity commands and measures displacement using the visual poses sampled during the recording.
 
-For a genuine recording, start `ros2 bag record` from a second shell for `/clock /tf /tf_static /camera/color/image_raw /camera/depth/image_rect_raw /camera/color/camera_info /scan /odom /run_slam/camera_pose /vslam/base_pose /map /cmd_vel`. Use the package entrypoint as above and an output under `data/`. Camera topics are high-volume; use a bounded recording and keep bags out of Git. A rosbag is not a substitute for the requested narrated demonstration video.
+The [hosted workflow](../../../.github/workflows/visual-slam-ros.yml) performs the same capture after checking sustained visual tracking. Keep the action JSON files with the MP4 so viewers can verify which goals succeeded. For additional debugging, `ros2 bag record` can capture `/clock /tf /tf_static /vslam/base_pose /map /cmd_vel` together with the RGB-D images and LiDAR scan.
 
 Stop the project gracefully so the wrapper writes its map and TUM trajectories:
 
@@ -118,6 +143,10 @@ docker compose -f assignments/assignment-3/compose.yaml logs --no-color integrat
 ```
 
 Save logs to a fresh result folder before starting another run. The wrapper may need longer than the timeout for a large optimization; never report a saved map unless the file was actually written.
+
+## Recorded navigation results
+
+The hosted run saved 506 camera frames and received 830 nonzero velocity commands while recording the live map and visual pose trail. The 0.5 m goal returned status 4 and error code 0. Nav2 logged its position at about `(0.15, 0.10)` m before starting the second goal. The global planner's 0.5 m tolerance permits a nearby reachable endpoint, so action success alone does not establish arrival at the exact requested coordinates. The second goal at `(0.10, -1.00)` m timed out. [Demo video](../results/ros2/demo/task3-demo.mp4) · [Action results and recording measurements](../results/ros2/demo/) · [Hosted workflow](https://github.com/RonShan03/turtlebot-maze/actions/runs/45123583442)
 
 ## Failure diagnosis and limits
 
@@ -132,12 +161,10 @@ Save logs to a fresh result folder before starting another run. The wrapper may 
 | Lost tracking | The bridge stops producing new transforms; stale TF should block motion. Do not keep publishing a held visual pose as if it were newly localized. |
 | New cloud host | Run Python CI first, build/import images, then repeat sensor/tracking/TF/costmap/goal stages. Cloud-provider creation and GPU allocation are not automated. |
 
-## Measured runtime outcome at travel handoff
+## Archived integration results
 
 `../results/ros2/integration02/smoke.json` validates all required sensor streams, 157 visual-pose messages, map TF and both costmaps. Controller and navigator were active. `goal01.json` records the successful (0.5, 0.0) goal: accepted, terminal status 4, error code 0, 5.345 s. This run used Python TimeSynchronizer and the upstream wrapper's approximate synchronization; commit `9789edb` preserves that source version.
 
-The stream later stalled: adapter pair counts stopped increasing while independent probes still saw raw color/depth. `sync-diagnostic.json` found 106 equal-stamp pairs across 113 RGB/111 depth messages, confirming that the raw sensor can supply matching stamps. `goal02.json` records a 2 m goal abort; `goal03.json` records rejection on a fresh run without visual map TF. The latest directly testable pairing buffer is algorithm-tested but did not resolve the runtime stall. Investigate per-subscription DDS/QoS delivery and buffer/loan lifetime next; the root cause is not established. Do not claim reliable full-maze navigation.
+The relay's pair counts later stopped increasing while independent probes still saw raw color and depth. `sync-diagnostic.json` found 106 equal-stamp pairs across 113 RGB and 111 depth messages. `goal02.json` records a 2 m goal abort, and `goal03.json` records rejection on a run without visual map TF. The [hosted validation run](https://github.com/RonShan03/turtlebot-maze/actions/runs/45091811727) used the direct subscriptions, sustained 300 distinct poses over 20 seconds, and completed the 0.5 m goal.
 
 `data/navigation-bag/` is a real 54.4 s, 21,971-message recording; its small inventory is committed as `navigation-bag-info.txt`. It began after goal01 finished, and contains zero velocity commands, so it records localization/geometry and the later stall rather than the completed short motion. `data/navigation02.avi` records actual camera imagery during a subsequent failed run; metadata describe its scope. These raw artifacts are ignored by Git and need an owner-controlled backup if they must survive loss of the workstation.
-
-The isolated simulation was stopped at handoff. Restart with the commands above, then repeat every stage. No personal camera reconstruction, full-maze run, GUI recording or published video is claimed.
