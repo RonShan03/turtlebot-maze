@@ -27,11 +27,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--seconds", type=float, default=105)
+    parser.add_argument("--second-goal", nargs=2, type=float, default=(0.1, -1.0), metavar=("X", "Y"))
     args = parser.parse_args()
     folder = args.output
     folder.mkdir(parents=True, exist_ok=True)
     fps = 10
-    goals = [(0.5, 0.0), (1.25, 0.0)]
+    goals = [(0.5, 0.0), args.second_goal]
     map_width, map_height = 508, 504
     pixels_per_metre = 96
     camera = None
